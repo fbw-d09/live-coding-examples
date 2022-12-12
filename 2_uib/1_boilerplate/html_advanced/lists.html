@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Listen</h1>
+
+    <h2>Geordnete Listen</h2>
+
+    <h3>Standard</h3>
+
+    <ol>
+        <li>Erster Eintrag</li>
+        <li>Zweiter Eintrag</li>
+        <li>Dritter Eintrag</li>
+    </ol>
+
+    <h3>Zahlen</h3>
+    <!-- Für zahlen nutzen wir den type "1" (Der default wert) -->
+    <ol type="1">
+        <li>Erster Eintrag</li>
+        <li>Zweiter Eintrag</li>
+        <li>Dritter Eintrag</li>
+    </ol>
+
+    <h3>Buchstaben</h3>
+    <!-- Für großbuchstaben nutzen wir den type "A" -->
+    <ol type="A">
+        <li>Erster Eintrag</li>
+        <li>Zweiter Eintrag</li>
+        <li>Dritter Eintrag</li>
+    </ol>
+
+    <h3>Kleinbuchstaben</h3>
+    <!-- Für kleinbuchstaben nutzen wir den type "a" -->
+    <ol type="a">
+        <li>Erster Eintrag</li>
+        <li>Zweiter Eintrag</li>
+        <li>Dritter Eintrag</li>
+    </ol>
+
+    <h3>Römische Zahlen</h3>
+    <!-- Für römische zahlen nutzen wir den type "I" -->
+    <ol type="I">
+        <li>Erster Eintrag</li>
+        <li>Zweiter Eintrag</li>
+        <li>Dritter Eintrag</li>
+    </ol>
+
+    <h3>Kleine Römische Zahlen</h3>
+    <!-- Für kleine römische zahlen nutzen wir den type "i" -->
+    <ol type="i">
+        <li>Erster Eintrag</li>
+        <li>Zweiter Eintrag</li>
+        <li>Dritter Eintrag</li>
+    </ol>
+
+    <h2>Ungeordnete Listen</h2>
+
+    <h3>Verschachtelte Listen</h3>
+
+    <!-- Schnelles Emmet kommando für mehrere UL/LI Bäume: ul>li>ul>li*3 -->
+
+    <ul>
+        <li>
+            Eintrag 1
+        </li>
+        <li>
+            Eintrag 2
+            <ul>
+                <li>
+                    Untereintrag 1
+                    <ul>
+                        <li>Unter-Unter Eintrag 1</li>
+                        <li>Unter-Unter Eintrag 2</li>
+                        <li>Unter-Unter Eintrag 3</li>
+                        <li>Unter-Unter Eintrag 4</li>
+                    </ul>
+                </li>
+                <li>
+                    Untereintrag 2
+                </li>
+            </ul>
+        </li>
+        <li>
+            Eintrag 3
+        </li>
+        <li>
+            Eintrag 4
+            <ul>
+                <li>Untereintrag 1</li>
+                <li>Untereintrag 2</li>
+                <li>Untereintrag 3</li>
+                <li>Untereintrag 4</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Gestylte Unsortiere Listen</h3>
+    
+    <h3>Standard</h3>
+    <ul>
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+    </ul>
+
+    <h3>Listenstyle: Disc</h3>
+    <!-- Für einen gefüllten kreis, nutzen wir "disc" (Default wert) -->
+    <ul style="list-style-type: disc;">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+    </ul>
+
+    <h3>Listenstyle: Circle</h3>
+    <!-- Für einen leeren kreis, nutzen wir "circle" -->
+    <ul style="list-style-type: circle;">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+    </ul>
+
+    <h3>Listenstyle: Quadrat</h3>
+    <!-- Für ein quadrat, nutzen wir "square" -->
+    <ul style="list-style-type: square;">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+    </ul>
+
+    <h3>Listenstyle: Keiner</h3>
+    <!-- Für garkeinen punkt, nutzen wir "none" -->
+    <ul style="
+        list-style-type: none; 
+        background: lime;
+        color: tomato;
+        font-weight: bold;
+    ">
+        <li style="color: purple;">Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+    </ul>
+
+</body>
+</html>
