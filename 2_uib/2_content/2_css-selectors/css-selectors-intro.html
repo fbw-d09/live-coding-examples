@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Selektoren</h1>
+
+    <p>
+        In css nutzen wir selektoren um das element, das wir stylen wollen auszuwählen, ein css kommando ist wie folgt aufgebaut:
+    </p>
+
+    <ul>
+        <li>[element] { = der selektor</li>
+        <li>[eigenschaft]: [wert]; = die option</li>
+        <li>} = das ende des kommandos</li>
+    </ul>
+
+    <p>Mit komma getrennt, können wir mehrere selektoren auswählen und ihnen die selben kommandos geben.</p>
+
+    <h2>Beispiele</h2>
+
+    <p id="testText">Hallo Welt</p>
+
+    <p id="testText-2">Noch einmal Hallo Welt</p>
+
+    <p>Mit sternchen (der universalselektor) können wir "alles" selektieren</p>
+
+    <p>Wir können auch direkt elemente ohne klasse oder id verändern</p>
+
+    <b>Ich bin fetter text</b>
+
+    <h2>Nachfahrenselektoren</h2>
+
+    <p>Wenn wir keinen spezifischen selektor angeben, selektieren wir alle elemente des ausgewählten types innerhalb unseres elternelementes.</p>
+
+    <div class="elternElement-1">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Kindselektor</h2>
+
+    <p>Der kindselektor wählt alle direkten kindelemente eines elternelements aus.</p>
+
+    <div class="elternElement-2">
+        <p>Erster Text</p>
+
+        <div class="kindElement-1">
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Nachbarselektor</h2>
+
+    <p>Der nachbarselektor wählt das nachbar element aus, wenn er dem auswahlelemnt direkt folgt</p>
+
+    <div class="elternElement-3">
+        <p>Erster Text</p>
+
+        <div class="kindElement-1">
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <a href="#">Ich bin ein link</a>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Geschwisterselektor</h2>
+
+    <p>Der Geschwisterselektor spricht alle nachfolgenden geschwister an, die auf der gleichen ebene sind</p>
+
+    <div class="elternElement-4">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+
+            <a href="#">Hallo Welt</a>
+
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <b>Hallo Welt</b>
+
+            <br>
+
+            <a href="#">Hallo Welt</a>
+            <a href="#">Hallo Welt</a>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Spezifisches kind auswählen</h2>
+
+    <p>
+        Mit ":nth-child" können wir spezifische elemente selektieren.
+    </p>
+
+    <div class="elternElement-5">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+            <p class="paragraph">Zweiter Text</p>
+            <p class="paragraph">Dritter Text</p>
+            <p class="paragraph">Dritter Text</p>
+
+            <b>Hallo Welt</b>
+
+            <br>
+
+            <a href="#">Hallo Welt</a>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <ul id="even-odd-beispiel">
+        <li>Erster Eintrag</li>
+        <li>Zweiter Eintrag</li>
+        <li>Dritter Eintrag</li>
+        <li>Vierter Eintrag</li>
+        <li>Fünfter Eintrag</li>
+    </ul>
+
+</body>
+</html>
