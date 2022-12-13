@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Wenn wir elemente selbst stlen wollen, nutzen wir dessen elementnamen: */
+        p
+        {
+            color: tomato;
+        }
+
+        /* Wenn wir ID's stylen wollen, nutzen wir vor deren namen eine raute: */
+        #hallo-1
+        {
+            color: cyan;
+        }
+        /* #hallo-2
+        {
+            color: lime;
+        } */
+        #hallo-3
+        {
+            color: purple;
+        }
+
+        /* Wenn wir klassen stylen wollen, nutzen wir vor deren namen einen punkt: */
+        .class-1
+        {
+            color: hotpink;
+        }
+
+        .class-2
+        {
+            background: blue;
+        }
+
+        .class-3
+        {
+            background: orange;
+        }
+
+        .class-2,
+        .class-3
+        {
+            color: lime;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Alle Elemente eines typs verändern:</h2>
+    <p>Hallo Welt 1</p>
+    <p>Hallo Welt 2</p>
+    <p>Hallo Welt 3</p>
+
+    <h2>Spezifische elemente verändern:</h2>
+    <p id="hallo-1">Hallo Welt 1</p>
+    <p id="hallo-2" class="class-2">Hallo Welt 2</p>
+    <p id="hallo-3">Hallo Welt 3</p>
+
+    <h2>Spezifische Gruppen von elementen verändern:</h2>
+    <p class="class-1">Hallo Welt 1</p>
+    <p class="class-1">Hallo Welt 2</p>
+    <p class="class-2">Hallo Welt 3</p>
+    <p class="class-2">Hallo Welt 4</p>
+    <p class="class-3">Hallo Welt 5</p>
+
+</body>
+</html>

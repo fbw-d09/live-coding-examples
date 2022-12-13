@@ -1,0 +1,23 @@
+p
+{
+    color: tomato;
+}
+
+ul
+{
+    background: cyan;
+}
+li
+{
+    color: orange;
+}
+
+#liste-2
+{
+    background: tomato;
+}
+
+#liste-2 li
+{
+    color: purple;
+}
