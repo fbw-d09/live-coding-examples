@@ -1,0 +1,94 @@
+html {
+    font-size: 16px;
+}
+
+h2
+{
+    color: tomato;
+    border-bottom: 1px solid tomato;
+}
+
+#pixel-unit-example-1 {
+    background-color: gray;
+    width: 16px;
+    height: 16px;
+}
+
+.em-parent {
+    font-size: 16px;
+}
+
+.em-child {
+    /* 2em = 2 * schriftgroesse in pixel des elternelements */
+    font-size: 2em;
+}
+
+.em-child-small {
+    font-size: 0.75em;
+}
+
+.rem-parent {
+    font-size: 24px;
+}
+
+.rem-child {
+    /* 2rem = 2 * schiriftgroesse in pixel des rootelements(<html>) */
+    font-size: 2rem;
+}
+
+.pro-parent 
+{
+    font-size: 24px;
+}
+
+.pro-child
+{
+    font-size: 150%;
+}
+
+#pro-test-box
+{
+    background-color: aqua;
+    height: 200px;
+    width: 50%; 
+}
+
+#vw-1
+{
+    font-size: 100vw;
+    color: red;
+}
+
+#vw-2
+{
+    font-size: 75vw;
+    color: blue;
+}
+
+#vh-1
+{
+    font-size: 100vh;
+    color: green;
+}
+
+#test-box-1
+{
+    background-color: antiquewhite;    
+    width: 70vw;
+    height: 600px
+}
+
+#test-box-1 #test-box-2 
+{
+    background-color: lime;
+    width: 90%;
+    height:50%;
+}
+
+#test-box-1 #test-box-3
+{
+    background-color: cyan;
+    width: 10%;
+    height: 10%;
+
+}

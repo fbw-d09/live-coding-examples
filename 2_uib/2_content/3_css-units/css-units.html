@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Groesseneinheiten</h1>
+
+    <h2>Pixel</h2>
+
+    <p>
+        Dies ist etwas text, der standardmaessig 16px gross ist.
+    </p>
+
+    <div id="pixel-unit-example-1"></div>
+
+    <h2>em</h2>
+
+    <p>em veraendert die groesse relative zum elternelement</p>
+
+    <div class="em-parent">
+        Elternelement
+        <div class="em-child">
+            Erstes Kind
+            <div class="em-child">
+                Zweites Kind
+                <div class="em-child">
+                    Drittes Kind
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="em-parent">
+    Elternelement
+    <div class="em-child-small">
+        Erstes Kind
+        <div class="em-child-small">
+            Zweites Kind
+            <div class="em-child-small">
+                Drittes Kind
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>rem</h2>
+
+<p>rem veraendert die groesse relative zum root element (html)</p>
+
+<ul>
+    <li>1rem = 16px</li>
+    <li>2rem = 32px</li>
+    <li>0.5rem = 8px</li>
+</ul>
+
+<div class="rem-parent">
+    Eltern element
+    <div class="rem-child">
+        Erstes Kind
+        <div class="rem-child">
+            Zweites Kind
+            <div class="rem-child">
+                Drittes Kind
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>% (Prozent)</h2>
+
+<p>Eine groessenangabe in prozent, gibt dem element die groesse in prozent des elternelement.</p>
+
+<ul>
+    <li>100% = 16px</li>
+    <li>200% = 32px</li>
+    <li>50% = 8px</li>
+</ul>
+
+<div class="pro-parent">
+    Eltern element
+    <div class="pro-child">
+        Erstes Kind
+        <div class="pro-child">
+            Zweites Kind
+            <div class="pro-child">
+                Drittes Kind
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pro-test-box">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, ipsa quaerat totam aperiam nemo est. Voluptatibus natus quidem, eos corrupti possimus quod, minima dicta enim sed veritatis nihil ipsa delectus?</p>
+</div>
+
+<h2>vw und vh (view-width und view-height)</h2>
+
+<p>vw und vh definieren die groesse eines elemnts in relation zur fenster hoehe und fenster breite</p>
+
+<p id="vw-1">W<p>
+<p id="vw-2">W<p>
+
+<p id="vh-1">W<p>
+
+<div id="test-box-1">
+    <div id="test-box-2"></div>
+    <div id="test-box-3"></div>
+</div>
+
+
+
+</body>
+</html>
