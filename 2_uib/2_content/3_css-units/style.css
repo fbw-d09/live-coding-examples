@@ -1,0 +1,101 @@
+html
+{
+    font-size: 16px;
+}
+
+#pixel-unit-example-1
+{
+    background: tomato;
+    width: 16px;
+    height: 16px;
+}
+#pixel-unit-example-2
+{
+    background: lime;
+    width: 100px;
+    height: 30px;
+}
+
+#pixel-groesserer-text
+{
+    /* font-size: ändert die größe des texts */
+    font-size: 32px;
+}
+#pixel-noch-groesserer-text
+{
+    font-size: 64px;
+}
+
+.em-parent
+{
+    font-size: 24px;
+}
+.em-child
+{
+    /* 2em = 2 * schriftgröße in pixel des elternelements */
+    font-size: 2em; 
+}
+
+.em-child-small
+{
+    font-size: 0.75em;
+}
+
+.rem-parent
+{
+    font-size: 24px;
+}
+
+.rem-child
+{
+    /* 2rem = 2 * schriftgröße in pixel des rootelements (<html>) */
+    font-size: 2rem;
+}
+
+.pro-parent
+{
+    font-size: 24px;
+}
+.pro-child
+{
+    font-size: 150%;
+}
+
+#pro-test-box
+{
+    background: tomato;
+    height: 100px;
+    width: 30%;
+}
+
+#vw-1
+{
+    font-size: 100vw;
+}
+#vw-2
+{
+    font-size: 75vw;
+}
+#vh-1
+{
+    font-size: 100vh;
+}
+
+#test-box-1
+{
+    background: tomato;
+    width: 70vw;
+    height: 600px;
+}
+#test-box-1 #test-box-2
+{
+    background: lime;
+    width: 90%;
+    height: 30%;
+}
+#test-box-1 #test-box-3
+{
+    background: cyan;
+    width: 80vw;
+    height: 200px;
+}
