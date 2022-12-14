@@ -19,7 +19,7 @@ h2
 }
 
 .em-child {
-    /* 2em = 2 * schriftgroesse in pixel des elternelements */
+    /* 2em = 2 * schriftgröße in pixel des elternelements */
     font-size: 2em;
 }
 
@@ -32,7 +32,7 @@ h2
 }
 
 .rem-child {
-    /* 2rem = 2 * schiriftgroesse in pixel des rootelements(<html>) */
+    /* 2rem = 2 * schiriftgröße in pixel des rootelements(<html>) */
     font-size: 2rem;
 }
 
