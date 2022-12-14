@@ -1,0 +1,44 @@
+.box
+{
+    width: 250px;
+    height:250px;
+}
+
+#box-1
+{
+    /* Benannte farben */
+    background: red;
+}
+
+#box-2
+{
+    /* Hex farben*/
+    /* background:#FF0000 */
+    /* background:#3CAFE2 */
+    /* background:#BADA55 */
+    /* background:#0FF1CE */
+    /* background:#COFFEE */
+    /* background:#FACADE */
+    /* background:#DECADE */
+    /* background:#1CODE1 */
+    background-color: #B0B;
+}
+
+#box-3
+{
+    /* Hex farbe mit alpha kanal (0 bis F) */
+    /* background:# FFOOFF55 */
+    background: #ADAC;
+}
+
+#box-4
+{
+    /* RGB Farbe */
+    background: rgb(255, 0, 255);
+}
+
+#box-5
+{
+    /*  */
+    background: rgba(255,50,200,60);
+}
