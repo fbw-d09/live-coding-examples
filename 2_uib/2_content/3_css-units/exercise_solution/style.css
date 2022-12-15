@@ -1,0 +1,78 @@
+html /* Bzw:  :root */
+{
+  height: 100vh;
+  width: 100vw;
+  font-size: 10px;
+}
+
+
+body 
+{
+  margin: 0 auto;
+  border: 2px solid #575052;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  width: 50rem;
+  height: 50rem;
+}
+
+h1 
+{
+  padding: 0;
+  margin: 0;
+  color: #e62260;
+  background-color: #e7becb;
+  height: 10rem;
+  font-size: 5.2rem;
+}
+
+p 
+{
+  padding: 0;
+  margin: 0;
+  color: #2b5c32;
+  height: 10%;
+  font-size: 2.6rem;
+}
+
+ul 
+{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 30rem;
+}
+
+li 
+{
+  color: #963629;
+  font-size: 2em; /* entspricht 20px */
+}
+
+.li1 
+{
+  background-color: antiquewhite;
+  height: 2.5em;   /* orientiert sich an eigener Schriftgröße */
+}
+
+.li2 
+{
+  background-color: #e9d1b3;
+  height: 5em;  /* orientiert sich an eigener Schriftgröße */
+}
+
+.li3 
+{
+  background-color: #d6a67a;
+  height: 7.5em;  /* orientiert sich an eigener Schriftgröße */
+}
+
+.p1 
+{
+  background-color: #a7dfcc;
+}
+
+.p2 
+{
+  background-color: #afe2ae;
+}
