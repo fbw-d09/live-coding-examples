@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wohnung
+        {
+            width: 210px;
+            height: 150px;
+            background: lightgray;
+            margin-bottom: 10px;
+        }
+
+        .zimmer
+        {
+            width: 100px;
+            height: 100px;
+            background: darkgray;
+            margin-bottom: 10px;
+        }
+
+        #wohnhaus{
+
+        }
+
+        #wohnhaus .wohnung:first-child .wohnzimmer
+        {
+            background: purple;
+        }
+
+        #wohnhaus #wohnung3 > p
+        {
+            background: lime;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="wohnhaus"> <!-- Ebene 1 -->
+        <div class="wohnung" id="wohnung1"> <!-- Ebene 2 -->
+            <p class="wohnzimmer">Wohnzimmer</p> <!-- Ebene 3 -->
+            <p class="schlafzimmer">Schlafzimmer</p>
+        </div>
+        <div class="wohnung" id="wohnung2">
+            <p class="wohnzimmer">Wohnzimmer</p>
+            <p class="schlafzimmer">Schlafzimmer</p>
+        </div>
+        <div class="wohnung" id="wohnung3">
+            <p class="wohnzimmer">Wohnzimmer</p>
+            <p class="schlafzimmer">Schlafzimmer</p>
+        </div>
+        <div class="wohnung" id="wohnung4">
+            <p class="wohnzimmer">Wohnzimmer</p>
+            <p class="schlafzimmer">Schlafzimmer</p>
+        </div>
+    </section>
+
+</body>
+</html>
