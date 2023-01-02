@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            width: 100px;
+            height: 70px;
+            background: black;
+            color: white;
+            margin: 10px;
+        }
+
+        .box-red
+        {
+            background: red;
+        }
+
+        .box-wide
+        {
+            width: 200px;
+        }
+
+        .box-alternative
+        {
+            width: 250px;
+            height: 100px;
+            background: lime;
+        }
+
+        /* Wenn wir den punkt, oder die raute direkt an den klassennamen anfuegen, bedeutet das, wir wollen ein element sektieren, das BEIDE attribute beinhaltet */
+        .box.box-red
+        {
+            border-radius: 10px;
+        }
+
+        .box.box-red.box-alternative
+        {
+            border-radius: 40px;
+        }
+
+        .box.box-wide p
+        {
+            display: inline;
+            background: green;
+        }
+
+        .btn
+        {
+            border-radius: 10px;
+            padding: 10px;
+            color: black;
+            font-size: 24px;
+            border: 1px solid black;
+        }
+
+        .btn-success
+        {
+            background: lime;
+        }
+
+        .btn-danger
+        {
+            background: tomato;
+        }
+
+        .btn-sm
+        {
+            padding:5px;
+        }
+
+        .btn-lg
+        {
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <button class="btn btn-lg btn-success">Button 1</button>
+    <button class="btn btn-sm btn-danger">Button 2</button>
+    <button class="btn btn-success">Button 3</button>
+
+    <div class="box box-red"></div>
+    <div class="box box-red box-wide"></div>
+    <div class="box box-red"></div>
+    <div class="box"></div>
+    <div class="box box-wide">
+        <p>Hello World</p>
+    </div>
+    <div class="box">
+        <p>Hello World</p>
+    </div>
+    <div class="box"></div>
+    <div class="box box-red box-alternative"></div>
+    <div class="box"></div>
+    <div class="box box-red"></div>
+</body>
+</html>
