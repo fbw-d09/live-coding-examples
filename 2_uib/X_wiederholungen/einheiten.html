@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  Der standard css-reset der praktisch immer ausgefuehrt wird */
+        *
+        {
+            padding:0;
+            margin:0;
+        }
+
+        .box
+        {
+            z-index: 10000;
+            position: relative;
+            background: tomato;
+            height:100px;
+            margin-top:100px ;
+            margin-bottom: 10px;
+        }
+
+        .box-percent
+        {
+            width: 100%;
+        }
+
+        .box-vw
+        {
+            width: 100vw;
+        }
+
+        .bg-image
+        {
+            z-index: 10;
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: lime;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box box-percent"></div>
+    <div class="box box-vw"></div>
+    <div class="bg-image"></div>
+</body>
+</html>
