@@ -1,0 +1,132 @@
+img
+{
+    width: 400px;
+    border-color: tomato;
+    border-width: 10px;
+}
+
+#style-dotted
+{
+    /* mit border-style geben wir an, welchen style typ wir für den border nutzen wollen, der default ist "solid" */
+    border-style: dotted;
+}
+
+#style-dashed
+{
+    border-style: dashed;
+}
+
+#style-solid
+{
+    border-style: solid;
+}
+
+#style-double
+{
+    border-style: double;
+}
+
+#style-groove
+{
+    border-style: groove;
+}
+
+#style-ridge
+{
+    border-style: ridge;
+}
+
+#style-inset
+{
+    border-style: inset;
+}
+
+#style-outset
+{
+    border-style: outset;
+}
+
+#style-specific
+{
+    /* top, right, bottom und left */
+    border-top-style: solid;
+}
+
+#style-mixed
+{
+    /*            oben   rechts unten links */
+    border-style: dotted dashed solid none
+}
+
+#width-specific
+{
+    border-style: solid;
+    border-width: 15px;
+}
+
+#width-mixed
+{
+    border-style: solid;
+    /*            top right bottom left */
+    border-width: 10px 25px 5px 0;
+}
+#width-mixed-2
+{
+    border-style: solid;
+    /*            top/bottom left/right */
+    border-width: 10px 20px;
+}
+
+#color-single
+{
+    border-style: solid;
+    border-width: 10px;
+    border-color: lime;
+}
+
+#color-specific
+{
+    border-style: solid;
+    border-color: lime;
+    border-left-color: orange;
+}
+
+#color-mixed
+{
+    border-style: solid;
+    border-width: 10px;
+    border-color: lime transparent cyan yellow;
+}
+
+#shorthand-default
+{
+    border: 20px solid lime;
+}
+
+#shorthand-mixed
+{
+    border: 10px solid orange;
+    border-bottom-color: lime;
+}
+
+#shorthand-specific
+{
+    border-top: 20px solid lime;
+    border-left: 10px dashed tomato;
+}
+
+#radius-specific
+{
+    border-top-left-radius: 100px;
+}
+
+#radius-mixed
+{
+    /*             t/l  t/r  b/r   b/l */
+    border-radius: 50px 10px 100px 200px;
+}
+
+#radius-shortcode
+{
+    border-radius: 25px;
+}
