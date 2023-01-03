@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="images.css">
+</head>
+<body>
+    
+    <h1>Images</h1>
+
+    <p>Attribute des img elements:</p>
+
+    <ul>
+        <li>src = der pfad zum bild</li>
+        <li>alt = der alternativ angezeigte text</li>
+        <li>width = die breite des bildes in pixel</li>
+        <li>height = die hoehe des bildes in pixel</li>
+        <li>title = der titel des bildes</li>   
+    </ul>
+
+    <p>typische bildformate: PNG, APNG, GIF, ICO, JPG, JPEG, SVG</p>
+
+    <p>Wenn ein bildlink nicht funktioniert, wird der inhalt des "alt" attributes angezeigt</p>
+
+    <img src="cheese.jpg" >
+    <br>
+    <img src="cheese.jpg" alt="cheese photo">
+    <br>
+
+    <img 
+        src="chili-pepper.jpg" 
+        alt="chili-pepper photo" 
+        title="testbild"
+        width="500"
+        height="200"
+    >
+
+    <p>Wenn wir nur die breite des bildes angeben, wird das bild nicht gestreckt</p>
+    <img 
+        src="chili-pepper.jpg" 
+        alt="chili-pepper photo"
+        width="500"
+    >
+
+    <p>Wie koennen die größe des bildes auch in CSS angeben</p>
+
+    <img src="chili-pepper.jpg" alt="chili-pepper photo" id="image-1">
+
+    <p>Auch wenn wir beide größen in CSS angeben, wird das bild verzogen</p>
+
+    <img src="chili-pepper.jpg" alt="chili-pepper photo" id="image-2">
+
+    <p>Auch wenn wir ein bild verschachteln, können wir dessen größe steuern</p>
+    
+    <div id="schachtel">
+        <img 
+            src="chili-pepper.jpg" 
+            alt="chili-pepper photo" 
+            id="schachtel-image">
+    </div>
+
+    <p>In ein Anchor-element(tag) gestreckt, koennen wir bilder auch als link benutzen</p>
+
+    <a href="https://google.de">
+        <img src="chili-pepper.jpg" alt="chili-pepper" id="image-3">
+    </a>
+
+    <p>src kann auch direkte weblinks enthalten</p>
+
+</body>
+</html>
