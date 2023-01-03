@@ -1,0 +1,100 @@
+h1, h2
+{
+    color: red;
+}
+
+img
+{
+    width: 400px;
+    border-color: tomato;
+    border-width: 10px;
+}
+
+#style-dotted
+{
+    /* mit border-style geben wir an, welchen style typ wir fuer den border nutzen wollen, der deault ist 'solid'*/
+    border-style: dotted;
+    background: lime;
+}
+
+#style-dashed
+{
+    border-style: dashed;
+}
+
+#style-solid
+{
+    border-style: solid;
+}
+
+#style-double
+{
+    border-style: double;
+}
+
+#style-groove
+{
+    border-style: groove;
+}
+
+#style-ridge
+{
+    border-style: ridge;
+}
+
+#style-inset
+{
+    border-style: inset;
+}
+
+#style-outset
+{
+    border-style: outset;
+}
+
+#style-specific
+{
+    border-top: 2px red solid;
+    border-bottom: 5px blue dotted;
+}
+
+#style-mixed
+{
+                /* oben rechts unten links */
+    border-style: dotted dashed solid none;
+}
+
+#width-specific
+{
+    border-style: solid;
+    border-width: 15px;
+}
+
+#color-single
+{
+    border: 10px solid lime;
+}
+
+#color-specific
+{
+    border-style: solid;
+    border-color: lime;
+    border-left-color: orange;
+}
+
+#radius-specific
+{
+    border-top-left-radius: 200px;
+}
+
+#radius-mixed
+{
+                    /* t/l t/r b/r b/l */
+    border-radius: 50px 10px 100px 200px;
+}
+
+#radius-shortcode
+{
+    /* border-radius: 20%; */
+    border-radius: 25px;
+}
