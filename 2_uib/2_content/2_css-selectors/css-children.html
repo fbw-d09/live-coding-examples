@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="children.css">
+</head>
+<body>
+
+    <h1>Children Count</h1>
+
+    <a href="https://css-tricks.com/useful-nth-child-recipies">Ein paar infos zum child counter</a>
+    
+    <h2>Das erste element in einer liste stylen</h2>
+
+    <p>Mit dem selektor :first-child {} koennen wir das erste element in einer liste, oder das erste kindelemente eines parentelements selektieren.</p>
+
+    <ul id="liste-1">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Das letzte element stylen</h2>
+    <p>Mit dem selektor :last-child {} koennen wir das letzte element selektieren.</p>
+
+    <ul id="liste-2">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>spezifische element stylen</h2>
+    <p>Mit :nth-child {} koennen wir ein spezifisches element stylen.</p>
+
+    <ul id="liste-3">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Gerade elemente stylen</h2>
+    <p>Mit :nth-child(even) {} koennen wir die geraden eintraege stylen</p>
+    <p>Mit :nth-child(odd) {} koennen wir die ungeraden eintraege stylen</p>
+
+    <ul id="liste-4">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Vom letzten kind aus rueckwaerts selektieren</h2>
+    <p>Mit :nth-last-child() {} koennen wir von hinten gezaehlt spezifische elemente stylen</p>
+
+    <ul id="liste-5">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>AB einem bestimmten eintrag elemente selektieren</h2>
+    <p>Mit :nth-child(n+[eintrag nummer]) koennen wir alle folgenden elemente stylen</p>
+
+    <ul id="liste-6">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Vom ersten bis zu einem bestimmten eintrag die elemente stylen</h2>
+    <p>Wenn wir vor das n ein minus setzen, koennen wir die selektionsreihenfolge umdrehen, und sagen wir wollen bis zu einem bestimmten eintrag selektieren.</p>
+
+    <ul id="liste-7">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+<h2>Jeden Xten eintrag stylen</h2>
+<p>Wenn wir vor das n eine zahl schreiben, selektieren wir jeden von der zahl definieirten xten eintrag</p>
+
+<ul id="liste-8">
+    <li>Eintrag 1</li>
+    <li>Eintrag 2</li>
+    <li>Eintrag 3</li>
+    <li>Eintrag 4</li>
+    <li>Eintrag 5</li>
+    <li>Eintrag 6</li>
+    <li>Eintrag 7</li>
+    <li>Eintrag 8</li>
+    <li>Eintrag 9</li>
+    <li>Eintrag 10</li>
+</ul>
+
+<h2>Eine spezifische anzahl von eintraegen selektieren</h2>
+<p>Wenn wir 2 nth-child() selektoren nutzen, dessen erster wert sich im plus, uns dessen zweiter wert sich im minus befindet, koennen wir von einem eintrag bis zu einem anderen eintrag selektieren.</p>
+
+<ul id="liste-9">
+    <li>Eintrag 1</li>
+    <li>Eintrag 2</li>
+    <li>Eintrag 3</li>
+    <li>Eintrag 4</li>
+    <li>Eintrag 5</li>
+    <li>Eintrag 6</li>
+    <li>Eintrag 7</li>
+    <li>Eintrag 8</li>
+    <li>Eintrag 9</li>
+    <li>Eintrag 10</li>
+</ul>
+</body>
+</html>
