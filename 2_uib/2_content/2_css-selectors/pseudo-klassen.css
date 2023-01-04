@@ -1,0 +1,54 @@
+a
+{
+    color:black;
+}
+
+a:hover
+{
+    color: orange;
+}
+
+a:active
+{
+    color: hotpink;
+}
+
+a:visited
+{
+    color:green;
+}
+
+/* In produktion vergeben wir bei links oft selektoren gruppen um besuchte links oder aktive links an das standarddesign anzupassen. */
+
+.test-link,
+.test-link:visited
+{
+    color: orange;
+}
+
+.test-link:active,
+.test-link:hover
+{
+    background: black;
+    color: white;
+}
+
+.box
+{
+    width: 200px;
+    height: 200px;
+    background: blue;
+}
+
+.box:hover
+{
+    background: red;
+    width:250px;
+    border: 10px solid cyan;
+    cursor: pointer;
+}
+
+.box:active
+{
+    background: green;
+}
