@@ -1,0 +1,57 @@
+.box
+{
+    background: tomato;
+    width: 100px;
+    height:100px;
+    margin-bottom: 10px;
+}
+
+.left
+{
+    background: lime;
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+
+p
+{
+    /* tipp: um den text zu blocktext zu aendern */
+    text-align: justify;
+}
+
+img
+{
+    width: 250px;
+    float: right;
+    margin-left: 10px;
+}
+
+.grid .column
+{
+    float: left;
+    width:33.33%;
+    height: 100px;
+    background: grey;
+}
+
+/* 
+.grid .column
+{
+    float: left;
+    width:32%;
+    height: 100px;
+    background: grey;
+    border: 1px solid black;
+} */
+
+.grid .column-2
+{
+    float: left;
+    width: 25%;
+    height: 100px;
+    background: tomato;
+}
