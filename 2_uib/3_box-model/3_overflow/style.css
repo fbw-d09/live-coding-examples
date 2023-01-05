@@ -1,0 +1,46 @@
+body
+{
+    background: lightgray;
+}
+
+.container
+{
+    border: 10px solid transparent;
+    background: darkslategray;
+    color: white;
+    width: 550px;
+    margin: auto;
+}
+article
+{
+    border-left: 10px solid transparent;
+    width: 90%;
+}
+.fahrzeuge
+{
+    background: lightgray;
+    color: black;
+    width: 100%;
+    height: 500px;
+
+    /* 
+        overflow:; gibt uns die möglichkeit zu steuern, was mit dem inhalt eines elementes passiert, das größer ist, als das elternelement 
+        */
+    /* mit overflow: hidden; wird der inhalt abgeschnitten und versteckt*/
+    /* overflow: hidden; */
+
+    /* mit overflow: scroll; können wir scrollbars erstellen, um in beide richtungen scrollen zu können */
+    /* overflow: scroll; */
+
+    /* mit overflow-x:; und overflow-y:; können wir steuern, wie sich der überstand horizontal oder vertikal verhält */
+
+    /* y = vertikale, x = horizontale */
+
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+    /* overflow-x: scroll; */
+
+    /* mit overflow: auto; lassen wir den browser selbst entscheiden welchen overflow er nimmt, da er sehen kann, welches element in welcher relation zueinander größer ist. */
+    overflow: auto;
+}

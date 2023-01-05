@@ -1,0 +1,62 @@
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #333;
+}
+nav ul li
+{
+    float: left;
+}
+nav ul li a
+{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+}
+nav ul li a:hover
+{
+    background: #111;
+}
+nav ul li a.active
+{
+    background: red;
+}
+nav ul li.right
+{
+    float: right;
+}
+
+.container
+{
+    background: darkslategray;
+    color: white;
+    /* mit max-with:; stellen wir ein wie breit ein element maximal sein kann */
+    max-width: 720px;
+    /* mit margin: 0 auto stellen wir ein, dass das element horizonal zentriert ist */
+    margin: 0 auto;
+}
+header
+{
+    background: black;
+    color: white;
+}
+section
+{
+    border: 1px solid red;
+    margin-top: 20px;
+}
+article
+{
+    border: 1px solid lime;
+    margin-top: 20px;
+}
+aside
+{
+    border: 1px solid lightblue;
+    padding: 10px;
+    margin-top: 20px;
+}
