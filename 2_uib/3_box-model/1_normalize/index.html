@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- normalize macht einen reset der css styles des browsers, und sorgt dafür das unsere seite auf jedem browser gleich aussieht -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!--
+        früher hat man Eric Meyers reset.css dafür benutzt, die standard css' einstellungen des browsers anzugleichen, so das die inhalte auf jedem browser gleich aussehen. Diese art des CSSReset's ist nicht mehr aktuell, denn hier müssen wir alle styles nach dem angleichen neu einstellen. 
+    -->
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+
+    <!-- ab hier können wir unsere eigenen styles nutzen, entweder per <style/> oder <link/> -->
+    <style>
+        .container
+        {
+            background: tomato;
+        }
+        /* Wir löschen den oberen abstand vom ersten element im container */
+        ul
+        {
+            margin-top: 0;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <ul>
+            <li>Startseite</li>
+            <li>Blog</li>
+            <li>Portfolio</li>
+            <li>Kontakt</li>
+        </ul>
+
+        <div>
+            <h1>Seiteninhalt</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quia cum, nesciunt possimus nobis qui non doloremque, vel velit corrupti dolores fugiat deleniti! Omnis, repellendus! Qui eos maxime saepe hic.
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
