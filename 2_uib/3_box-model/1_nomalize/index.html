@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- normalize macht einen reset der css styles des browsers, und sorgt dafuer das unsere seite auf jedem browser gleich aussieht -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+<!-- ab hier koennen wir unsere eigenen styles nutzen -->
+
+<!-- Eric Meyers reset.css ==> nicht mehr aktuell -->
+
+<style>
+    .container
+    {
+        background: turquoise;
+    }
+
+    /* Wir loeschen den oberen abstand vom ersten element im container */
+    ul
+    {
+        margin-top: 0;
+    }
+</style>
+
+<div class="container">
+    <ul>
+        <li>Startseite</li>
+        <li>Blog</li>
+        <li>Portfolio</li>
+        <li>Kontakt</li>
+    </ul>
+
+    <div>
+        <h1>Seiteninhalt</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum error, reiciendis placeat iusto porro a illo quisquam itaque! Eum saepe dolores ipsa sed tempore provident sunt fugiat a, neque expedita.</p>
+    </div>
+</div>
+
+</body>
+</html>
