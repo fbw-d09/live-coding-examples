@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Padding und Margin</h1>
+
+<p>Der default wert von padding und margin ist 0; allerdings haben elemente wie P oder H1 ein vorgegebenes margin oder padding (standardmaessig nach oben und unten)</p>
+    
+<p>Mit padding und margin koennen wir abstaende innerhalb und zwischen elementen angeben.</p>
+
+<ul>
+    <li>padding = abstand von inhalt zum rand des elements</li>
+    <li>border = der stylebare rand des elements</li>
+    <li>margin = abstand vom element zum naechsten elemente</li>
+</ul>
+
+<div class="beispielbox">
+    <div class="innen">Hallo Box</div>
+</div>
+
+<h2>Padding</h2>
+
+<div class="box" id="padding-top">
+    <div class="innen">Hallo Box 2</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<h2>Margin</h2>
+
+<div class="aussen">
+    <div class="box" id="margin-top">Hallo Box 3</div>
+</div>
+
+<h2>Padding in einem Paragraphen</h2>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consequatur natus iste. <em id="padding-paragraph">lorem lorem</em>Nemo tenetur a harum, numquam voluptatem eaque animi. Deleniti, eveniet ratione impedit sunt suscipit sit hic repellendus. Perferendis.</p>
+
+<h2>Horizontales zentrieren von inhalten</h2>
+<p>Mit margin: auto; oder margin: 0 auto; koennen wir inhalte innerhalb eines elements (meist dem haupt-seiteninhalt) zentrieren</p>
+
+<div class="box" id="margin-auto"></div>
+
+<h2>Padding bei Images</h2>
+
+<p>Wenn man einem img element ein padding gibt, erweitert man die box in der sich das bild befindet, aber nicht das bild</p>
+
+<img src="chili-pepper.jpg" alt="chili photo">
+
+<h2>Padding bei links</h2>
+
+<a href="#">Ich bin ein link</a>
+<a href="#">Ich bin ein link</a>
+
+<br><br><br>
+
+</body>
+</html>
