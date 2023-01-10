@@ -1,0 +1,59 @@
+.container
+{
+    border: 5px solid black;
+    display: inline-block;
+
+    /* wenn das elternelement position: relative at, bezieht sich das "absolute position */
+    position: absolute;
+}
+
+.box
+{
+    display: inline-block;
+    width: 100px;
+    height:100px;
+}
+
+.box1
+{
+    background: tomato;
+}
+
+.box2
+{
+    background: lime;
+    position: relative;
+
+    /* von OBEN */
+    top: 20px;
+
+    /* von LINKS */
+    left: -20px;
+}
+
+.box3
+{
+    background: plum;
+    position: absolute; 
+    /* nimmt kein platz mehr, can check with "display: none" */
+
+    top: 40px;
+    right: 20px;
+}
+
+.box4
+{
+    background: orange;
+
+}
+
+.positionBox
+{
+    background: black;
+    position: absolute;
+    opacity: 0.5;
+    top: 20px;
+    left: 20px;
+    right:20px;
+    bottom: 100px;
+}
