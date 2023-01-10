@@ -1,0 +1,57 @@
+.container
+{
+    border: 5px solid black;
+    display: inline-block;
+
+    /* wenn das elternelement position: relative; hat, bezieht sich das "absolute positioning" des kindelementes auf die 0 position des elternelements, wenn das elternelement keine positionierungsregel hat, bezieht sich das absolute positionieren auf den body der seite. */
+    position: relative;
+}
+.box
+{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.ersteBox
+{
+    background: tomato;
+}
+
+.zweiteBox
+{
+    background: lime;
+    position: relative;
+
+    /* von OBEN */
+    top: 20px;
+
+    /* von LINKS */
+    left: -20px;
+}
+
+.dritteBox
+{
+    background: plum;
+
+    position: absolute;
+
+    top: 40px;
+    right: 10px;
+}
+
+.vierteBox
+{
+    background: orange;
+}
+
+.positionBox
+{
+    background: black;
+    position: absolute;
+    opacity: 0.5;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 100px;
+}
