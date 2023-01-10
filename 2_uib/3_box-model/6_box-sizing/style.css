@@ -1,0 +1,51 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.box
+{
+    width:100px;
+    height:100px;
+}
+
+.innen
+{
+    background: lime;
+    /* important: use % for inside elements */
+    height:100%;
+    width:100%;
+
+    /* text: overflow als ellipsis(ausgepunktet) darstellen. */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#box-1
+{
+    background: tomato;
+    padding-left: 25px;
+    box-sizing: content-box;
+}
+
+#box-2
+{
+    background: red;
+    padding-left: 25px;
+    box-sizing: border-box;  /* can also be deleted */
+}
+
+#box-3
+{
+    background: cyan;
+    border: 10px solid orange;
+    box-sizing: border-box;  /* can also be deleted */
+}
+
+#box-4
+{
+    background: cyan;
+    border: 10px solid orange;
+    box-sizing: content-box;
+}
