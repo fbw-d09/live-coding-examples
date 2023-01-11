@@ -42,3 +42,84 @@ img
     background-image: url(https://picsum.photos/id/1005/200/300);
     /* background-size: cover; */
 }
+
+.containBox
+{
+    background-image: url(https://picsum.photos/id/1006/200/200);
+    background-size: contain;
+}
+
+.repeatBox
+{
+    background-image: url(https://picsum.photos/id/1008/100/100);
+    background-repeat: repeat;
+}
+
+.repeatXBox
+{
+    background: tomato;
+    background-image: url(https://picsum.photos/id/1009/200/250);
+    background-repeat: repeat-x;
+}
+
+.repeatYBox
+{
+    background: tomato;
+    background-image: url(https://picsum.photos/id/1010/200/220);
+    background-repeat: repeat-y;
+}
+
+.noRepeatBox
+{
+    background: tomato;
+    background-image: url(https://picsum.photos/id/1011/200/250);
+    background-repeat: no-repeat;
+}
+
+.spaceBox
+{
+    background: tomato;
+    background-image: url(https://picsum.photos/id/1012/200/150);
+    background-repeat: space;
+}
+
+.roundBox
+{
+    background: tomato;
+    background-image: url(https://picsum.photos/id/1013/200/150);
+    background-repeat: round;
+}
+
+.positionBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1014/200/100);
+    background-repeat: no-repeat;
+                       /* horizontal vertikal */
+    background-position: 10px 75%;
+}
+
+.positionCenterBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1015/200/100);
+    background-repeat: no-repeat;
+/* Wenn wir nur ein "center" schreiben, zentrieren wir das bild sowohl horizontal wie auch vertikal. */
+    background-position: center;
+}
+
+.positionWordBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1016/200/100);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.shortCodeBox
+{
+    /* farbe link wiederholung position / groesse */
+    background: tomato url(https://picsum.photos/id/1015/200/100) no-repeat center/100px 100px;
+    /* mit background-blend-mode: : koennen wir unsere photoshop shills in css nutzen */
+    background-blend-mode: soft-light;
+}

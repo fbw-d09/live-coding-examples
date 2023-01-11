@@ -3,7 +3,7 @@
     border: 5px solid black;
     display: inline-block;
 
-    /* wenn das elternelement position: relative at, bezieht sich das "absolute position */
+    /* wenn das elternelement position: relative hat, bezieht sich das "absolute positioning des kindelements auf die 0 position des elternelemnts, wenn das elternelment keine positionierungsregel hat, bezieht sich das absolute positionieren auf den body der seite. */
     position: absolute;
 }
 
