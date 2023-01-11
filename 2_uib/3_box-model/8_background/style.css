@@ -118,7 +118,7 @@ img
 
 .shortCodeBox
 {
-    /* farbe link wiederholung position / groesse */
+                /* farbe link wiederholung position / groesse */
     background: tomato url(https://picsum.photos/id/1015/200/100) no-repeat center/100px 100px;
     /* mit background-blend-mode: : koennen wir unsere photoshop shills in css nutzen */
     background-blend-mode: soft-light;
