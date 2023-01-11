@@ -18,7 +18,7 @@
 
     /* text: overflow als ellipsis(ausgepunktet) darstellen. */
     overflow: hidden;
-    white-space: nowrap;
+    white-space:nowrap;
     text-overflow: ellipsis;
 }
 
@@ -33,19 +33,19 @@
 {
     background: red;
     padding-left: 25px;
-    box-sizing: border-box;  /* can also be deleted */
+    box-sizing: border-box;  /* can also be deleted as already written */
 }
 
 #box-3
 {
     background: cyan;
-    border: 10px solid orange;
+    border: 20px solid orange;
     box-sizing: border-box;  /* can also be deleted */
 }
 
 #box-4
 {
     background: cyan;
-    border: 10px solid orange;
+    border: 20px solid orange;
     box-sizing: content-box;
 }
