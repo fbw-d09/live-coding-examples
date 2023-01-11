@@ -32,19 +32,27 @@
             background: lime;
         }
 
-        /* Wenn wir den punkt, oder die raute direkt an den klassennamen anfuegen, bedeutet das, wir wollen ein element sektieren, das BEIDE attribute beinhaltet */
+        /* Wenn wir den punkt, oder die raute direkt an den klassennamen anfügen, bedeutet das, wir wollen ein element sektieren, das BEIDE attribute beinhaltet */
         .box.box-red
         {
-            border-radius: 10px;
+            border-radius: 20px;
+        }
+
+        .box#test
+        {
+            background-color: blue;
         }
 
         .box.box-red.box-alternative
         {
-            border-radius: 40px;
+            border-radius: 50%;
+            color: black;
+            text-align: center;
         }
 
         .box.box-wide p
         {
+            /* <p> is block element */
             display: inline;
             background: green;
         }
@@ -55,7 +63,6 @@
             padding: 10px;
             color: black;
             font-size: 24px;
-            border: 1px solid black;
         }
 
         .btn-success
@@ -82,6 +89,8 @@
         {
             border: 5px solid tomato;
         }
+
+        
     </style>
 
 </head>
@@ -101,8 +110,8 @@
         <p>Hello World</p>
     </div>
     <div class="box"></div>
-    <div class="box box-red box-alternative"></div>
-    <div class="box"></div>
+    <div class="box box-red box-alternative">Hallooooooo</div>
+    <div class="box" id="test"></div>
     <div class="box box-red"></div>
 </body>
 </html>
