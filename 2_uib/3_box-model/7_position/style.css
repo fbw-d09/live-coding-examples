@@ -1,3 +1,11 @@
+#bigBox
+{
+    width: 500px;
+    height: 200px;
+    border: 2px solid red;
+    /* position: absolute; */
+}
+
 .container
 {
     border: 5px solid black;
@@ -23,12 +31,8 @@
 {
     background: lime;
     position: relative;
-
-    /* von OBEN */
-    top: 20px;
-
-    /* von LINKS */
-    left: -20px;
+    bottom:10px;
+    right: 10px;
 }
 
 .box3
@@ -36,10 +40,9 @@
     background: plum;
     position: absolute; 
     /* nimmt kein platz mehr, can check with "display: none" */
-
-    top: 40px;
-    right: 20px;
-}
+    bottom: 50px;
+    right: 50px;
+} 
 
 .box4
 {
@@ -55,5 +58,15 @@
     top: 20px;
     left: 20px;
     right:20px;
-    bottom: 100px;
+    bottom: 20px;
+    color: white;
+}
+
+#bigBox2
+{
+    width: 500px;
+    height: 400px;
+    background-color: red;
+    position: absolute;
+    /* inside the bigBox2 or not */
 }
