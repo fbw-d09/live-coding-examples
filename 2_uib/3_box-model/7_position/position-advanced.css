@@ -1,7 +1,7 @@
 .container
 {
-    position: relative;
-    padding-top: 100px;
+    /* position: relative; */
+    padding-top: 80px;
 }
 
 .box
@@ -14,7 +14,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
     z-index: 1;
 }
 
@@ -22,10 +22,10 @@
 {
     position: sticky;
     background: yellow;
-    top: 100px;
+    top: 80px;
     height: 50px;
     width: 100%;
-    z-index: 100;
+    z-index: 1;
 }
 
 .backToTopBox
@@ -42,7 +42,6 @@
 
 .backToTopBox a
 {
-    width: 50px;
     padding: 8px;
     color: white;
     text-decoration: none;
