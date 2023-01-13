@@ -19,11 +19,13 @@ b
     color: purple;
 }
 
+/* Alle P element unter dieses div */
 .elternElement-1 p
 {
     color: lime;
 }
 
+/* direckten kindelemente */
 .elternElement-2 > p
 {
     color: lime;
@@ -34,14 +36,19 @@ b
     color: tomato;
 }
 
+/* Nachbar */
+/* p + a ==> nur die Anchor elements die direkt nach P elements sind  */
 .elternElement-3 .kindElement-1 p + a
 {
     color: lime;
 }
 
+/* Geschwister */
+
 .elternElement-4 .kindElement-1 p ~ a
 {
     color: lime;
+    border: 1px solid lime;
 }
 
 .elternElement-5 > .kindElement-1 > .paragraph:not(:nth-child(2))

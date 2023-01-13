@@ -38,7 +38,7 @@
 
     <h2>Nachfahrenselektoren</h2>
 
-    <p>Wenn wir keinen spezifischen selektor angeben, selektieren wir alle elemente des ausgewählten types innerhalb unseres elternelementes.</p>
+    <p>Wenn wir keinen spezifischen selektor angeben, selektieren wir alle elemente(kindelement/Enkelkindelement...) des ausgewählten types innerhalb unseres elternelementes.</p>
 
     <div class="elternElement-1">
         <p>Erster text</p>
@@ -59,6 +59,9 @@
 
     <div class="elternElement-2">
         <p>Erster Text</p>
+        <div>Some div text</div>
+        <a href="#">Test</a>
+        <p>Extra Test Text</p>
 
         <div class="kindElement-1">
             <p>Zweiter Text</p>
@@ -67,6 +70,10 @@
             <div class="kindElement-2">
                 <p>Vierter Text</p>
             </div>
+        </div>
+
+        <div class="kindElement-1">
+            <p>Test test</p>
         </div>
     </div>
 
@@ -80,8 +87,9 @@
         <div class="kindElement-1">
             <p>Zweiter Text</p>
             <p>Dritter Text</p>
-
             <a href="#">Ich bin ein link</a>
+            <p>Test test</p>
+            <a href="#">Ich bin auch ein link</a>
 
             <div class="kindElement-2">
                 <p>Vierter Text</p>
@@ -91,7 +99,7 @@
 
     <h2>Geschwisterselektor</h2>
 
-    <p>Der Geschwisterselektor spricht alle nachfolgenden geschwister an, die auf der gleichen ebene sind</p>
+    <p>Der Geschwisterselektor spricht alle nachfolgenden geschwister an.</p>
 
     <div class="elternElement-4">
         <p>Erster text</p>
@@ -111,7 +119,14 @@
             <a href="#">Hallo Welt</a>
 
             <div class="kindElement-2">
+                <a href="#">Test Link before Paragraph</a>
                 <p>Vierter Text</p>
+                <a href="#">Test Link</a>
+                <div>
+                    <a href="#">Test link before P in 4th generation</a>
+                    <p>Test text</p>
+                    <a href="#">Test link after Paragraph</a>
+                </div>
             </div>
         </div>
     </div>
