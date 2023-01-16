@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Einheiten</title>
+    <style>
+      /** Standard Schriftgröße von 16px
+        1.0 em (Emphasis) oder 1.0 rem (Root Emphasis)
+        Root Element für Grundeinstellungen der gesamten Webseite über einen Pseudoklassen Aufruf**/
+      :root {
+        font-size: 12px; /** Ohne diese Angabe ist dieser Wert 16 Pixel**/
+        color: rgb(220, 220, 220);
+      }
+      h1 {
+        font-size: 1rem; /** 12 Pixel**/
+        font-size: 2.5rem; /** 30 Pixel**/
+        font-size: 1em;
+      }
+      img {
+        /** 1920x1080 **/
+        /** Handy Bildschirm Auflösung: 580x420 **/
+        width: 100%; /** Originalgröße des Bildes mit der Originalauflösung**/
+        height: auto; /** Auflösung des Bildes berechnet / width Pixel **/
+      }
+      body {
+        width: 100vw; /** 100 Prozent des aktuellen Bildschirms und dessen Pixelbreite **/
+        height: 100vh; /** 100 Prozent des aktuellen Bidlschirms und dessen Pixelhöhe **/
+        color: lightcoral; /** Farbnamen vordefiniert von HTML5**/
+        color: #ff00ff; /** HEXCode Farbwerte im Web Farbraum wird in 3 Teile aufgeteilt: Es beginnt immer mit dem Sharp gefolgt von 3 Werten bestehend aus 2 Ziffern, welche Buchstaben oder Zahlen sein können. Der minimale Wert bei Hexcode ist 00 und der maximale Wert ist FF. **/
+        color: rgb(
+          255,
+          0,
+          255
+        ); /** RGB Farbwert im Web Farbraum wird in 3 Teile aufgeteilt: Es gibt immer mit dem rgab Funktionsaufruf und die 3 Werte bestehen aus jeweils nur Zahlen. Der minimale Wert bei rgab ist 0 und der maximale Wert ist 255.**/
+        color: rgba(
+          255,
+          0,
+          255,
+          0.5
+        ); /** RGBA fügt dem RGB Wert eine Opacity hinzu. Der vierte Wert im RGBA beschreibt zwischen 0 und 1 diese Opacity.**/
+      }
+      /** 
+      Best pratices für grundsätzliches UX Design im HTML/CSS
+        1. Größe von klickbaren Inhalten
+        2. Icons und deren einheitlichen Darstellung
+        3. Error Handlung / Lade Hinweise
+        4. Responsive Design
+        5. Bildauflösungen/Bildgrößen
+        6. Lesbarkeit durch Text/Überschrift Angaben
+        7. Farbmodus für verschiedene Farbkonzepte
+        8. Formular Hinweise/Ausgaben
+      **/
+    </style>
+  </head>
+  <body>
+    <p><i>Lorem</i> ipsum <em>dolor</em> sit amet consectetur, adipisicing elit. Quae illo nesciunt repellat fuga dicta, culpa ullam et. Hic totam cumque, voluptate molestias rem ducimus tempore odio ab, sit id quia. <sup>3</sup>
+    Repellendus odio illo, repudiandae non optio, aperiam fuga qui voluptatum aspernatur, <b>inventore</b> eaque quaerat eum tempora cum voluptatibus libero dicta perspiciatis eos sit voluptates. Facilis harum quas nemo tempore modi.</p>
+    <h1>Hello</h1>
+    <img
+      src="https://digitalcareerinstitute.org/wp-content/uploads/2022/04/DCI_COLORS_June24_logo_wordmark_blue.svg"
+      alt=""
+    />
+  </body>
+</html>
