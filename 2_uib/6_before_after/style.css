@@ -1,0 +1,94 @@
+/* Zurücksetzen */
+
+:root {
+    font-size: 62.5%; 
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 200vh;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* utilities */
+.inline {
+    display: inline-block;
+}
+
+
+/* Navigation */
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;  
+    z-index: 99;
+
+}
+
+.nav > ul {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+
+.nav > ul > li {
+    margin-right: 20px;
+    
+}
+
+/* Main */
+
+.main {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.todosBox > div {
+    width:      400px;
+    min-height: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-right: 30px;
+}
+
+.todosBox ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.todosBox ul li::before {
+    display: inline-block;
+    margin-right: 10px;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    content: '';
+}
+
+.done > ul li::before {
+    background-image: url('./assets/check.png');
+}
+
+.open > ul li::before {
+    background-image: url('./assets/to-do-list.png');
+}
+
+.floatingPen {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    background-color: pink;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+
