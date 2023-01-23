@@ -9,9 +9,9 @@
     background: lime;
 }
 
-*
+ul 
 {
-    font-style: italic;
+    list-style-type: none;
 }
 
 b
@@ -50,7 +50,8 @@ b
     border: 1px solid lime;
 }
 
-.elternElement-5 > .kindElement-1 > .paragraph:not(:nth-child(2))
+/* nth-child */
+.elternElement-5 > .kindElement-1 > .paragraph:not(:nth-child(1))
 {
     color: lime;
 }
