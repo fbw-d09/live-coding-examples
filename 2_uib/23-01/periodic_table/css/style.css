@@ -1,0 +1,100 @@
+table {
+  width: 90vw;
+  height: 90vh;
+  margin: 5rem auto;
+}
+td {
+  border: 1px black solid;
+  border-radius: 10%;
+  text-align: center;
+  max-width: 0px;
+  transition: all 0.2s;
+}
+td:hover {
+  transform: scale(2);
+  transition: 1.5s;
+}
+td:empty {
+  border: 0;
+}
+
+/*Yellow elements*/
+tr:first-child :first-child,
+tr:nth-child(2) :nth-child(n + 14):nth-child(-n + 16),
+tr:nth-child(3) :nth-child(n + 15):nth-child(-n + 16),
+tr:nth-child(4) :nth-child(16) {
+  background-color: rgba(255, 255, 0, 0.76);
+}
+
+/*Blue Row*/
+tr:nth-child(n + 2):nth-child(-n + 7) td:nth-child(1),
+tr:nth-child(7) td:nth-child(17) {
+  background-color: rgba(80, 104, 150, 0.76);
+}
+
+/*Cream Row*/
+tr:nth-child(n + 2):nth-child(-n + 7) td:nth-child(2),
+tr:nth-child(7) :nth-child(18) {
+  background-color: rgba(222, 184, 135, 0.76);
+}
+
+/*Coral Row*/
+tr:nth-child(2) :nth-child(13),
+tr:nth-child(n + 3):nth-child(-n + 4) td:nth-child(14),
+tr:nth-child(n + 4):nth-child(-n + 5) td:nth-child(15),
+tr:nth-child(n + 5):nth-child(-n + 6) td:nth-child(16) {
+  background-color: rgba(255, 127, 80, 0.76);
+}
+
+/*Light Pink Row*/
+tr:nth-child(n + 3):nth-child(-n + 7) td:nth-child(13),
+tr:nth-child(n + 5):nth-child(-n + 7) td:nth-child(14),
+tr:nth-child(6) :nth-child(15) {
+  background-color: rgba(255, 182, 193, 0.76);
+}
+
+/*Green Row*/
+tr:nth-child(4) :nth-child(n + 3):nth-child(-n + 12),
+tr:nth-child(5) :nth-child(n + 3):nth-child(-n + 12),
+tr:nth-child(6) :nth-child(n + 4):nth-child(-n + 12),
+tr:nth-child(7) :nth-child(n + 4):nth-child(-n + 12) {
+  background-color: rgba(25, 114, 25, 0.76);
+}
+
+/* Fuchsia column*/
+tr:nth-child(n + 1):nth-child(-n + 6) td:nth-child(18),
+tr:nth-child(7) :nth-child(16) {
+  background: rgba(196, 133, 196, 0.76);
+}
+
+/*Orange Columns*/
+tr:nth-child(n + 2):nth-child(-n + 6) td:nth-child(17),
+tr:nth-child(7) :nth-child(15) {
+  background: rgba(204, 142, 26, 0.76);
+}
+
+/* Light Blue row*/
+tr:nth-last-child(2) td:nth-child(n + 2):nth-child(-n + 15) {
+  background-color: rgba(135, 206, 250, 0.76);
+}
+
+/* Dark Blue row*/
+tr:last-child td:nth-child(n + 2):nth-child(-n + 15) {
+  background-color: rgba(0, 128, 128, 0.76);
+}
+
+/* Single blue element */
+tr:nth-child(7) td:nth-last-child(16) {
+  background-color: rgba(0, 128, 128, 0.76);
+  border: 1px solid black;
+}
+/* Single light-blue element */
+tr:nth-child(6) td:nth-last-child(16) {
+  background-color: rgba(135, 206, 250, 0.76);
+  border: 1px solid black;
+}
+/*The two single elements without hover*/
+tr:nth-child(6) td:nth-last-child(16):hover,
+tr:nth-child(7) td:nth-last-child(16):hover {
+  transform: none;
+}
