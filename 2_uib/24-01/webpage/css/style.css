@@ -115,6 +115,70 @@ header nav ul {
   color: var(--boss-color);
   text-decoration: none;
 }
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 70vw;
+}
+.products .card {
+  width: 40%;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/* card */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  /* border: 2px solid red; */
+}
+.card .image-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #dcdcdc;
+}
+.card .image-container img {
+  width: 100%;
+
+  z-index: 1;
+}
+.image-container :first-child {
+  /* ♡ */
+  align-self: flex-end;
+  width: 3rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  background-color: white;
+}
+.image-container :last-child {
+  /* Deal */
+  background-color: red;
+  width: 3rem;
+  justify-self: flex-end;
+  position: relative;
+  top: -30px;
+  z-index: 1;
+}
+.item-info {
+  height: 20%;
+}
+.item-name {
+  font-weight: 900;
+}
+
+.item-price {
+  margin-top: 1rem;
+}
+.item-price h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+.item-price del {
+  color: red;
+}
 
 /* Footer */
 footer {
