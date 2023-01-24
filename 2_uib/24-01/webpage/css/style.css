@@ -1,1 +1,83 @@
-/* css */
+/* css
+div {
+  border: 6px solid red;
+  width: 6rem;
+  height: 6rem;
+}
+.box {
+  border: 6px solid black;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  /* menu -> space-between
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box .other-flex div {
+  border: 6px solid greenyellow;
+  width: 2rem;
+  height: 2rem;
+}
+.other-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: 0.4s;
+}
+/* var */
+:root {
+  font-size: 16px;
+  /* snake-case */
+  --logo-color: orange;
+  --logo-font-size: 3rem;
+}
+body {
+}
+/* links */
+a {
+  text-decoration: none;
+}
+/* menu */
+header {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px dashed red;
+}
+header nav {
+  flex-grow: 2;
+  border: 2px dashed red;
+}
+header nav ul {
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  border: 2px dashed black;
+}
+/* logo */
+.logo {
+  flex-grow: 1;
+  border: 2px dashed red;
+}
+/* .logo :nth-child(1) */
+.logo :first-child {
+  color: var(--logo-color);
+  font-size: larger;
+  font-weight: 900;
+  font-family: "Pacifico", cursive;
+}
+/* .logo :nth-child(2) */
+.logo :last-child {
+  font-size: larger;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace, cursive;
+}
