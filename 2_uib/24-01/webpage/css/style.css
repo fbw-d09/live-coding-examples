@@ -141,7 +141,6 @@ header nav ul {
 }
 .card .image-container img {
   width: 100%;
-
   z-index: 1;
 }
 .image-container :first-child {
@@ -173,6 +172,7 @@ header nav ul {
   margin-top: 1rem;
 }
 .item-price h4 {
+  color: red;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
