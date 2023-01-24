@@ -43,6 +43,27 @@
         <article></article>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Founder words</a></li>
+          <li><a href="#">Imprint</a></li>
+        </ul>
+      </nav>
+      <hr />
+      <div>
+        <h5>Made with <span>❤️</span> by Hadi</h5>
+        <h6>
+          Copyright © <span id="year"></span> Hadi Inc Alle Rechte vorbehalten.
+        </h6>
+      </div>
+      <!-- JavaScript -->
+      <script>
+        let span = document.querySelector("#year");
+        let currentYear = new Date().getFullYear(); // 2023
+        span.innerHTML = currentYear;
+      </script>
+    </footer>
   </body>
 </html>

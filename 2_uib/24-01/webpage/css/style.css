@@ -25,59 +25,134 @@ div {
   align-items: flex-end;
 } */
 
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Pacifico&family=Sedgwick+Ave&display=swap");
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
   transition: 0.4s;
 }
-/* var */
 :root {
   font-size: 16px;
-  /* snake-case */
-  --logo-color: orange;
-  --logo-font-size: 3rem;
+  /* snack-case */
+  --boss-color: orange;
+  --bg-color: lightgray;
 }
+/* body */
 body {
+  font-family: "Montserrat", sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
-/* links */
-a {
+a,
+a:visited {
+  color: lightgray;
+  font-size: 1.5rem;
+  font-weight: 800;
   text-decoration: none;
+  transition: 0.5s;
 }
-/* menu */
+a:hover {
+  color: gray;
+  transform: scale(2);
+}
+/* Menu */
+
 header {
   display: flex;
   justify-content: flex-end;
-  border: 2px dashed red;
 }
 header nav {
   flex-grow: 2;
-  border: 2px dashed red;
 }
 header nav ul {
-  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+/* Logo */
+.logo {
+  /* border: var(--border-value); */
+  flex-grow: 1;
+}
+/* .logo :nth-child(1)  -> .Be */
+.logo :first-child {
+  font-family: "Courier New", Courier, monospace, cursive;
+  font-weight: 900;
+  font-size: 2rem; /*  rem =  16px * 2 = 32 */
+}
+/* .logo :nth-child(2)  -> you */
+.logo :last-child {
+  color: var(--boss-color);
+  font-size: 1.5em; /* em = 16 * 1.5 = 24 */
+  font-family: "Pacifico", cursive;
+}
+/* Main */
+.main-container {
+  width: 100vw; /* view width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container article {
+  height: 75vh; /* view hight  */
+}
+.main-intro {
+  width: 50vw;
+  padding-top: 20vh;
+  color: black;
+  line-height: 5.5vh;
+  font-size: 1.5rem;
+}
+.main-intro h2 {
+  color: var(--boss-color);
+}
+.main-intro a {
+  color: var(--boss-color);
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-color);
+}
+/* footer menu */
+footer > nav {
+  width: 50%;
+}
+footer > nav > ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  border: 2px dashed black;
 }
-/* logo */
-.logo {
-  flex-grow: 1;
-  border: 2px dashed red;
+footer nav li {
+  font-size: 0.75rem;
 }
-/* .logo :nth-child(1) */
-.logo :first-child {
-  color: var(--logo-color);
-  font-size: larger;
-  font-weight: 900;
-  font-family: "Pacifico", cursive;
+footer hr {
+  width: 100%;
 }
-/* .logo :nth-child(2) */
-.logo :last-child {
-  font-size: larger;
-  font-weight: 600;
-  font-family: "Courier New", Courier, monospace, cursive;
+footer nav a {
+  color: gray;
+  text-decoration: none;
+}
+footer nav a:hover {
+  color: white;
+}
+footer div {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
