@@ -101,5 +101,194 @@
         <div class="box">5</div>
     </div>
 
+    <h2>align-items: vertikale sortierung</h2>
+
+    <h3>align-items: stretch;</h3>
+
+    <p>
+        der default wert von align-items: ; ist stretch, so nehmen die elemente den kompletten vertikalen platz ein.
+    </p>
+
+    <div class="container align-stretch">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h3>align-items: flex-start;</h3>
+
+    <p>mit align-items: flex-start; legen wir die elemente ganz nach oben</p>
+
+    <div class="container align-flex-start">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h3>align-items: center;</h3>
+
+    <p>mit align-items: center; setzen wir die kind elemente in die exakte vertikale mitte des elternelements</p>
+
+    <div class="container align-center">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h3>align-items: flex-end;</h3>
+
+    <p>
+        mit align-items: flex-end; legen wir die elemente ganz nach unten.
+    </p>
+
+    <div class="container align-flex-end">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h3>komplett zentrierte elemente</h3>
+
+    <p>
+        wenn wir justify-content: center; und align-items: center; gemeinsam benutzen, zentrieren wir den inhalt KOMPLETT in der mitte unseres elternelementes.
+    </p>
+
+    <div class="container justify-align-center">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h2>Wrap</h2>
+
+    <h3>flex-wrap: wrap;</h3>
+
+    <p>
+        mit flex-wrap: wrap; sorgen wir dafür, das, wenn die kindelemente nicht mehr in das eltern element passen, das sie in die nächste zeile geschoben werden.
+    </p>
+
+    <div class="container wrap">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+        <div class="box2">6</div>
+        <div class="box2">7</div>
+        <div class="box2">8</div>
+        <div class="box2 testbox">9</div>
+        <div class="box2">0</div>
+    </div>
+
+    <h3>wrap: wrap-reverse;</h3>
+
+    <p>
+        mit flex-wrap: wrap-reverse; sorgen wir dafür, das die kindelemente umgekehrt gewrapt werden
+    </p>
+
+    <div class="container wrap-reverse">
+        <section>
+            <div class="box2">1</div>
+            <div class="box2">2</div>
+            <div class="box2">3</div>
+            <div class="box2">4</div>
+            <div class="box2">5</div>
+        </section>
+        <section>
+            <div class="box2">6</div>
+            <div class="box2">7</div>
+            <div class="box2">8</div>
+            <div class="box2 testbox">9</div>
+            <div class="box2">0</div>
+        </section>
+    </div>
+
+    <h2>Direction</h2>
+
+    <h3>flex-direction: row; (default)</h3>
+
+    <p>mit flex-direction: row; legen wir die elemente horizonal nebeneinander, also in einer zeile/reihe</p>
+
+    <div class="container direction-row">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>flex-direction: column;</h3>
+
+    <i>wichtig: bei flex-direction: column; wird unser inhalt in der sortierung um 90 grad gekippt, dadurch ist align-items: ; und justify-content: ; in der bedeutung vertauscht.</i>
+
+    <p>
+        mit flex-direction: column; legen wir die elemente vertikal an, also untereinander in einer column, also einer spalte.
+    </p>
+
+    <div class="container direction-column">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>flex-direction: row-reverse;</h3>
+
+    <p>
+        mit flex-direction: row-reverse; legen wir die elemente umgekehrt nebeneinander, fangen also rechts an.
+    </p>
+
+    <div class="container direction-row-reverse">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>flex-direction: column-reverse;</h3>
+
+    <p>
+        mit flex-direction: column-reverse; legen wir die elemente vertikal, also untereinander an, aber auf dem kopf (umgekehrt).
+    </p>
+
+    <div class="container direction-column-reverse">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>shortcode für flex-flow befehle</h3>
+
+    <p>
+        mit flex-flow: ; können wir die befehle flex-direction: ; und flex-wrap: ; miteinander verwenden.
+    </p>
+
+    <div class="container flex-flow">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2 testbox">5</div>
+        <div class="box2">6</div>
+        <div class="box2">7</div>
+        <div class="box2">8</div>
+        <div class="box2">9</div>
+        <div class="box2">0</div>
+    </div>
+
 </body>
 </html>
