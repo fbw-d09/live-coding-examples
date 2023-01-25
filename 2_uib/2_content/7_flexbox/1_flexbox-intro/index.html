@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Flexbox Intro</h1>
+
+    <p>Eine flexbox ist ein elter element, das flex eigenschaften hat, und somit kind elemnte flexibel sortieren und anzeigen kann.</p>
+
+    <h2>justify: horizontale sortierung</h2>
+
+    <h3>justigy-content: flex-start</h3>
+
+    <p>mit justigy-content: flex-start; setzen wir die elemente an den horizontalen anfang der flex-box.</p>
+
+    <div class="container justify-flex-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>justify-content: center;</h3>
+
+    <p>mit justify-content: center; setzen wir die elemente horizontal in die mitte der flexbox</p>
+
+    <div class="container justify-flex-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>justify-content: space-between</h3>
+
+    <p>mit justify-content: space-between; werden die kind-elemente den kompletten platz einnehmen den sie haben und sich gleich verteilen, so das immer der selbe abstand zwischen den elementen ist.</p>
+
+    <div class="container justify-flex-space-between">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>justify-content: space-around</h3>
+
+    <p>mit justify-content: space-around; werden die kind elemente den kompletten platz einnehmen, den sie haben, um sich gleich zu verteilen, aber haben links und rechts alle den gleichen abstand.</p>
+
+    <div class="container justify-flex-space-around">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>justify-content: space-evenly</h3>
+
+    <div class="container justify-flex-space-evenly">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <hr>
+
+    <p>der default wert von align-items:; ist stretch, </p>
+
+    <div class="container align-stretch">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h3>align-items: flex-end</h3>
+
+    <p>mit align-items: flex-end; legen wir die elemente ganz nach unten.</p>
+
+    <div class="container align-flex-end">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h3>komplett zentrierte elemente</h3>
+
+    <p>wenn wir justify-content: center; und align-items: center; gemeinsam benutzen, zentrieren wir den inhalt KOMPLETT in der mitte unseres elternelementes.</p>
+
+    <div class="container justify-align-center">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </div>
+
+    <h2>Wrap</h2>
+
+    <h3>flex-wrap: wrap;</h3>
+
+    <p>mit flex-wrap: wrap; sorgen wir dafuer, das, wenn die kind-elemente nicht mehr in das eltern element passen, das sie in die naechste zeile geschoben werden.</p>
+
+    <div class="container wrap">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+        <div class="box2">6</div>
+        <div class="box2">7</div>
+        <div class="box2">8</div>
+        <div class="box2 testbox">9</div>
+        <div class="box2">0</div>
+    </div>
+
+    <h3>wrap: wrap-reverse;</h3>
+
+    <p>mit flex-wrap: wrap-reverse; sorgen wir dafuer, das ie kind-elemente ungekehrt gewrapt werden.</p>
+
+    <div class="container wrap-reverse">
+    <section>
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+    </section>
+
+    <section>
+        <div class="box2">6</div>
+        <div class="box2">7</div>
+        <div class="box2">8</div>
+        <div class="box2 testbox">9</div>
+        <div class="box2">0</div>
+    </section>
+    </div>
+
+    <h2>Direction</h2>
+
+    <p>flex-direction: row;</p>
+
+    <p>mit flex-direction: row; legen wir die elemente horizonal nebeneinander, also in einer zeile/reihe</p>
+
+    <div class="container direction-row">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>flex-direction: column;</h3>
+    
+    <p>wichtig: bei flex-direction: column; wird unser inhalt inder sortierung um 90grad gekippt, dadurch ist align-items:; und justirfy-content:; in der bedeutung vertauscht.</p>
+
+    <p>mit flex-direction: column, legen wir die elemente vertikal an, also untereinander in einer column, also einer spalte.</p>
+
+    <div class="container direction-column">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>flex-direction: row-reverse;</h3>
+
+    <p>mit flex-direction: row-reverse; legen wir die elemente ungekehrt nebeneinander, fangen also rechts an.</p>
+
+    <div class="container direction-row-reverse">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>flex-direction: column-reverse;</h3>
+
+    <div class="container direction-column-reverse">
+        <div class="box testbox">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>shortcode fuer flex-flow befehle</h3>
+
+    <p>mit flex-flow: ; koennen wir die befehle flex-direction: ; und flex-wrap: ; miteinander verwenden.</p>
+
+    <div class="container flex-flow">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2 testbox">5</div>
+        <div class="box2">6</div>
+        <div class="box2">7</div>
+        <div class="box2">8</div>
+        <div class="box2">9</div>
+        <div class="box2">0</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body
+{
+    padding: 10px;
+}
+
+.container
+{
+    border: 5px solid tomato;
+    min-height: 500px;
+
+    /* mit display: flex; starten wir den "flex-mode" eines eltern-elements */
+    display: flex;
+}
+
+.box
+{
+    background-color: lime;
+    border: 5px solid black;
+    width: 50px;
+    height:50px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.justify-flex-start
+{
+    justify-content: flex-start;
+}
+
+.justify-flex-center
+{
+    justify-content: center;
+}
+
+.justify-flex-space-between
+{
+    justify-content: space-between;
+}
+
+.justify-flex-space-around
+{
+    justify-content: space-around;
+}
+
+.justify-flex-space-evenly
+{
+    justify-content: space-evenly;
+}
+
+.box2
+{
+    background-color: lime;
+    border: 5px solid black;
+    width: 50px;
+    min-height: 50px;
+    font-size:32px;
+    text-align: center;
+}
+
+.align-strech
+{
+    align-items: stretch;
+}
+
+.align-flex-end
+{
+    align-items: flex-end;
+}
+
+.justify-align-center
+{
+    /* horizontale mitte: */
+    justify-content: center;
+    /* vertikale mitte: */
+    align-items: center
+}
+
+.testbox
+{
+    background-color: cyan;
+}
+
+section
+{
+    width: 300px;
+    border: 5px solid purple;
+}
+.wrap .box2
+{
+    width: 100px;
+}
+
+.wrap
+{
+    flex-wrap: wrap;
+}
+
+.wrap-reverse
+{
+    flex-wrap:wrap-reverse;
+}
+
+.direction-row
+{
+    flex-direction: row;
+}
+
+.direction-column
+{
+    flex-direction: column;
+}
+
+.direction-row-reverse
+{
+    flex-direction: row-reverse;
+}
+
+.direction-column-reverse
+{
+    flex-direction: column-reverse;
+}
+
+.flex-flow
+{
+    flex-flow: row wrap;
+}
