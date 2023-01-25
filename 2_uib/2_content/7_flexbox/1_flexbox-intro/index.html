@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,9 +16,9 @@
 
     <h2>justify: horizontale sortierung</h2>
 
-    <h3>justigy-content: flex-start</h3>
+    <h3>justigy-content: flex-start;</h3>
 
-    <p>mit justigy-content: flex-start; setzen wir die elemente an den horizontalen anfang der flex-box.</p>
+    <p>mit justify-content: flex-start; setzen wir die elemente an den horizontalen anfang der flex-box.</p>
 
     <div class="container justify-flex-start">
         <div class="box">1</div>
@@ -38,6 +39,8 @@
         <div class="box">4</div>
         <div class="box">5</div>
     </div>
+
+    <h3>justify-content: flex-end;</h3>
 
     <h3>justify-content: space-between</h3>
 
@@ -75,7 +78,11 @@
 
     <hr>
 
-    <p>der default wert von align-items:; ist stretch, </p>
+    <h2>align-items: vertikale sortierung</h2>
+
+    <h3>align-items: stretch;</h3>
+
+    <p>der default wert von align-items:; ist stretch, so nehmen die elemente den kompletten vertikalen platz ein. </p>
 
     <div class="container align-stretch">
         <div class="box2">1</div>
@@ -85,7 +92,13 @@
         <div class="box2">5</div>
     </div>
 
-    <h3>align-items: flex-end</h3>
+    <h3>align-items: flex-start;</h3>
+
+    <p>mit align-items: flex-start; legen wir die elemente ganz nach oben</p>
+
+    <h3>align-items: center;</h3>
+
+    <h3>align-items: flex-end;</h3>
 
     <p>mit align-items: flex-end; legen wir die elemente ganz nach unten.</p>
 
@@ -152,7 +165,7 @@
 
     <h2>Direction</h2>
 
-    <p>flex-direction: row;</p>
+    <p>flex-direction: row;(default)</p>
 
     <p>mit flex-direction: row; legen wir die elemente horizonal nebeneinander, also in einer zeile/reihe</p>
 
@@ -166,7 +179,7 @@
 
     <h3>flex-direction: column;</h3>
     
-    <p>wichtig: bei flex-direction: column; wird unser inhalt inder sortierung um 90grad gekippt, dadurch ist align-items:; und justirfy-content:; in der bedeutung vertauscht.</p>
+    <p>wichtig: bei flex-direction: column; wird unser inhalt inder sortierung um 90 grad gekippt, dadurch ist align-items:; und justirfy-content:; in der bedeutung vertauscht.</p>
 
     <p>mit flex-direction: column, legen wir die elemente vertikal an, also untereinander in einer column, also einer spalte.</p>
 
@@ -200,9 +213,9 @@
         <div class="box">5</div>
     </div>
 
-    <h3>shortcode fuer flex-flow befehle</h3>
+    <h3>shortcode für flex-flow befehle</h3>
 
-    <p>mit flex-flow: ; koennen wir die befehle flex-direction: ; und flex-wrap: ; miteinander verwenden.</p>
+    <p>mit flex-flow: ; können wir die befehle flex-direction: ; und flex-wrap: ; miteinander verwenden.</p>
 
     <div class="container flex-flow">
         <div class="box2">1</div>
