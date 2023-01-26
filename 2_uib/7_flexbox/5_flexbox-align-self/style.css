@@ -1,0 +1,49 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    padding: 10px;
+}
+
+.container
+{
+    border: 5px solid tomato;
+    height: 250px;
+    width: 500px;
+    display: flex;
+}
+
+.box
+{
+    background: lime;
+    border: 5px solid black;
+    flex-grow: 1;
+}
+
+.stretch
+{
+    align-self: stretch;
+}
+
+.flex-start
+{
+    align-self: flex-start;
+}
+
+.flex-end
+{
+    align-self: flex-end;
+}
+
+.center
+{
+    align-self: center;
+}
+
+.baseline
+{
+    align-self: baseline;
+}
