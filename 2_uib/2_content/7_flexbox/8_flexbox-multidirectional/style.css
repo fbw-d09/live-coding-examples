@@ -1,0 +1,50 @@
+main
+{
+    height: 100vh;
+    font-size: 32px;
+}
+
+.container
+{
+    display: flex;
+}
+
+.vertical
+{
+    flex-direction: column;
+}
+
+.horizontal
+{
+    flex-direction: row;
+}
+
+.small
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+
+.big
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 500px;
+}
+
+.small
+{
+    background-color: plum;
+}
+
+.container .horizontal
+{
+    background-color: tomato;
+    border: 4px solid blue;
+}
+
+.container .horizontal .small
+{
+    background-color: lime;
+}

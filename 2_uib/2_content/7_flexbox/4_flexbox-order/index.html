@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Flexbox Advanced</h1>
+    
+    <h2>order: ;</h2>
+
+    <p>mit order: ; koenne wir die angezeigte reihefolge von elementen veraendern, egal wie sie im HTML code sortiert sind.</p>
+
+    <p>der standardwert von order: ; ist 0.</p>
+
+    <div class="container">
+        <div class="box" id="box-one">1(0)</div>
+        <div class="box" id="box-two">2(-1)</div>
+        <div class="box" id="box-three">3(3)</div>
+        <div class="box" id="box-four">4(1)</div>
+        <div class="box" id="box-five">5(-2)</div>
+    </div>
+<br>
+
+<p>Wenn elemente die gleiche order:; habe, wenden sie in der reihenfolge angezeigt, in der im HTML code stehen.</p>
+
+    <div class="container">
+        <div class="box" id="box-one">1(0)</div>
+        <div class="box" id="box-two">2(-1)</div>
+        <div class="box" id="box-three">3(3)</div>
+        <div class="box" id="box-four">4(1)</div>
+        <div class="box" id="box-six">BOX(-1)</div>
+        <div class="box" id="box-five">5(-2)</div>
+    </div>
+
+</body>
+</html>
