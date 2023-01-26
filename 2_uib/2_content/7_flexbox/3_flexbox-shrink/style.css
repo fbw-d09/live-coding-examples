@@ -1,0 +1,40 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    padding: 10px;
+}
+
+.container
+{
+    border: 5px solid tomato;
+    display: flex;
+    width: 600px;
+    min-height: 100px;
+}
+
+.box
+{
+    background-color: lime;
+    border: 2px solid black;
+    flex-grow: 0;
+    flex-shrink: 0;
+    /* flex-basis: ; definiert die ausgangsgroesse des elements */
+    flex-basis:150px;
+}
+
+/* shorthand fuer flex befehle:
+    flex: {flex-grow} {flex-shrink} {flex-basis}
+    flex: 0 0 150px;
+
+    der standartwert fuer flex ist:
+    flex: 0 1 auto;
+*/
+
+.shrink-box-1
+{
+    flex-shrink: 1;
+}
