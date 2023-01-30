@@ -19,20 +19,20 @@
     /* mit display: grid; setzen wir die kind elementen des containers in den grid modus */
     display: grid;
 
-    /* FR Einheit: eine fraktion des verfuegbaren plaztes. */
+    /* FR Einheit: eine fraktion des verfügbaren plaztes. */
 
     /* Spalten(columns): */
-    /* mit grid-template-columns: ; legen wir den platz fuer die kindelemente fest */
+    /* mit grid-template-columns: ; legen wir den platz für die kindelemente fest */
 
     /* 3 spaten, jeweils eine fraktion: */
     /* grid-template-columns: 1fr 1fr 1fr */
 
-    /* auch verschieden grosse spalten sind moeglich */
+    /* auch verschieden große spalten sind möglich */
     grid-template-columns: 1fr 3fr 2fr 1fr;
 
-    /* mit den repeat(): befehl, koennen wir sagen wie oft eine groesseneinheit wiederholt wird */
+    /* mit den repeat(): befehl, können wir sagen wie oft eine größeneinheit wiederholt wird */
 
-    /*                        wie oft?, welche groesse */
+    /*                        wie oft?, welche größe */
     grid-template-columns: repeat(5,      1fr);
     /* equivalent zu dem obrigen befehl: 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/

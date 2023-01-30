@@ -9,7 +9,7 @@
     height: 100vh;
 
     display: grid;
-    /* margin-abstaende zweischen grid elementen: */
+    /* margin-abstände zwischen grid elementen: */
     /* gap: 10px; */
     row-gap:20px;
     column-gap: 10px;
