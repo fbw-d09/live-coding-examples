@@ -1,0 +1,64 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.box
+{
+    background: tomato;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.container
+{
+    padding: 10px;
+    background: lime;
+
+    /* mit display: grid; setzen wir die kind elemente des containers in den grid modus */
+    display: grid;
+
+    /* FR Einheit: eine fraktion des verfügbaren platzes. */
+    
+    /* Spalten (COLUMNS): */
+    /* mit grid-template-columns: ; legen wir den platz für die kindelemente fest */
+
+    /* 3 spalten, jeweils eine fraktion: */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    /* auch verschieden große spalten sind möglich */
+    /* grid-template-columns: 1fr 3fr 2fr 1fr; */
+
+    /* mit dem repeat(); befehl, können wir sagen wie oft eine größeneinheit wiederholt wird. */
+
+    /*                            wie oft?, welche größe? */
+    /* grid-template-columns: repeat(5,        1fr); */
+    /* equivalent zu dem obrigen befehl:
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    */
+
+    /* Automatisch verteilen */
+    /* grid-template-columns: auto auto auto auto; */
+
+    /* Pixel und gemischte werte: */
+    /* grid-template-columns: 150px 200px 1fr 2fr 100px; */
+
+    /* werte mischen bei repeat(); */
+    /* grid-template-columns: repeat(2, 150px) repeat(3, 1fr) 100px; */
+
+    grid-template-columns: 1fr 1fr 2fr;
+
+    /* ZEILEN (ROWS): */
+    /* grid-template-rows: 1fr 2fr 2fr 5fr; */
+    grid-template-rows: 100px 1fr 100px 200px;
+
+}
+
+/* Media query beispiel: */
+/* @media (min-width: 720px) {
+    .container
+    {
+        grid-template-columns: 1fr 3fr 2fr;
+    }
+} */

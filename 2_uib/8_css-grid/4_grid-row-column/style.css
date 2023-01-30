@@ -1,0 +1,66 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.box
+{
+    background: tomato;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+.container
+{
+    background: lime;
+
+    display: grid;
+    grid-gap: 10px; /* oder gap: ; */
+
+    /*            spalten: 1    2    3     4 */
+    grid-template-columns: 50px auto 200px 150px;
+    grid-template-rows: 100px 200px 75px 200px 150px;
+}
+
+.box-1
+{
+    background: cyan;
+    /* grid positions start und ende auf der column */
+    /* grid-column-start: 1; starte in der ersten spalte */
+    /* grid-column-end: 5; bis zum start der 5. spalte (also inklusive der 4) */
+    grid-column: 2 / 5;
+}
+
+.box-2
+{
+    background: yellow;
+    /* grid posiiton start und ende auf der row */
+    grid-row-start: 1;
+    grid-row-end: 4;
+    /* shortcode: grid-row: ; */
+}
+
+.box-3
+{
+    background: plum;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.box-4
+{
+    background: purple;
+    /*       start / end */
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.box-5
+{
+    background: #3cafe2;
+    /* das span keyword sagt über wieviele zeilen/spalten sich ein element erstrecken soll, damit ändert sich der wert hinter dem schrägstrich, von der zielposition zu einer mengenangabe. */
+    grid-row: 4 / span 3;
+    grid-column: 2 / span 2;
+}

@@ -1,0 +1,43 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: grid;
+    height: 100vh;
+    padding: 10px;
+    background: lime;
+
+    grid-template-rows: 60px auto 200px;
+}
+
+.box
+{
+    background: tomato;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+.content
+{
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+
+.header
+{
+    font-size: 32px;
+    background: black;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.menu
+{
+    background: red;
+}

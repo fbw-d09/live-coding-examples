@@ -1,0 +1,36 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    background: lime;
+    padding: 10px;
+    height: 100vh;
+
+    display: grid;
+
+    /* margin-abstände zwischen grid elementen: */
+    /* gap: 10px; */
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.box
+{
+    background: tomato;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+.box-4
+{
+    background: cyan;
+    
+    /* display: grid; erstellt ein neues grid element. */
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 100px
+}
