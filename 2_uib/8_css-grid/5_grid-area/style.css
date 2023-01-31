@@ -1,0 +1,43 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.box
+{
+    background: tomato;
+    padding: 10px;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    /* equivalent zu grid-row-gap: ; / grid-column-gap: ; */
+    gap: 10px; /* oder grid-gap: ; - dies ist allerdings obsolete */
+    padding: 10px;
+    background: lime;
+}
+
+.bigger-box
+{
+    background: cyan;
+
+    /* 
+        1. grid-row-start: ;
+        2. grid-column-start: ;
+        3. grid-row-end: ;
+        4. grid-column-end: ;
+    */
+    /*         row / column / row / column */
+    /* grid-area: 2 / 2 / span 3 / span 3; */
+
+    /* grid-row-start: 2; */
+    /* grid-column-start: 3; */
+    /* grid-row-end: 4; */
+    /* grid-column-end: 5; */
+    /* wird zu: */
+    grid-area: 2 / 3 / 4 / 5;
+}
