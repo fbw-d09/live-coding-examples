@@ -1,0 +1,73 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    background-color: aqua;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+
+    grid-template-columns: 
+      1fr   2fr  1fr   1fr   2fr;
+
+    grid-template-rows: 
+      1fr
+      2fr
+      2fr
+      1fr;
+
+    grid-template-areas: 
+    /* mit einem punkt, setzen wir eine leere grid-fraktion. */
+    "boxOne boxTwo boxThree .      boxFive"
+    "boxOne boxTwo boxFour boxFour boxFive"
+    ".      .      .       boxSix  boxFive"
+
+}
+
+.box
+{
+    background-color: tomato;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+.box-1
+{
+    background-color: lime;
+
+    /* mit grid-area:; koennen wir dem element einen namen geben, wie eine variable. */
+    grid-area: boxOne;
+}
+
+.box-2
+{
+    background-color: purple;
+    grid-area: boxTwo;
+}
+
+.box-3
+{
+    background-color: blue;
+    grid-area: boxThree;
+}
+
+.box-4
+{
+    background-color: red;
+    grid-area: boxFour;
+}
+
+.box-5
+{
+    background-color: orange;
+    grid-area: boxFive;
+}
+
+.box-6
+{
+    background-color: yellow;
+    grid-area: boxSix;
+}

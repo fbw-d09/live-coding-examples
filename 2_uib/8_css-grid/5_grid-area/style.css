@@ -1,0 +1,39 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.box
+{
+    background-color: tomato;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+
+    /* equivalent zu grid-row-gap: ; / grid-column-gap:; */
+    gap: 10px; /* oder grip-gap */
+
+    padding: 10px;
+    background-color: cyan;
+}
+
+.bigger-box
+{
+    background-color: lime;
+
+    /* 
+    1, grid-row-start:;
+    2, grid-column-start:;
+    3, grid-row-end:;
+    4, grid-column-end:;
+    */
+        /*  row/ column / row / column */
+    /* grid-area: 2 / 3 / 4 / 5; */
+    grid-area: 1 / 2 / span 2 / span 3;
+}
