@@ -9,7 +9,7 @@
     padding: 10px;
     background-color: aqua;
 
-    grid-template-rows: 100px auto 200px;
+    grid-template-rows: 100px auto 150px;
 }
 
 .box
@@ -32,6 +32,8 @@
 
     display: grid;
     grid-template-columns: 200px auto;
+
+    /* padding: 0; */
 }
 
 .menu

@@ -3,25 +3,26 @@
     box-sizing: border-box;
 }
 
-.box
-{
-    background-color: tomato;
-    border: 2px solid black;
-    padding: 10px;
-}
-
 .container
 {
     background-color: cyan;
     padding: 10px;
 
     display: grid;
-    grid-gap:10px;  /* oder: grap:; */
+    grid-gap:10px;  /* oder: gap:; */
 
     /*             spalten: 1     2     3    4 */
     grid-template-columns: 50px auto 200px 150px;
     grid-template-rows: 100px 200px 75px 200px;
 }
+
+.box
+{
+    background-color: tomato;
+    border: 5px solid black;
+    padding: 10px;
+}
+
 
 .box-1
 {
@@ -31,7 +32,7 @@
     /* grid-column-start: 1;  starte in der ersten spalte */
     /* grid-column-end: 5; bis zum start der 5.spalte(also inklusive der 4) */
 
-    grid-column: 2 / 5;
+    grid-column: 2 / span 2;
 }
 
 .box-2

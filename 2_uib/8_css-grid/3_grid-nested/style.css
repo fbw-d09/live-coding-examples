@@ -19,16 +19,16 @@
 {
     background-color: tomato;
     padding: 10px;
-    border: 2px solid black;
+    border: 5px solid black;
 }
 
 .box-4
 {
-    background-color: aliceblue;
+    background-color: lime;
 
     /* display: grid; erstellt ein neues grid element. */
     display: grid;
-    grid-gap:10px;
+    grid-gap:40px;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 2fr 100px; 
+    grid-template-rows: 1fr 5fr 100px; 
 }

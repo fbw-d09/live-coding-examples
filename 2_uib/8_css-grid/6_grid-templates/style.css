@@ -23,7 +23,8 @@
     /* mit einem punkt, setzen wir eine leere grid-fraktion. */
     "boxOne boxTwo boxThree .      boxFive"
     "boxOne boxTwo boxFour boxFour boxFive"
-    ".      .      .       boxSix  boxFive"
+    "boxOne .      boxSix  boxSix  boxFive"
+    ".      .      boxSix  boxSix  boxFive"
 
 }
 
@@ -38,7 +39,7 @@
 {
     background-color: lime;
 
-    /* mit grid-area:; koennen wir dem element einen namen geben, wie eine variable. */
+    /* mit grid-area:; können wir dem element einen namen geben, wie eine variable. */
     grid-area: boxOne;
 }
 

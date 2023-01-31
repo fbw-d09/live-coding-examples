@@ -3,10 +3,16 @@
     box-sizing: border-box;
 }
 
+body
+{
+    font-size: 2em;
+    font-weight: 800;
+}
+
 .box
 {
     background-color: tomato;
-    border:2px solid black;
+    border:5px solid black;
     padding: 10px;
     text-align: center;
 }
@@ -51,7 +57,8 @@
     /* ZEILEN(Rows) */
     /* grid-template-rows: 1fr 2fr 2fr 5fr; */
 
-    grid-template-rows: 100px 1fr 100px 200px;
+    grid-template-rows: 100px 5fr 100px 200px;
+    /* height: 100vh; */
 
 }
 
