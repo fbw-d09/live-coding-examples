@@ -1,0 +1,74 @@
+body
+{
+    background-color: cyan;
+}
+
+p
+{
+    font-size: 16px;
+}
+
+#test-box-1
+{
+    border-radius: 5px;
+    background-color: orange;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+#test-box-2
+{
+    margin-top: 20px;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+
+/* @media leitet eine media query ein, wir koennen damit festlegen, ab welchere, oder von welcher bix zu welcher groesse des bildschirms wir bestimmte css attribute aendern wollen. */
+
+@media (min-width: 800px) and (max-width:1000px)
+{
+    body
+    {
+        background-color: lime;
+    }
+
+    #test-box-1
+    {
+        border-radius: 50px;
+        display: none;
+    }
+
+    #test-box-2
+    {
+        display: block;
+    }
+}
+
+/* scrren stellt den media typen fuer die darstellung da, es gibt auch noch speech fuer screen reader, und print fuer zeitung, drucke, usw. */
+
+@media screen and (min-width: 1001px) 
+{
+    #test-box-1
+    {
+        border:10px solid red;
+    }
+}
+
+#test-box-2:hover
+{
+    background-color: yellow;
+}
+
+/* Wir koennen mehrere @media queries schreiben, mit verschidenen inhalten, sie ueberschreiben nicht die vorher angegenen optionen. */
+
+@media (min-width: 800px)
+{
+    #test-box-2:hover
+    {
+        background-color: red;
+    }
+}
