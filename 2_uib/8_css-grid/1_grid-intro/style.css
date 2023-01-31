@@ -16,7 +16,7 @@
     padding: 10px;
     background: lime;
 
-    /* mit display: grid; setzen wir die kind elemente des containers in den grid modus */
+    /* mit display: grid; setzen wir die kind elemente des containers in den grid modus, damit bekommen auch alle kinder die display option "grid". */
     display: grid;
 
     /* FR Einheit: eine fraktion des verfügbaren platzes. */

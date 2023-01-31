@@ -1,0 +1,104 @@
+*
+{
+    box-sizing: border-box;
+}
+
+/* wir designen als erstes unsere mobilansicht */
+header
+{
+    height: 50px;
+    width: 100vw;
+    background: black;
+}
+
+h1
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1rem;
+}
+#werbebox
+{
+    background: hotpink;
+    padding: 10px;
+    display: none;
+}
+aside
+{
+    width: 100%;
+    display: inline-block;
+    background: gray;
+    height: 50px;
+}
+#container
+{
+    width: 100%;
+    display: inline-block;
+}
+
+/* wir schreiben unsere spezifischen änderungen für andere auflösungen, wir fangen standardmäßig bei 769px, also der desktop ansicht an. Wir kö nnen auch, wenn wir wollen/oder wenn nötig, bei der portraitauflösung eines tablets anfangen. das wären dann 481px. */
+@media (min-width: 769px)
+{
+    #werbebox
+    {
+        display: block;
+    }
+    header
+    {
+        height: 100px;
+    }
+    header h1
+    {
+        text-align: left;
+        padding-left: 20px;
+        line-height: 100px;
+        font-size: 2rem;
+    }
+
+    aside
+    {
+        width: 30%;
+        height: 100vh;
+    }
+
+    #container
+    {
+        width: 70%;
+    }
+}
+@media (min-width: 1025px)
+{
+    aside
+    {
+        width: 20%;
+    }
+    #container
+    {
+        width: 80%;
+    }
+}
+
+/* spezielle auflösungen für RETINA displays */
+@media screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi)
+{
+    body
+    {
+        background: hotpink;
+    }
+}
+
+/* spezielle auflösung für smartwatches, wie zb. die apple watch */
+@media (max-device-width: 281px) and (max-device-height: 281px)
+{
+    body
+    {
+        background: rebeccapurple;
+    }
+}
