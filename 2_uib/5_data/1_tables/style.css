@@ -1,0 +1,165 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    padding: 10px;
+}
+
+table,
+th,
+td
+{
+    border: 1px solid black;
+}
+
+#table-3
+{
+    width: 100%;
+    /* mit border-collapse löschen wir den abstand zwischen den spalten */
+    border-collapse: collapse;
+}
+
+/* #table-4 th
+{
+    padding: 50px;
+} */
+
+#table-4 td
+{
+    padding: 30px;
+}
+
+#table-5
+{
+    width: 100%;
+    border-spacing: 10px;
+}
+
+#table-6
+{
+    width: 100%;
+}
+
+#table-8
+{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: aquamarine;
+}
+
+#table-8 caption
+{
+    background-color: orange;
+    font-size: 32px;
+    height:50px;
+
+    /* line-height:; gibt an, wie zentriert ein text innerhalb seines elternelementes ist (oder den abstand zwischen paragraphen zeilen */
+    line-height: 50px;
+}
+
+#table-8 caption .bottom
+{
+    /* mit caption-side:; können wir definieren, auf welcher seite der tabelle sich unsere caption befindet */
+    caption-side: bottom;
+}
+
+#table-8 th
+{
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: left;
+    /* mit vertical-align:; können wir definieren, wo sich unser text auf der vertikalen achse des datenfeldes befindet (top, middle, bottom) */
+    vertical-align: bottom;
+    padding-left: 10px;
+}
+
+#table-8 td
+{
+    padding: 10px;
+}
+#table-8 tr:nth-child(even)
+{
+    background: darkgray
+}
+#table-8 tr:nth-child(odd)
+{
+    background: grey;
+}
+#table-8 th,
+#table-8 td
+{
+    border: 2px solid lime;
+}
+#table-8 tr:hover
+{
+    background: black;
+    color: white;
+}
+#table-8 td:hover
+{
+    background: tomato;
+    color: white;
+    cursor: pointer;
+}
+#table-8 .first-name
+{
+    width: 300px;
+}
+
+#table-9
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#table-9 tbody
+{
+    background-color: tomato;
+}
+
+#table-9 thead th[scope=col],
+#table-9 tbody th[scope=row]
+{
+    background-color: blue;
+    color: white;
+}
+
+#table-9 tfoot th
+{
+    background-color: yellow;
+    font-size: 24px;
+}
+
+#table-10
+{
+    display: table;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: 1px solid black;
+}
+
+/* <tr/> */
+
+#table-10 .table-header,
+#table-10 .table-row
+{
+    display: table-row;
+}
+
+#table-10 .table-header > .table-data,
+#table-10 .table-row > .table-data
+{
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#table-10 .table-header > .table-data
+{
+    font-weight: bold;
+    text-align: center;
+}

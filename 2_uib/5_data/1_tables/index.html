@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Tabellen</h1>
+
+    <h2>Default Table</h2>
+
+    <p>Eine Tabelle erstellen wir mit dem element "table", odrt können wir dann "tr" für eine neue zeile (table row) und dort drin dann "td" (table data) fuer einen neue spalte nutzen.</p>
+
+    <b>Tabelle 1</b>
+
+    <!-- table = das tablellen element -->
+    <table id="table-1">
+        <!-- table row = eine tabellen zeile -->
+        <tr>
+            <!-- table data = eine tabellenspalte -->
+            <td>Erste datenspalte</td>
+            <td>Zweite datenspalte</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h2>Tabellen Header</h2>
+
+    <p>Um einer tabelle eine kopfzeile zu geben, nutzen wir das "th" element, innerhalb einer eigenen zeile (tr) </p>
+
+    <b>Tabelle 2</b>
+    <table id="table-2">
+        <tr>
+            <!-- table header = kopfzeile der tabelle -->
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <th>Max</th>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <!-- links  rechts -->
+            <th>James</th><td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Fluide Tabellen & Tabellen Titel</h2>
+
+    <p>Wenn wir die größe von spalten änder ist der inhalt der "th", also des table headers zentriert.</p>
+
+    <p>mit "caption" können wir der tabelle einen titel geben, das caption element sollte immer das erste kind von "table" sein, also über "tr".</p>
+
+    <b>Tabelle 3</b>
+    <table id="table-3">
+        <!-- caption = tabellen titel -->
+        <caption>
+            <h1>Name Table</h1>
+        </caption>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen zellen padding</h2>
+
+    <p>Wenn wir padding haben wollen, müssen wir die table data und table header elemente ansprechen.</p>
+
+    <b>Tabelle 4</b>
+    <table id="table-4">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen zellen abstand</h2>
+
+    <p>Mit dem befehl border-spacing:; können wir angeben, wie größe der abstand zwischen den tablellen zellen ist. </p>
+
+    <b>Tabelle 5</b>
+    <table id="table-5">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen spalten zusammenfügen (col-span)</h2>
+
+    <p>mit dem html attribut colspan="" können wir definieren, wie viele spalten ein datenfeld (td/th) breit ist.</p>
+
+    <b>Tabelle 6</b>
+
+    <table id="table-6">
+        <tr>
+            <th colspan="2">First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Henry</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Theodore</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen zeilen zusammenfügen (row-span)</h2>
+
+    <p>Um zeilen zu kombinieren, können wir das attribut row-span="" benutzen.</p>
+
+    <b>Tabelle 7</b>
+
+    <table id="table-7">
+        <tr>
+            <th rowspan="2">First Name</th>
+            <td>Max</td>
+            <td>James</td>
+        </tr>
+        <tr>
+            <td>Henry</td>
+            <td>Theodore</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>Mustermann</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+    
+    <h2>Tabellen Stylen</h2>
+
+    <b>Tabelle 8</b>
+
+    <table id="table-8">
+        <caption>Name Table</caption>
+        <caption class="bottom">Name Table</caption>
+        <tr>
+            <th class="first-name">First Name</th>
+            <th class="last-name">Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+        <tr>
+            <td>Henry</td>
+            <td>Jones Jr.</td>
+        </tr>
+        <tr>
+            <td>Hannibal</td>
+            <td>Smith</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen Sektionen</h2>
+
+    <p>Mit den sektionen table-header un table-body können wir inhalte in tabellen besser sortieren</p>
+
+    <p>mit scope="" geben wir an, in wie fern ein table-header mit dem folgenden inhalt verknüpft ist.</p>
+
+    <b>Tabelle 9</b>
+
+    <table id="table-9">
+        <!-- thead = table header -->
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th scope="col">Amount</th>
+            </tr>
+        </thead>
+        <!-- tbody = table body -->
+        <tbody>
+            <tr>
+                <th scope="row">Apple</th>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th scope="row">Banana</th>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th scope="row">Straberry</th>
+                <td>5</td>
+            </tr>
+        </tbody>
+        <!-- tfoot = table footer -->
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>10</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <h2>Semantische Tabellen in CSS</h2>
+
+    <div id="table-10" class="table-container">
+        <header class="table-header">
+            <div class="table-data">First Name</div>
+            <div class="table-data">Last Name</div>
+            <div class="table-data">Phone Number</div>
+        </header>
+        <section class="table-row">
+            <div class="table-data">Max</div>
+            <div class="table-data">Mustermann</div>
+            <div class="table-data">12345-6789</div>
+        </section>
+        <section class="table-row">
+            <div class="table-data">James</div>
+            <div class="table-data">Bond</div>
+            <div class="table-data">XXXX-XXXX</div>
+        </section>
+    </div>
+</body>
+</html>
