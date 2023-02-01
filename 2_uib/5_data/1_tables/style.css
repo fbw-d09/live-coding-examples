@@ -134,6 +134,7 @@ td
 {
     display: table-row;
 }
+/* <td/> */
 #table-10 .table-header > .table-data,
 #table-10 .table-row > .table-data
 {
