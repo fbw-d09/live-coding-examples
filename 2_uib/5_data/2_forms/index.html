@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body
+        {
+            padding: 10px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Formular elemente</h1>
+
+    <p>
+        Ein formular hat 2 essentielle attribute, action="", gibt den pfad zu unserer validierung/auswertung an. Außerdem gibt es method="", die methode, mit der wir die daten bearbeiten, also GET(Daten anfragen) und POST(daten senden.)
+    </p>
+
+    <p>Bei wichtigen, nicht oeffentlichen daten, wird IMMER POST benutzt, da man dann, im browser den datenverkehr nicht nachvollziehen kann.</p>
+
+    <p>Das element "form" wird benoetigt, um ein formular zu erstellen.</p>
+
+    <p>Ein formular enthaelt immer die zusammengehoerenden informationen, die die input felder enthalten sollten.</p>
+
+    <b>Formular 1:</b>
+
+    <form action="#" method="GET">
+    <!-- ein "label"  element ist fuer beschribungen zustaendig, fuer den benutzer, damit er sieht, was er in das input feld engeben soll-->
+    <!-- das label element ist mit dem attribut "for"  zum jeweiligen input element verlinkt.-->
+    <label for="username">Username</label>
+
+    <!-- das input element beinhaltet mehrere attribute, darunter unter anderem "type", as angibt welche art von inhalt das input element annimmt, "name", den namen des inhaltes,der an den server geschickt wird, und "value", den wert der an den server geschickt wird. -->
+    <input type="text" name="username" id="username-input" placeholder="Bitter username eingeben">
+
+    <br>
+
+    <!-- ein gutes beispiel fuer einen anderen input-type ist "password", dieser blendet den eingegebenen wert aus. -->
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password-input">
+
+    <br>
+    <br>
+
+    <!-- ein "button" ist ein klickbares element, das eine aktion ausfuehrt. -->
+    <!-- es gibt 2 verschiedene arten von buttons, einmal des element "button", und das input element des types submit. -->
+    <input type="submit" value="Abschicken1111">
+</form>
+
+<h2>Google Formular</h2>
+
+<b>Formular 2:</b>
+
+<form action="https://google.com/search" method="GET" target="_blank">
+    <input type="text" name="q">
+
+    <input type="submit" value="Suchen">
+</form>
+
+<h2>Input typen</h2>
+
+<b>Formular 3:</b>
+
+<form action="">
+    <h3>Text</h3>
+
+    <label for="inputtext">Text</label>
+    <input 
+        type="text"
+        name="inputtext"
+        id="text-input"
+        placeholder="Hier bitte etwas eingeben"
+        maxlength="10"
+    >
+
+    <p>das attribut placeholder="" definiert, was angezeigt werden soll, wenn das input feld leer ist.</p>
+
+    <p>das attribut maxlength="" definiert, wie viele zeichen in das input feld geschrieben werden duerfen.</p>
+
+    <h3>Password</h3>
+
+    <label for="inputpassword">Password</label>
+
+    <input 
+        type="password"
+        name="inputpassword"
+        id="password-input"
+        placeholder="password eingeben"
+        maxlength="16"
+        minlength="8"
+    >
+
+    <p>Das input feld des types "password" versteckt den geschrieben inhalt, so das er auf webseite im browser nicht sichtbar ist.</p>
+
+    <h3>E-mail</h3>
+
+    <label for="inputemail">E-mail</label>
+
+    <input 
+        type="email"
+        name="inputemail"
+        id="email-input"
+        placeholder="E-mail Adresse eingeben"
+    >
+
+    <p>Ein e-mail feld sollte mit den e-mail adressen regeln validieren, also von dem @ mindestens 1 buchstabe, ein @ symbol, eine domain, und eine oder mehr top-level domains.</p>
+
+    <br>
+
+    <h3>Number</h3>
+
+    <label for="inputnumber">Number</label>
+    <input 
+        type="number"
+        name="inputnumber"
+        id="number-input"
+        max="25"
+        min="8"
+        value="10"
+    >
+
+    <p>mit min und max koennen wir die kleinste und groeste auswaehlbare zahl angeben.</p>
+
+    <h3>Range</h3>
+
+    <label for="inputrange">Range</label>
+    <input 
+        type="range"
+        name="inputrange"
+        id="range-input"
+        value="75"
+        step="25"
+    >
+
+    <p>mit value="" koennen wir angeben welchen wert der range slider zwischen 0 und 100 haben soll, wenn er geladen wird.</p>
+
+    <p>mit step="" koennen wir die schritte angeben, in denen der range-slider bewegt werden kann.</p>
+
+    <h3>Textarea</h3>
+
+    <label for="inputtextarea">Textarea</label>
+    <textarea 
+        name="inputtextarea" 
+        id="textarea-input" 
+        cols="30" 
+        rows="15"
+        placeholder="Hier koennten wir seeeehr vile text eingeben....."
+    ></textarea>
+
+    <p>ein textarea element unterscheidet sich von input-elementen, da man hier den gewuenschten text direkt zwischen die element tags platziert, nicht als value.</p>
+
+    <p>mit col="" geben wir an, wie breit (in buchstaben) unser textarea element sein soll, und mit rows="" geben wir an (in textzeilen) wie hoch das element sein soll.</p>
+
+    <h3>Buttons</h3>
+
+    <p>Ein submit button, ist dafuer da, ein formular abzuschicken.</p>
+    <input type="submit" value="Abschicken">
+
+    <p>ein reset button, ist dafuer da, ein formular zuruckzusetzen.</p>
+    <input type="reset" value="Reset">
+</form>
+
+<h3>Nicht formular-buttons</h3>
+
+<p>Ein button des types "button" ist dafuer da, events in javascript auszufuehern, dafuer wird kein formular benoetigt.</p>
+
+<input type="button" value="Click" onclick="alert('Hallo')">
+
+<br>
+
+<p>Der button ueber diesem text, ist ein aequivalent zu dem folfenden button, nur das man hier den text direkt zwischen die element tags schreibt - und dieser "button" des types "button" meist in javascript ohne formular benutzt wird.</p>
+
+<button onclick="alert('ich bin da!');">Click</button>
+
+<h2>Checkbox</h2>
+
+<p>Wir koennen mehrere checkboxen zur auswahl stellen, der benutzer hat dann die wahl, welche er anklicken moechte.</p>
+
+<b>Formular 4:</b>
+
+<form action="">
+    <input 
+        type="checkbox"
+        name="inputcheckbox1"
+        id="checkbox-input1"
+        value="apfel"
+    >
+    <label for="inputcheckbox1">Apfel</label>
+
+    <br>
+
+    <input 
+        type="checkbox"
+        name="inputcheckbox2"
+        id="checkbox-input2"
+        value="zitrone"
+    >
+    <label for="inputcheckbox2">Zitrone</label>
+
+    <br>
+
+    <input
+        type="checkbox"
+        name="inputcheckbox3"
+        id="checkbox-input3"
+        value="erdbeere"
+        checked
+    >
+    <label for="inputcheckbox3">Erdbeere</label>
+
+    <br>
+    <br>
+    <input type="submit" value="Abschicken">
+</form>
+
+<h2>Radio</h2>
+
+<p>Bei radio buttons koennen wir immer nur ein element pro gruppe auswaehlen, eine gruppe traegt dazu immer den selben wert beim attribut name="".</p>
+
+<p>mit dem attribut checked="" koennen wir definieren welcher radio button von anfang an ausgewaehlt ist, dies funktioniert auch bei checkboxen.</p>
+
+<b>Formular 5:</b>
+
+<form action="">
+    <input 
+        type="radio"
+        name="color"
+        id="color-input-1"
+        value="blue"
+    >
+    <label for="color">Blue Car</label>
+
+    <br>
+
+    <input 
+        type="radio"
+        name="color"
+        id="color-input-2"
+        value="yellow"
+    >
+    <label for="color">Yellow Car</label>
+
+    <br>
+
+    <input 
+        type="radio"
+        name="color"
+        id="color-input-3"
+        value="red"
+    >
+    <label for="color">Red Car</label>
+
+    <br>
+    <input type="submit" value="Send">
+</form>
+
+    <h2>Select</h2>
+
+    <p>Eine select box, hat mehrere optionen aus denen wir etwas auswaehlen koennen, die einzelnen auswaehlbare werte sind mit dem "option" element erstellbar.</p>
+
+    <b>Formular 6:</b>
+
+    <form action="">
+        <label for="valuelist">Color list</label>
+        <select 
+            name="valuelist" 
+            id="value-list-input"
+        >
+            <option value="yellow">Yellow color</option>
+            <option value="blue">Blue color</option>
+            <option value="orange">Orange color</option>
+        </select>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <h2>Datalist</h2>
+
+    <p>Um eine autocomplete-datalist zu erstellen, brachen wir ein input-element mit einem list attribut, das die selbe id hat, wie unsere datalist.</p>
+
+    <p>Wir koennen sowohl die value, wie auch den angezeigten wert eingeben um 2 zeilen text in die auswahl zu bringen.</p>
+
+    <b>Formular 7:</b>
+
+    <form action="">
+
+        <label for="inputlist">List of Fruits</label>
+
+        <input list="fruitlist" id="inputlist" name="inputlist">
+
+        <datalist id="fruitlist">
+            <option value="banana">Banana111</option>
+            <option value="orange">Orange</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="lime"></option>
+            <option value="coconut"></option>
+            <option value="peach"></option>
+        </datalist>
+
+        <br>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <h2>Color</h2>
+
+    <p>Bei dem color-field koennen wir als value einen hex-code angeben.</p>
+
+    <b>Formular 8:</b>
+
+    <form action="">
+        <label for="colorpicker">Color</label>
+
+        <input 
+            type="color"
+            name="colorpicker"
+            id="colorpicker"
+            value="#3cafe2"
+        >
+    </form>
+
+    <h2>Date</h2>
+
+    <b>Formular 9:</b>
+
+    <form action="">
+        <label for="datepicker">Date</label>
+        <input type="date" name="dtepicker" id="datepicker">
+    </form>
+
+    <h2>Formularsttributen</h2>
+
+    <form action="">
+        <p>ein feld mit dem attribut "readonly" kann nur gelesen werdenm kopiert oder selektiert werden, der inhalt kann aber nicht veraendert werden.</p>
+
+        <label for="inputreadonly">Nur lesbar: </label>
+        <input 
+            type="text"
+            id="inputreadonly"
+            value="Hallo Welt"
+            readonly
+        >
+
+        <br>
+
+        <p>ein feld mit dem attribut "required" muss ausgefuellt werden, damit das formular abgeschickt werden kann.</p>
+
+        <label for="inputrequired"> Noetig zum absenden: </label>
+        <input 
+            type="text"
+            id="inputrequired"
+            required
+        >
+
+        <br>
+
+        <p>ein feld mit dem attribut "disabled" kann selektiert werden, gelesen werden, aber er kann keine weitere interaktion durchgefuehrt werden, es erscheint grau, weil es "deaktiviert" wurde.</p>
+
+        <label for="inputdisabled">deaktiviert: </label>
+        <input 
+            type="text"
+            id="inputdisabled"
+            name="inputdisabled"
+            value="Hallo Welt"
+            disabled
+        >
+
+        <br>
+
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+</html>
