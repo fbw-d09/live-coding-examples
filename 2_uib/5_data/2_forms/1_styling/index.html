@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Formulare</h1>
+
+    <form action="">
+        <input 
+            type="text"
+            name="textinput"
+            id="textinput"
+        >
+
+        <br>
+
+        <input 
+            type="password" 
+            name="passwordinput" 
+            id="passwordinput"
+        >
+
+        <br>
+
+        <input 
+            type="text"
+            name="disabledinput"
+            id="disabledinput"
+            value="Hallo Welt!"
+            disabled
+        >
+
+        <br>
+        
+        <input 
+            type="text"
+            name="readonlyinput"
+            id="readonlyinput"
+            value="Hallo Welt!"
+            readonly
+        >
+    </form>
+
+    <h2>Checkboxen stylen</h2>
+
+    <form action="">
+
+        <h3>Umuts Weg (noederner und reusable)</h3>
+
+        <p>durch die nutzung von appearance: none; setzen wir die checkbox styles zuruck, und koennen sie dann komplett neu stylen, wir benotigen auch code um den haken und den checked state neu zu erschaffen.</p>
+
+        <input 
+            type="checkbox"
+            name="checkbox"
+            id="normalecheckbox">
+
+        <br>
+
+        <h3>Umuts Weg mit accent-color: ;</h3>
+
+        <p>mit der option accent-color:; koennen wir zumindes ide hintergrundfarbe der checkbox aendern.</p>
+        <br>
+
+        <h3>Ricks Weg</h3>
+
+        <p>
+            Wir erstellen ein label, in das wir eine checkbox packen, und ein span, die die unsichtbare checkbox, triggern wir den :checked state, und koennen diesen kontrollieren.
+        </p>
+        <label 
+            class="checkbox" 
+            for="checkboxCustomField">
+
+            <input 
+                type="checkbox"
+                name="checkboxcustom"
+                id="checkboxCustomField"
+                value="ich funktioniere...."
+            >
+
+            <span class="checkmark"></span>
+        </label>
+
+        <br>
+        <br>
+        <input type="submit" value="Send">
+
+    </form>
+</body>
+</html>

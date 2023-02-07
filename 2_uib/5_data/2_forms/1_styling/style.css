@@ -1,0 +1,105 @@
+body
+{
+    padding: 10px;
+}
+
+input[type=text],
+input[type=password]
+{
+    margin-top: 10px;
+    margin-left: 10px;
+
+    /* border: 2px solid blue; */
+    /* outline ist eine art border, die keinen platz um das element herrum weg nimmt. */
+    outline:2px solid blue;
+    border: 2px solid red;
+}
+
+/* mit der pseudo-klasse :focus koennen wir definieren, wenn wir eie form-element selektiert (also zb angeklickt) haben. */
+input[type=password]:focus
+{
+    background-color: lime;
+}
+
+/* das pseudoattribut disabled spricht form elemente an, die das attribut "disabled" haben. */
+input[type=text]:disabled
+{
+    background-color: darkgray;
+}
+
+input[disabled]
+{
+    color: red;
+}
+
+/* das pseudoattribut read-only spricht form elemente an, die nur lesbar sind, also das attribut "readonly" haben. */
+input[type=text]:read-only
+{
+    background-color: cyan;
+}
+
+/* der obere selektor gilt auch fuer den disabled state, weil ein disabled element auch read-only (also nur lesbar) ist. */
+input[readonly]
+{
+    color: purple;
+}
+
+#normalecheckbox
+{
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    outline: 1px solid black;
+    position: relative;
+    border-radius: 5px;
+}
+
+#normalecheckbox:checked
+{
+    background-color: darkgreen;
+}
+
+#normalecheckbox:checked::before
+{
+    content: "✔";
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 14px);
+    font-size: 32px;
+    color: white;
+}
+
+
+.checkbox
+{
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.checkbox input
+{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox .checkmark
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: tomato;
+    border-radius: 50%;
+    border: 2px solid lime;
+}
+
+.checkbox input:checked ~ .checkmark
+{
+    background-color: lime;
+}
