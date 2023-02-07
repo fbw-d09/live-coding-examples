@@ -59,7 +59,7 @@ input[readonly]
     content: "✔";
     position: absolute;
     top: calc(50% - 16px);
-    left: calc(50% - 14px);
+    left: calc(50% - 12px);
     font-size: 32px;
     color: white;
 }
