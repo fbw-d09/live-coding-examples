@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Shapes</h1>
+
+    <h2>Maskierungen</h2>
+
+    <p>
+        Um masken zu nutzen, müssen wir (aktuell) einen präprozessor anwenden, diesen können wir browserspezifisch ansprechen:
+    </p>
+
+    <ul>
+        <li>-webkit- = Chrome, Safari und Opera</li>
+        <li>-moz- = Mozilla Firefox</li>
+        <li>-o- = Opera (vor 15)</li>
+        <li>-ms- = Edge/Internet Explorer ab 10</li>
+    </ul>
+
+    <p>also zb. -webkit-mask-image: ;</p>
+
+    <p>
+        Wir können mit dem befehl mask-image: ; ein bild definieren, dessen weisse und schwarze (graustufen) farbe als maske dienne. Das Dunkle wird dabei sichtbar, und das helle transparent. WIchtig ist, das bild sollte nur aus 2 farben bestehen.
+    </p>
+
+    <p>
+        Maskenbilder nennen sich im normalfall "alpha maps" oder "image masks", diese google suchbefehle, sollten ein paar ergebnisse bringen.
+    </p>
+
+    <p>
+        mit dem befehl mask-size: ; geben wir die horizontale und vertikale größe der maske an. Um die maske nicht zu strecken oder zu stauchen, sollten wir diese werte, der größe der maske anpassen.
+    </p>
+
+    <p>
+        Wenn wir mask-repeat: ; nutzen, wird nur die sichtbare maske angesprochen, genau wie bei einem image.
+    </p>
+
+    <p>
+        Alle image befehle funktionieren auch mit mask-: ; davor.
+    </p>
+
+    <img src="https://picsum.photos/id/1033/200/200" alt="beispiel" class="mask-1">
+    <img src="https://picsum.photos/id/1038/200/200" alt="beispiel" class="mask-2">
+    <img src="https://picsum.photos/id/1044/200/200" alt="beispiel" class="mask-3">
+    <img src="https://picsum.photos/id/1048/200/200" alt="beispiel" class="mask-4">
+    <img src="https://picsum.photos/id/1028/200/200" alt="beispiel" class="mask-5">
+
+</body>
+</html>

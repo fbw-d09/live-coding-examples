@@ -1,0 +1,45 @@
+img
+{
+    display: block;
+    margin: 10px auto;
+}
+
+body
+{
+    background: tomato;
+}
+
+.mask-1
+{
+    /* der pfad zum maskenbild */
+    -webkit-mask-image: url(https://d33wubrfki0l68.cloudfront.net/d319533ac3d22c3186498254e0caee871796a29e/d7ce9/images/css/masking/image-mask.png);
+    /* maskengröße: horizontal vertikal */
+    -webkit-mask-size:   400px 600px;
+}
+.mask-2
+{
+    -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg);
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-size: 100px;
+}
+.mask-3
+{
+    -webkit-mask-image: url(https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2014/10/mask-image.png);
+    -webkit-mask-size: 150px;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+}
+.mask-4
+{
+    -webkit-mask-image: linear-gradient(
+        transparent, 
+        black
+    );
+}
+.mask-5
+{
+    -webkit-mask-image: radial-gradient(
+        black,
+        transparent
+    );
+}
