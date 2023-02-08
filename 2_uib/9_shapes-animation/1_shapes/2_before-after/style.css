@@ -1,0 +1,122 @@
+div
+{
+    margin: 0 auto 25px;
+}
+
+.caro
+{
+    background: tomato;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-45deg);
+}
+
+.heart
+{
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-45deg);
+    position: relative;
+}
+.heart::before,
+.heart::after
+{
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+}
+.heart::before
+{
+    top: -50px;
+}
+.heart::after
+{
+    left: 50px;
+}
+.heart,
+.heart::before,
+.heart::after
+{
+    background: darkred;
+}
+
+.diamond
+{
+    margin-top: 50px;
+    width: 100px;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid cyan;
+    position: relative;
+}
+.diamond::after
+{
+    content: '';
+    position: absolute;
+    border-top: 150px solid cyan;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    top: 50px;
+    left: -50px;
+}
+
+.letterA
+{
+    width: 60px;
+    height: 90px;
+    border-bottom: 14px solid tomato;
+    transform: scale(0.7);
+    position: relative;
+}
+.letterA::before,
+.letterA::after
+{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 120px;
+    background: tomato;
+    top: 10px;
+}
+.letterA::before
+{
+    transform: skew(-20deg);
+}
+.letterA::after
+{
+    transform: skew(20deg);
+    left: 45px;
+}
+
+.mail
+{
+    width: 100px;
+    height: 65px;
+    background: tomato;
+    position: relative;
+    border-radius: 5px;
+}
+.mail::before,
+.mail::after
+{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-radius: 5px;
+}
+.mail::before
+{
+    border-top: 30px solid white;
+}
+.mail::after
+{
+    border-top: 20px solid tomato;
+}

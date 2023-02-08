@@ -1,0 +1,119 @@
+*
+{
+    box-sizing: border-box;
+}
+
+div
+{
+    margin: 0 auto 25px;
+    background: tomato;
+}
+
+.square
+{
+    width: 200px;
+    height: 100px;
+}
+
+.circle
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.parallelogram
+{
+    width: 200px;
+    height: 100px;
+    transform: skew(-25deg);
+}
+
+.ring
+{
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border-radius: 50%;
+    border: 20px solid tomato;
+}
+
+.trapezoid
+{
+    width: 100px;
+    height: 0;
+    background: transparent;
+    border-bottom: 65px solid tomato;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+}
+
+.corner
+{
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-bottom: 100px solid tomato;
+    border-left: 100px solid transparent;
+    border-right: 0;
+    border-top: 0;
+}
+
+.quad
+{
+    width: 0;
+    height: 0;
+    border-top: 50px solid tomato;
+    border-right: 50px solid lime;
+    border-bottom: 50px solid plum;
+    border-left: 50px solid orange;
+}
+
+.up,
+.down,
+.left,
+.right
+{
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+.up
+{
+    border-top: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 100px solid tomato;
+}
+.down
+{
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 100px solid tomato;
+    border-bottom: 0;
+}
+.left
+{
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-right: 100px solid tomato;
+    border-left: 0;
+}
+.right
+{
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-left: 100px solid tomato;
+    border-right: 0;
+}
+
+.pacman
+{
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 50px solid orange;
+    border-right: 50px solid transparent;
+    border-radius: 50%;
+}
