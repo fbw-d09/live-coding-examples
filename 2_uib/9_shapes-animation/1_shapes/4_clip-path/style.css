@@ -1,0 +1,60 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    padding: 10px;
+}
+
+img
+{
+    display: block;
+    margin: 10px auto;
+}
+
+.circle
+{
+    /*         form   radius */
+    clip-path: circle(100px);
+}
+.circle-2
+{
+    /*                         horizontal vertikal */
+    clip-path: circle(100px at 50px       50px);
+}
+
+.ellipse
+{
+    /*                 horizontal verikal */
+    clip-path: ellipse(100px      50px);
+}
+
+.polygon
+{
+    clip-path: polygon(
+/*      horizonal verikal */
+        50%       0%,
+        0%        100%,
+        100%      100%
+    )
+}
+.polygon-2
+{
+    clip-path: polygon(
+/*      horizonal verikal */
+        50%       0%,
+        0%        50%,
+        50%       50%,
+        100%      30%
+    )
+}
+
+.clippy
+{
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.clippy-2
+{
+    clip-path: polygon(95% 82%, 54% 93%, 28% 69%, 35% 39%, 55% 40%, 45% 19%, 69% 18%, 89% 30%, 98% 54%, 85% 54%, 88% 71%);
+}

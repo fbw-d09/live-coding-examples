@@ -1,0 +1,98 @@
+div
+{
+    background: tomato;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 40px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid blue;
+}
+
+.scale-1
+{
+    /* horizontal und vertikal in einem skalieren */
+    transform: scale(1.5); /* oder: scale: 1.5; */
+}
+.scale-2
+{
+    /*         horizonal, vertikal */
+    transform: scale(1.5, 0.5); /*  scale: 1.5 0.5; */
+}
+.scale-3
+{
+    /* es ist möglich, bei transform, mehrere befehle aneinanderzureihen. */
+    transform: scaleX(2) scaleY(1.2);
+}
+.scale-3:hover
+{
+    transform: scaleX(5) scaleY(5);
+}
+.scale-3 p
+{
+    transform: scaleX(0.5) scaleY(0.8);
+}
+
+.translate-1
+{
+    /*             horizontal, vertikal */
+    transform: translate(50px, 20px); /* translate: 50px 20px; */
+}
+.translate-2
+{
+    transform: translateX(-20%);
+}
+.translate-3
+{
+    transform: 
+        translateY(-20px)
+        scaleX(2.0);
+}
+
+.rotate-1
+{
+    /* bei rotate, können wir die drehung in grad, also degree (deg) angeben. */
+    transform: rotate(175deg); /* rotate: 175deg; */
+}
+.rotate-2
+{
+    /* mit "turn" können wir angeben, in wievielen drehungen sich ein element drehen soll. */
+    transform: rotate(0.25turn);
+}
+.rotate-3
+{
+    transform: 
+        rotate(25deg)
+        scale(0.9)
+        translateY(-20px);
+}
+
+.skew-1
+{
+             /* horizonal, verikal */
+    transform: skew(30deg, 10deg)
+}
+.skew-2
+{
+    transform: skew(-20deg);
+}
+.skew-3
+{
+    transform: 
+        skewX(20deg)
+        scale(1.2)
+        translateY(5px)
+        rotate(20deg);
+}
+
+.test-1
+{
+    transform: rotateY(55deg);
+}
+.perspective-1
+{
+    transform:
+        /* die entfernung der kamera zum element definieren wir mit : perspective();*/
+        perspective(250px)
+        rotateY(55deg);
+}
