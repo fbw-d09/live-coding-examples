@@ -1,0 +1,63 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+ }
+main
+{
+    margin: 100px auto;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+main h1
+{
+    position: absolute;
+    font-size: 32px;
+    top: calc(50% - 40px);
+    left: calc(50% - 32px);
+}
+.box
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transition: 1s;
+}
+.box:nth-of-type(1)
+{
+    top: 0;
+    left: 0;
+    background: steelblue;
+    transform-origin: top left;
+}
+.box:nth-of-type(2)
+{
+    top: 0;
+    right: 0;
+    background: dimgray;
+    transform-origin: top right;
+}
+.box:nth-of-type(3)
+{
+    bottom: 0;
+    right: 0;
+    background: rosybrown;
+    transform-origin: bottom right;
+}
+.box:nth-of-type(4)
+{
+    bottom: 0;
+    left: 0;
+    background: yellow;
+    transform-origin: bottom left;
+}
+main:hover .box:nth-of-type(1),
+main:hover .box:nth-of-type(3)
+{
+    rotate: 90deg;
+}
+main:hover .box:nth-of-type(2),
+main:hover .box:nth-of-type(4)
+{
+    rotate: -90deg;
+}
