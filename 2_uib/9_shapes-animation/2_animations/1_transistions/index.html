@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Animations</h1>
+
+    <h2>Transitions</h2>
+
+    <h3>Eigenschaften</h3>
+
+    <ul>
+        <li>transition-property: ; = Der befehl in css, die wir animieren lassen wollen</li>
+        <li>transition-duration: ; = Die zeit, die die transition in sekunden oder millisekunden benötigt um durchzulaufen</li>
+        <li>transition-timing-function: ; = Die easing funktion, der die animation folgen soll.</li>
+    </ul>
+
+    <div class="box transbox-1"></div>
+
+    <h3>Easing/timing Funktionen</h3>
+
+    <p>
+        Es gibt verschiedene easing-funktionen, die dafür sorgen, das die animation sich verschieden verhält.
+    </p>
+
+    <ul>
+        <li>linear: Die animation bewegt sich konstakt von anfang zum ende</li>
+        <li>ease: Die animation startet langsam und wird zur mitte hin schneller und wird kurz vorm ende wieder langsamer</li>
+        <li>ease-in: Die animation ist ähnlich zu ease</li>
+        <li>ease-out: Umgekehrt zu ease-in, startet die animation schnell, und wird dann langsamer</li>
+        <li>ease-in-out: Die animation startet schnell, geht dann zur mitte hin langsamer, und wird am ende wieder schneller</li>
+    </ul>
+
+    <div class="container">
+        <div class="box box-linear">Linear</div>
+        <div class="box box-ease">Ease</div>
+        <div class="box box-ease-in">Ease-In</div>
+        <div class="box box-ease-out">Ease-Out</div>
+        <div class="box box-ease-in-out">Ease-In-Out</div>
+    </div>
+
+    <h3>Delay</h3>
+
+    <p>
+        mit dem befehl transition-delay: ; können wir eine verzögerung erstellen, nach der die animation gestartet wird. Wie auch bei transition-duration: ; können wir diese zeit in sekunden und millisekunden definieren.
+    </p>
+
+    <div class="container">
+        <div class="box box-instant"></div>
+        <div class="box box-delay-1"></div>
+        <div class="box box-delay-2"></div>
+    </div>
+
+    <h3>Transition mixing</h3>
+
+    <p>Wenn wir mehrere eigenschaften animieren wollen, können wir sie per komma trennen. Die die animationslänge können wir pro eigenschaft mit dem komma trennen.</p>
+
+    <p>mit transition-property: all; animieren wir alle eigenschaft, die verändert wurden.</p>
+
+    <div class="container">
+        <div class="box box-mix-1"></div>
+        <div class="box box-mix-2">Hallo</div>
+        <div class="box box-all"></div>
+    </div>
+
+    <h3>Shortcode</h3>
+
+    <div class="box box-short-1"></div>
+    <div class="box box-short-multi"></div>
+
+</body>
+</html>

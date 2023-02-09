@@ -1,0 +1,134 @@
+body
+{
+    padding: 10px;
+}
+
+.box
+{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    margin: 0 auto 25px;
+}
+.container:hover .box
+{
+    width: 300px;
+    /* height: 200px; */
+}
+
+.transbox-1
+{
+    /* transition-property: all; ist der default wert, der alle optionen transistieren soll. */
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.box-linear
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+.box-ease
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+.box-ease-in
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+}
+.box-ease-out
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+.box-ease-in-out
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.box-instant
+{
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.box-delay-1
+{
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+}
+.box-delay-2
+{
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+}
+
+.container:hover .box-mix-1,
+.container:hover .box-mix-2,
+.container:hover .box-all
+{
+    background: lime;
+    color: white;
+}
+
+.box-mix-1
+{
+    transition-property: width, background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.box-mix-2
+{
+    transition-property: width, background, color;
+    transition-duration: 1s,    5s,         2s;
+    transition-timing-function: linear;
+}
+.box-all
+{
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.box-short-1:hover
+{
+    background: lime;
+}
+.box-short-1
+{
+    /*          property duration function delay*/
+    transition: all      1s       linear   1s;
+}
+
+/* 
+    0s          1s          2s          3s
+    width------|
+                background-|
+                            b-r----|
+*/
+.box-short-multi
+{
+    transition:
+        width 1s linear,
+        background 1s ease-in 1s,
+        border-radius 0.5s linear 2s;
+}
+.box-short-multi:hover
+{
+    width: 150px;
+    background: lime;
+    border-radius: 50%;
+}
