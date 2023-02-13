@@ -1,0 +1,13 @@
+@mixin box {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+%box-shared {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  display: inline-block;
+}

@@ -1,0 +1,74 @@
+@use "sass:color";
+
+$primary-color: #0CB6EB;
+$secondary-color: #20232a;
+$text-color: #fff;
+$mobile-width: 461px;
+$laptop-width: 796px;
+
+@mixin nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: calc(0.2rem + 1vw);
+  a {
+    font-size: calc(1rem + 0.5vw);
+    text-decoration: none;
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 0.1em 0.7em;
+    border-radius: 0.1em;
+    transition: background-color 400ms ease-out;
+  }
+  a:hover {
+    background-color: color.scale($primary-color, $lightness: -30%);
+  }
+}
+
+@mixin headers {
+  text-align: center;
+  color: $primary-color;
+}
+
+@mixin cards {
+  padding: 1.2em;
+  min-height: 340px;
+}
+
+@mixin cards-light($rounded: true) {
+  background-color: color.invert($secondary-color);
+  color: color.invert($text-color);
+  max-width: 100%;
+  transition: transform 250ms ease-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @if $rounded {
+    border-radius: 0.5em;
+  }
+}
+
+@mixin footer-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 0.2em;
+  a {
+      color: $text-color;
+      padding: 0.2em 0.5em;
+      transition: color 400ms ease-out;
+  }
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+@mixin card-btn ($size: 0) {
+  display: inline-block;
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 0.3em 1.2em;
+  text-decoration: none;
+}

@@ -1,0 +1,119 @@
+@use "./foundations/" as *;
+@use "sass:color";
+
+:root {
+  @include soft-reset;
+}
+
+body {
+  background-color: $secondary-color;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-color;
+}
+
+.container {
+  min-width: $mobile-width;
+  max-width: 100%;
+  margin: 0 auto;
+  p {
+    max-width: $mobile-width;
+    margin: 1em auto;
+  }
+  @media(min-width: $laptop-width) {
+    min-width: $laptop-width;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 0.5em;
+  img {
+    width: 4em;
+  }
+
+  ul {
+    @include nav-list;
+  }
+}
+
+section.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-content: center;
+  margin: 1em auto;
+  border-bottom: 7px solid $primary-color;
+  max-width: 1120px;
+  h1 {
+    @include headers;
+  }
+  p {
+    &:first-of-type {
+      font-weight: bold;
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  @media(min-width: $laptop-width) {
+    gap: 2em;
+    padding: 1em;
+    .hero-image, .hero-content {
+      display: inline-block;
+    }
+  }
+}
+
+section.courses {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: $secondary-color;
+  h3 {
+    @include headers;
+  }
+
+  .card {
+    @include cards;
+    &:nth-of-type(even) {
+      background-color: color.invert($secondary-color);
+      color: color.invert($text-color);
+      max-width: 100%;
+    }
+    @media(min-width: $laptop-width) {
+      @include cards-light;
+    }
+  }
+  .card-body {
+    max-width: $mobile-width;
+    margin: 0 auto;
+  }
+  .card-btn {
+    @include card-btn;
+    margin-top: 1em;
+  }
+
+  @media(min-width: $laptop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 0.5em 1.5em;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5em;
+  ul {
+    @include footer-list;
+  }
+}

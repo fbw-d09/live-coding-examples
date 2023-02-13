@@ -1,0 +1,164 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #20232a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.container {
+  min-width: 461px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container p {
+  max-width: 461px;
+  margin: 1em auto;
+}
+@media (min-width: 796px) {
+  .container {
+    min-width: 796px;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 0.5em;
+}
+nav img {
+  width: 4em;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: calc(0.2rem + 1vw);
+}
+nav ul a {
+  font-size: calc(1rem + 0.5vw);
+  text-decoration: none;
+  background-color: #0CB6EB;
+  color: #fff;
+  padding: 0.1em 0.7em;
+  border-radius: 0.1em;
+  transition: background-color 400ms ease-out;
+}
+nav ul a:hover {
+  background-color: #087fa5;
+}
+
+section.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-content: center;
+  margin: 1em auto;
+  border-bottom: 7px solid #0CB6EB;
+  max-width: 1120px;
+}
+section.hero h1 {
+  text-align: center;
+  color: #0CB6EB;
+}
+section.hero p:first-of-type {
+  font-weight: bold;
+}
+section.hero img {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+@media (min-width: 796px) {
+  section.hero {
+    gap: 2em;
+    padding: 1em;
+  }
+  section.hero .hero-image, section.hero .hero-content {
+    display: inline-block;
+  }
+}
+
+section.courses {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #20232a;
+}
+section.courses h3 {
+  text-align: center;
+  color: #0CB6EB;
+}
+section.courses .card {
+  padding: 1.2em;
+  min-height: 340px;
+}
+section.courses .card:nth-of-type(even) {
+  background-color: #dfdcd5;
+  color: black;
+  max-width: 100%;
+}
+@media (min-width: 796px) {
+  section.courses .card {
+    background-color: #dfdcd5;
+    color: black;
+    max-width: 100%;
+    transition: transform 250ms ease-out;
+    border-radius: 0.5em;
+  }
+  section.courses .card:hover {
+    transform: scale(1.1);
+  }
+}
+section.courses .card-body {
+  max-width: 461px;
+  margin: 0 auto;
+}
+section.courses .card-btn {
+  display: inline-block;
+  background-color: #0CB6EB;
+  color: #20232a;
+  padding: 0.3em 1.2em;
+  text-decoration: none;
+  margin-top: 1em;
+}
+@media (min-width: 796px) {
+  section.courses {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 0.5em 1.5em;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5em;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 0.2em;
+}
+footer ul a {
+  color: #fff;
+  padding: 0.2em 0.5em;
+  transition: color 400ms ease-out;
+}
+footer ul a:hover {
+  color: #0CB6EB;
+}
+
+/*# sourceMappingURL=style.css.map */

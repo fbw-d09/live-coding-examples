@@ -1,0 +1,46 @@
+@use "../foundations/" as *;
+
+
+:root {
+  --accent-color: gold;
+  @include soft-reset;
+}
+
+.box1 {
+  @include box;
+  background-color: red;
+}
+.box2 {
+  @include box;
+  background-color: blue;
+}
+.box3 {
+  @include box;
+  background-color: black;
+}
+
+.box-1 {
+  @extend %box-shared;
+  background-color: green;
+}
+.box-2 {
+  @extend %box-shared;
+  background-color: purple;
+}
+.box-3 {
+  @extend %box-shared;
+  background-color: orange;
+}
+
+.btn {
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: $primary-color;
+  color: var(--accent-color);
+  margin-top: 2em;
+  padding: 0.25em 1em;
+}
+
+.btn-sass {
+  @include btn-link(1.4, $rounded: true);
+}

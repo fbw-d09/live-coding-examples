@@ -1,0 +1,15 @@
+@use "./variables";
+
+@mixin btn-link($size, $rounded: false) {
+  margin-top: 2em;
+  padding: 0.25em 1em;
+  text-transform: capitalize;
+  text-decoration: none;
+  background-color: variables.$primary-color;
+  color: variables.$secondary-color;
+  font-size: $size * 1rem;
+
+  @if $rounded {
+    border-radius: 5px;
+  }
+}
