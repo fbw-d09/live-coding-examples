@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 1. Browser normalisieren -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- 2. externe CSS dateien einladen -->
+    <!-- Hier ist platz für andere CSS dateien... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- 3. Unsere eigenen CSS Dateien einladen -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Font-icons mit FontAwesome</h1>
+
+    <h2>Font Awesome</h2>
+
+    <a href="https://fontawesome.com/v5/search">font-awesome Font-icons</a>
+
+    <h3>Verwendung</h3>
+
+    <p>
+        Um ein icon aus font-awesome einzuladen, müssen wir, nachdem wir font-awesome zu unserem projekt hinzugefügt haben, müssen wir ein "i" element erstellen, mit 2 klassen, die erste davon ist die font-awesome bibliothek, in der das icon hinterlegt ist (fab, fa, fas)
+    </p>
+
+    <p>
+        ... wir gehen normalerweise einfach auf die font-awesome webseite, und kopieren uns den benötigten code.
+    </p>
+
+    <i class="fab fa-apple"></i>
+    <br>
+    <i class="fas fa-mobile"></i>
+    <br>
+
+    <h3>Größe</h3>
+
+    <p>
+        Mit einer weiteren klasse, fa_ gefolgt von einigen größeneinheiten, jönnen wir die icons direkt vergrößern oder verkleiner.
+    </p>
+
+    <ul>
+        <li><i class="fab fa-apple fa-xs"></i></li>
+        <li><i class="fab fa-apple fa-sm"></i></li>
+        <li><i class="fab fa-apple"></i></li>
+        <li><i class="fab fa-apple fa-lg"></i></li>
+        <li><i class="fab fa-apple fa-2x"></i></li>
+        <li><i class="fab fa-apple fa-3x"></i></li>
+        <li><i class="fab fa-apple fa-4x"></i></li>
+        <li><i class="fab fa-apple fa-5x"></i></li>
+        <li><i class="fab fa-apple fa-10x"></i></li>
+    </ul>
+
+    <h3>Icons sind schrift</h3>
+
+    <p>
+        Wir können mit klassen in css arbeiten und fonticons genauso benutzen wie schriften.
+    </p>
+
+    <div class="box">
+        <i class="fas fa-dizzy"></i>
+        <i class="fas fa-cogs"></i>
+        <i class="fas fa-camera"></i>Hallo Welt
+    </div>
+
+    <h3>Icons animieren</h3>
+
+    <p>
+        mit der klasse .fa-pulse und .fa-spin können wir icons auch rotieren lassen.
+    </p>
+
+    <i class="fab fa-linkedin fa-pulse fa-6x"></i>
+    <i class="fas fa-bus fa-pulse fa-6x"></i>
+    <i class="fas fa-dizzy fa-pulse fa-6x"></i>
+    <i class="fas fa-dizzy fa-spin fa-6x"></i>
+
+    <h3>Icons drehen</h3>
+
+    <p>
+        mit .fa-rotate können wir die icons von vorneherein ein wenig drehen.
+    </p>
+
+    <i class="fas fa-bus fa-rotate-90 fa-6x"></i>
+    <i class="fas fa-bus fa-rotate-180 fa-6x"></i>
+    <i class="fas fa-bus fa-rotate-270 fa-6x"></i>
+
+    <h3>Icons spiegeln</h3>
+
+    <p>
+        mit .fa-flip können wir die icons umdrehen/spiegeln, vertikal und horizontal.
+    </p>
+
+    <i class="fab fa-cc-apple-pay fa-6x"></i>
+    <i class="fab fa-cc-apple-pay fa-6x fa-flip-horizontal"></i>
+    <i class="fab fa-cc-apple-pay fa-6x fa-flip-vertical"></i>
+    <i class="fab fa-cc-apple-pay fa-6x fa-flip-both"></i>
+
+    <h3>Icons übereinanderlegen</h3>
+
+    <p>
+        wir können icons auch miteinander verwenden, wenn wir den sogenannten "stack" benutzen.
+    </p>
+
+    <p>mit .fa-stack erstellen wir einen stapel, der alle icons beinhaltet, die wir nutzen wollen</p>
+    <p>innerhalb des stacks können wir die elemente mit .fa-stack-größe in der größe verändern</p>
+
+    <p>
+        auch hier wird das dokument von oben nach unten gelesen, elemente die tiefer im stack sitzen, sind also im vordergrund.
+    </p>
+
+    <span class="fa-stack fa-2x">
+        <i class="fas fa-camera fa-stack-1x"></i>
+        <i class="fas fa-ban fa-stack-2x" style="color: red;"></i>
+    </span>
+
+    <h3>Selbst icons in klassen verwenden</h3>
+
+    <p>Wir können symbole auch selbst einfügen, wenn wir das before einer klasse im content des symbols benutzen, und die inhalte der .fas klasse kopieren.</p>
+
+    <i class="fas eigenes-symbol">Hallo Welt</i>
+
+</body>
+</html>

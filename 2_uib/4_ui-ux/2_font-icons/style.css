@@ -1,0 +1,38 @@
+body
+{
+    padding: 10px;
+}
+
+.box
+{
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.box .fa-dizzy
+{
+    font-size: 32px;
+    color: tomato;
+}
+.box .fa-cogs
+{
+    font-size: 64px;
+    color: plum;
+}
+.box .fa-camera
+{
+    font-size: 2em;
+    color: lime;
+    margin-right: 10px;
+}
+
+.eigenes-symbol
+{
+    font-size: 32px;
+}
+.eigenes-symbol::before
+{
+    /* wenn wir in den content der before pseudo klasse den unicode eines icons setzen, können wir es damit in unsere eigene klasse einfügen */
+    content: "\f805"
+}
