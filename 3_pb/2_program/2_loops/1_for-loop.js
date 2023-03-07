@@ -53,7 +53,7 @@ divider('Ein weiters beispiel');
 // wenn wir im dritten statement das zweite + mit einem gleich, gefolgt von einer zahl ersetzen, können wir schritte überspringen.
 for (let i = 0; i < counter; i+=2)
 {
-    console.log(`Iteration: ${ i + 1}`);    
+    console.log(`Iteration: ${ i + 1}`);  
 }
 
 divider('for loop unterbrechen');
