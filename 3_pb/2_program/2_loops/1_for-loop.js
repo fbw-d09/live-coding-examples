@@ -121,3 +121,12 @@ divider('Unendlicher Loop');
 // {
 //     console.log('Bis zur unendlichkeit und noch viel weiter!', i);
 // }
+
+divider('For loop mit array');
+
+const testArray = [ "Imad", "Hussi", "Hansi", "Benni", "Jana", "Melanie" ];
+
+for(let i = 0; i < testArray.length; i++)
+{
+    console.log(testArray[i], i);
+}
