@@ -37,6 +37,9 @@ if(darfAusführen)
 showMessage();
 
 // eine funktion kann sich auch selbst starten, das nennt man dann eine selbstausführende fuktion, dies können wir erreichen indem wir hinter den code block der funktion klammern setzen.
+
+// etwas mehr info hierzu: https://www.mediaevent.de/javascript/self-executing-functions.html
+
 const selfExecutingFunction = function ()
 {
     console.log("ich habe mich selber ausgeführt!");
