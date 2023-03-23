@@ -24,6 +24,10 @@ const user =
     isAdult(adultAge)
     {
         return this.age >= adultAge;
+    },
+    test: () =>
+    {
+        
     }
 }
 
