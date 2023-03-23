@@ -118,3 +118,42 @@ console.log(city);
 console.log(continent);
 
 console.log();
+
+let consoleName = "PlayStation";
+let consoleBrand = "Sony";
+const consoleYear = 2020;
+
+console.log("Name:", consoleName); // "Playstation"
+console.log("Brand:", consoleBrand); // "Sony"
+console.log("Year:", consoleYear);
+
+const consoleObject =
+{
+    consoleName: "XBox",
+    consoleBrand: "Microsoft"
+};
+
+// Wenn wir unsere deklaration in klammern setzen, können wir die vorhandenen variablen mit den neuen werten aus dem objekt ersetzen:
+({ consoleName, consoleBrand } = consoleObject);
+// consoleName = consoleObject.consoleName;
+// consoleBrand = consoleObject.consoleBrand;
+
+console.log();
+
+console.log("Name:", consoleName); // "XBox"
+console.log("Brand:", consoleBrand); // "Microsoft"
+console.log("Year:", consoleYear);
+
+const newConsoleObject = 
+{
+    consoleName: "Switch",
+    consoleBrand: "Nintendo"
+};
+
+({ consoleName, consoleBrand } = newConsoleObject);
+
+console.log();
+
+console.log("Name:", consoleName); // "Switch"
+console.log("Brand:", consoleBrand); // "Nintendo"
+console.log("Year:", consoleYear);
