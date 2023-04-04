@@ -4,8 +4,6 @@ const validateCreditCard = (num) =>
 {
     const checkNum = num.split("-").join("");
 
-    isNumbersDifferent(checkNum);
-
     return (
         isLastNumberEven(checkNum) + 
         isOnlyNumbers(checkNum) + 
