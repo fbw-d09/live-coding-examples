@@ -17,3 +17,4 @@ console.log(tier.eat("Donut"));
 
 console.log(doggydogdog);
 console.log(doggydogdog.bark());
+dog = new Dog('Herbert', 'Bulldog');
