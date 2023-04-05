@@ -13,7 +13,7 @@ const tier = new Bird('Max', 'Parrot', true);
 const doggydogdog = new Dog('Herbert', 'Bulldog');
 
 console.log(tier);
-console.log(tier.eat("Donut"));
+console.log(tier.eat("DoSennut"));
 
 console.log(doggydogdog);
 console.log(doggydogdog.bark());
