@@ -56,4 +56,4 @@ const isNumbersDifferent = (num) =>
     return count > 0;
 }
 
-console.log(validateCreditCard('5500-6503-0027-4774'));
+console.log("is creditcard valid?", validateCreditCard('5500-6503-0027-4774'));
