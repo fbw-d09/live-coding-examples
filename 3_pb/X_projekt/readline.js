@@ -44,7 +44,7 @@ rl.question("Wieviele flaschen milch hast du gekauft? ", (anzahl) =>
     rl.question("Wieviele flaschen milch hast du davon bereits getrunken?", (getrunken) =>
     {
         // da wir uns mit der .cursorTo(); methode an eine beliebige stelle im terminal bewegen können, setzen wir unser ergebnis 2 zeilen tiefer in zeile 3.
-        readline.cursorTo(process.stdout, 0, 3);
+        readline.cursorTo(process.stdout, 10, 3);
 
         const uebrig = anzahl - getrunken;
 
