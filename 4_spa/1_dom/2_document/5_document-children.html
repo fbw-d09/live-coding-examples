@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #beispiel
+        {
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Unser HTML: -->
+
+    <!-- Hier befindet sich unser "before" element (davor) -->
+
+    <p id="beispiel">Hallo Welt!</p>
+
+    <!-- Hier befindet sich unser "after" element (danach) -->
+
+    <footer>Hier ist ein footer!</footer>
+
+    <!-- Unser JavaScript: -->
+    <script>
+        const beispielElement = document.getElementById('beispiel');
+        const footerElement = document.querySelector('footer');
+
+        /**
+         * ChildNode.before();
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/before
+         * Diese methode fügt ein element über dem aktuell selektierten element ein
+         * @params { object } - das einzufügende Element
+         */
+        const beforeElement = document.createElement('p'); // <p></p>
+        beforeElement.innerText = 'Dieses element befindet sich vor unserem beispielElement'; // <p>...</p>
+        beispielElement.before(beforeElement);
+
+        /**
+         * ChildNode.after();
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/after
+         * Diese methode fügt ein element unter/nach dem selektierten element ein
+         * @params { object } - das einzufügende element
+         */
+        const afterElement = document.createElement('p'); // <p></p>
+        afterElement.innerText = 'Dieses element befindet sich nach unserem beispielElement'; // <p>...</p>
+        beispielElement.after(afterElement);
+
+        /**
+         * ChildNode.replaceWith();
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/replaceWith
+         * die methode ChildNode.replaceWith(); ersetzt das selektierte element mit einem anderen
+         * @params { object } - das einzufügende element
+         */
+        console.log(beispielElement); // <p id="beispiel">Hallo Welt!</p>
+        const newElement = document.createElement('h1'); // <h1></h1>
+        newElement.id = 'beispiel';                      // <h1 id="beispiel"></h1>
+        newElement.innerText = 'Dies hier ersetzt unser aktuelles element'; // <h1 id="beispiel">...</h1>
+
+        // wir ersetzen das aktuelle element mit dem neuen element
+        // beispielElement.replaceWith(newElement);
+
+        // listenbeispiel:
+        const listElement = document.createElement('ul'); // <ul></ul>
+        const listEntryElement = document.createElement('li'); // <li></li>
+        listEntryElement.innerText = "Hallo, ich bin ein listeneintrag"; // <li>...</li>
+
+        listElement.append(listEntryElement); // <ul><li>...</li></ul>
+
+        beispielElement.replaceWith(listElement);
+
+        /**
+         * ChildNode.remove();
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove
+         * Diese methode löscht das selektierte element
+         */
+        footerElement.remove();
+
+    </script>
+    
+</body>
+</html>
