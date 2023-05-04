@@ -25,12 +25,12 @@ const greetMessage = (username) =>
 const greetUsers = (userlist, callback) =>
 {
     // bekommen wir die userliste?
-    console.log(userlist); // ja
+    // console.log(userlist); // ja
 
-    // wenn wir durch die userliste loopen, bekommen wir jeden namen einzeln?
+    // // wenn wir durch die userliste loopen, bekommen wir jeden namen einzeln?
     userlist.forEach(user =>
     {
-        console.log(user); // wir bekommen jeden user zurück
+        // console.log(user); // wir bekommen jeden user zurück
 
         callback(user); // der callback übergibt die daten
     });
