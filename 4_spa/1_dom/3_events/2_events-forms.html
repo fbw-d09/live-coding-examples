@@ -173,10 +173,15 @@
         <div id="clickElement" style="width: 200px; height: 200px; background: tomato;"></div>
 
         <script>
+            let isActive = false;
+
             document.getElementById('clickElement').onclick = (event) =>
             {
                 console.log("click");
-                event.target.style.background = "lime";
+
+                isActive = !isActive;
+
+                event.target.style.background = isActive ? "lime" : "tomato";
             }
         </script>
 
