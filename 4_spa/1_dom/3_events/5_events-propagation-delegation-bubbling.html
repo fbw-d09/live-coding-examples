@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Events</h1>
+
+    <h2>Propagation, Delegation, Bubbling</h2>
+
+    <a href="https://en.wikipedia.org/wiki/Event_bubbling">Wikipedia Link</a>
+
+    <!-- Was ist event delegation oder event bubbling? um diese techniken besser zu verstehen, erinnern wir uns erst einmal daran, wie events in javascript funktionieren: -->
+
+    <h3>Wie funktioneren events?</h3>
+
+    <i>Wir haben ein element, das wir anklicken wollen, zum beispiel ein LI element in einer liste</i>
+
+    <ul class="liste">
+        <li id="beispiel">Ein Beispiel</li>
+    </ul>
+
+    <script>
+        // Wir holen uns das element
+        const beispielElement = document.querySelector('#beispiel');
+
+        // ... und fügen den event listener hinzu. der darauf wartet, das event abzufeuern, sobald er aufgerufen wird.
+        // beim abfeuern des events, übergeben wir einige informationen, wie da angeklickte element, und dessen id.
+        // diese informationen bekommen wir über den parameter "event"
+        beispielElement.addEventListener('click', (event) => {
+            // Wenn wir auf das element klicken, feuern wir das event ab, welches hier als beispiel die ID des angeklickten elementes ausgibt:
+            console.log(event.target.id); // beispiel
+        });
+    </script>
+
+    <p>
+        Event listener werden beim einladen der seite erstellt, und wenn der code im browser geöffnet wird, kann der event listener sofort ausgeführt werden.
+    </p>
+
+    <p>
+        In dem beispiel oben, wird, wenn die seite geladen ist, als erstes das element mit der id "beispiel" gesucht, dann wird der event listener mit der aktion "click" darauf eingestellt, und dann wird, wenn der klick passiert, die funktion im callback ausgeführt.
+    </p>
+
+    <h2>Event Bubbling</h2>
+
+    <p>
+        Event bubbling in javascript hängt mit der reihenfolge der ereignisausbreitung zusammen, in der die event listener bei der verschachtlung von HTML-Elementen aufgerufen werden, und alle elemente sich mit den selben ereignissen, wie dem click event beim event listener registriert haben.
+    </p>
+
+    <b>Ein beispiel:</b>
+
+    <p>Wir erstellen ein paar ineinander verschachtelte elemente:</p>
+
+    <div class="beispielContainer">
+        <ul class="beispielListe">
+            <li class="beispielEintrag">Eintrag</li>
+        </ul>
+    </div>
+
+    <script>
+        // All die elemente, die wir nutzen, können das event "click" registieren.
+        // in diesem beispiel haben wir für jedes element ein eigenes click event.
+
+        // Das event für die klasse .beispielContainer
+        const containerElement = document.querySelector('.beispielContainer');
+        containerElement.addEventListener('click', (event) =>
+        {
+            console.log('.beispielContainer angeklickt');
+        });
+
+        // Das event für die klasse .beispielListe
+        const listenElement = document.querySelector('.beispielListe');
+        listenElement.addEventListener('click', (event) =>
+        {
+            console.log('.beispielListe angegklickt');
+        });
+
+        // Das event für die klasse .beispielEintrag
+        // const eintragElement = document.querySelector('.beispielEintrag');
+        // eintragElement.addEventListener('click', (event) =>
+        // {
+        //     console.log('.beispielEintrag angeklickt');
+        // });
+    </script>
+
+    <p>
+        Wenn wir auf "Eintrag" klicken, sehen wir, das alle anderen events, die mit diesem element verbunden sind, ausgeführt werden.
+    </p>
+
+    <b>Das bedeutet:</b>
+
+    <ol>
+        <li>Als wir auf das LI element klickten, wurden dessen events abgefeuert</li>
+        <li>Da das LI elment sich innerhalb eines UL elementes befindet</li>
+        <li>Wird dessen event auch automatisch abgefeuert</li>
+        <li>da sich das UL element innerhalb einer div befindet</li>
+        <li>WIrd das click event der div auch automatisch ausgeführt</li>
+    </ol>
+
+    <p>Also werden alle 3 elemente, die übereinander liegen, sozusagen angeklickt.</p>
+
+    <p>
+        LI liegt in UL, UL liegt in DIV. Diesen prozess nennt man event-bubbling.
+    </p>
+
+    <h2>Deaktivieren von Event-Bubbling</h2>
+
+    <p>
+        Natürlich kann es ein, das wir nicht WOLLEN, das ein element andere events als das aktuelle ausführt - um das zu erreichen, gibt es 2 befehle.
+    </p>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation">
+                Event.stopPropagation();
+            </a>
+        </h3>
+
+        <p>Diese methode verhindert, das andere events, durch bubbling ausgeführt werden.</p>
+
+        <i>
+            Ausnahmen sind Links von a-elementen (anchor tags), die über ddem event im dom liegen, solange nicht ein .preventDefault(); auf das element gesetzt wird.
+        </i>
+
+        <div id="aussen" style="width: 200px; height: 200px; background: tomato; padding: 10px;">
+            <div id="mitte" style="width: 150px; height: 150px; background: yellow; padding: 10px;">
+                <div id="innen" style="width: 100px; height: 100px; background: darkblue"></div>
+            </div>
+        </div>
+
+        <!-- wir erstellen uns eine radio button group, um die position des stops zu testen -->
+        <div>
+            Stop:
+            <input type="radio" name="stopPropagation" value="aussen" checked> Aussen
+            <input type="radio" name="stopPropagation" value="mitte"> Mitte
+            <input type="radio" name="stopPropagation" value="innen"> Innen
+        </div>
+
+        <script>
+            const aussenElement = document.getElementById('aussen');
+            const mitteElement = document.getElementById('mitte');
+            const innenElement = document.getElementById('innen');
+            const wahlElemente = document.getElementsByName('stopPropagation');
+
+            console.log(wahlElemente)
+
+            aussenElement.onclick = (event) =>
+            {
+                // wir überprüfen ob X "checked "ist.
+                if(wahlElemente[0].checked)
+                {
+                    // wir führen .stopPropagation(); aus.
+                    event.stopPropagation();
+                }
+
+                console.log('.aussen angeklickt');
+            }
+
+            mitteElement.onclick = (event) =>
+            {
+                if(wahlElemente[1].checked)
+                {
+                    event.stopPropagation();
+                }
+
+                console.log('.mitte angeklickt');
+            }
+
+            innenElement.onclick = (event) =>
+            {
+                if(wahlElemente[2].checked)
+                {
+                    event.stopPropagation();
+                }
+
+                console.log('.innen angeklickt');
+            }
+        </script>
+    </section>
+
+</body>
+</html>
