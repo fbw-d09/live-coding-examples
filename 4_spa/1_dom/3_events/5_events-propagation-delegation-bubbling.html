@@ -146,8 +146,6 @@
             const innenElement = document.getElementById('innen');
             const wahlElemente = document.getElementsByName('stopPropagation');
 
-            console.log(wahlElemente)
-
             aussenElement.onclick = (event) =>
             {
                 // wir überprüfen ob X "checked "ist.
@@ -182,5 +180,120 @@
         </script>
     </section>
 
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation">
+                Event.stopImmediatePropagation()
+            </a>
+        </h3>
+
+        <p>
+            Diese methode verhindert, das andere events für das aktuelle element ausgeführt werden. Dies passiert allerdings in code-leserictung, was bedeutet, das alle events die VOR dem stop angelegt wurden, auch ausgeführt werden.
+        </p>
+
+        <button id="stopButton">Klick Mich!</button>
+
+        <script>
+            const stopButtonElement = document.getElementById('stopButton');
+
+            stopButtonElement.addEventListener('click', (event) =>
+            {
+                console.log("Das erste event wurde abgefeuert!");
+            });
+            
+            stopButtonElement.addEventListener('click', (event) =>
+            {
+                event.stopImmediatePropagation(); // bewegen
+                console.log("Das zweite event wurde abgefeuert!");
+            });
+            
+            stopButtonElement.addEventListener('click', (event) =>
+            {
+                console.log("Das dritte event wird abgefeuert!");
+            });
+        </script>
+    </section>
+
+    <h2>Event Delegation</h2>
+
+    <p>
+        Event-Delegation ist eine Technik um events in unseren web-apps zu behandeln. Delegation wird möglich, weil javascript events "bubblen" kann, also über mehrere elemente in der dom ausbreiten kann. Tatsächlich basiert event-delegation auf dem konzept von event-bubbling, weswegen event-delegation immer dann möglich ist, wenn event-bubbing auch möglich wäre.
+    </p>
+
+    <p>
+        Wenn wir event listener benutzen, und wir wissen, das bubbling möglich ist, können wir uns so einige event listener sparen, um unseren code effizienter zu machen
+    </p>
+
+    <p>
+        Meist haben unsere applikationen eine menge zu handlen, klick events, key events, mouse events, und einige andere events. Umso größer unsere applikation wird, umso mehr events benötigen wir, für wieder und wieder die selben aktionen. Was irgendwann zu performance problemen führen ... <b>WIRD</b>.
+    </p>
+
+    <p>
+        Sagen wir, wir haben eine webseite, mit mehren eigenen kategorien, all diese kategorien habne eigene event-handler. Wenn wir auf eine kategorie klicken, führen wir eine funktion aus.
+    </p>
+
+    <ul id="categoryList">
+        <li class="categoryItem" id="category1">Category 1</li>
+        <li class="categoryItem" id="category2">Category 2</li>
+        <li class="categoryItem" id="category3">Category 3</li>
+    </ul>
+
+    <script>
+        const categoryItemElement1 = document.querySelector('#category1');
+        categoryItemElement1.addEventListener('click', (event) =>
+        {
+            console.log(event.target.id);
+        });
+
+        const categoryItemElement2 = document.querySelector('#category2');
+        categoryItemElement2.addEventListener('click', (event) =>
+        {
+            console.log(event.target.id);
+        });
+
+        const categoryItemElement3 = document.querySelector('#category3');
+        categoryItemElement3.addEventListener('click', (event) =>
+        {
+            console.log(event.target.id);
+        });
+    </script>
+
+    <p>
+        Das funktioniert Super! ABER WO LIEGT DAS ANGESPROCHENE PROBLEM?
+        <br>
+        WIr haben 3 li's, und jedem einzelnen haben wir ein event angehangen das essenziell den selben code beinhaltet.
+        Was wenn wir in zukunft mehr kategorien hinzufügen, müssen wir dann für jeden weiteren eintrag einne event handler hinzufügen?
+        <br>
+        Können wir das problem vielleicht mit WENIGER code lösen, anstelle von MEHR code? Ja!
+    </p>
+
+    <p>
+        Event delegation ist, anstelle das man jedem element und dessen kindes kindern manuell einen event listener zuweist, das event vom eltern element her zuzufügen. Was ändert sich dadurch? Das kindelement wird durch event-bubbling den event-listener im elternelement nutzen.
+    </p>
+
+    <i>Wie vorher auch, erstellen wir zum test eine liste:</i>
+
+    <ul id="userList">
+        <li id="user1">Max</li>
+        <li id="user2">James</li>
+        <li id="user3">Henry</li>
+        <li id="user4">Michael</li>
+        <li id="user5">George</li>
+    </ul>
+
+    <script>
+        // Wir holen uns das listen element...
+        const userListElement = document.querySelector('#userList');
+
+        // ... und fügen einen event-listener hinzu:
+        userListElement.addEventListener('click', (event) =>
+        {
+            // Wenn wir jetzt event.target; nutzen, bekommen wir...
+            console.log(event.target.id);
+            // ... die information vom kind-element
+        });
+    </script>
+
+    <p>Auf diese weise, können wir uns VIEL code sparen, und entlasten die appliation, sparen also auch performance.</p>
 </body>
 </html>
