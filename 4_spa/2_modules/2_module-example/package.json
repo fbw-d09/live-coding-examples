@@ -12,5 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "mocha": "^10.2.0",
+    "petals": "^0.1.1",
+    "rand-token": "^1.0.1"
   }
 }

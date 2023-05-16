@@ -1,0 +1,28 @@
+package.json
+
+{
+  "name": "2_module-example", // name des projektes
+  "version": "0.1.0",         // version des projektes, wir starten normalerweise bei 0.1.0 = MAJOR.MINOR.PATCH
+  "description": "",          // beschreibung des projektes
+  "main": "./src/index.js",   // datei die das projekt startet
+  "scripts": {
+    "start": "node ./src/index.js",       // ausführung des projektes für produktion (npm run start)
+    "start:dev": "nodemon ./src/index.js"  // ausführung des projektes für entwicklung (npm run start:dev)
+  },
+  "keywords": [], 
+  "author": "", // der author des projektes 
+  "license": "ISC", // die lizenz des projektes
+  "devDependencies": { // abhängigkeiten (module) die zur entwicklung benötigt werden
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": { // abhängigkeiten (module) die innerhalb des projektes benutzt werden
+    "petals": "^0.1.1",
+    "rand-token": "^1.0.1"
+  }
+}
+
+die package-lock.json wird von einigen CI applikationen genutzt um versionen von abhängigkeiten zu vergleichen
+
+Damit unser projekt nicht zu groß wird, erstellen wir eine datei namens ".gitignore", in die wir dateien oder ordner schreiben, die wir NICHT bei einem git commit/push auf github hochladen wollen, wir schreiben IMMER /node_modules in diese datei.
+
+
