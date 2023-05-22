@@ -1,5 +1,6 @@
 // Promises
 console.log("start");
+
 // function changeBackgroundColor(color, delay) {
 //   return new Promise((resolve) => {
 //     setTimeout(() => {

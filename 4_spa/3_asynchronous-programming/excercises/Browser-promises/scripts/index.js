@@ -1,22 +1,20 @@
 // write your code here
 const modal = document.querySelector("#myModal");
-
-let promiseOfModal = new Promise((resolve) => {
+console.log(typeof modal);
+//  const userAge = get user age
+const promiseOfModal = new Promise((resolve) => {
   window.setTimeout(() => {
     resolve(modal);
-  }, 1000 * 5);
+  }, 5000);
 });
 
-promiseOfModal.then((val) => {
+promiseOfModal.then((ele) => {
   console.log("User has been waiting for 5 seconds");
-  val.style.display = "block";
+  ele.style.display = "block";
 });
-
+console.log("nice");
 modal.addEventListener("click", (e) => {
-  switch (e.target.className) {
-    case "close":
-    case "modal":
-      modal.style.display = "none";
-      break;
+  if (e.target.className == "close" || e.target.className == "modal") {
+    modal.style.display = "none";
   }
 });
