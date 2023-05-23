@@ -1,4 +1,8 @@
 {
   "name": "Ali",
-  "age": 22
+  "age": 22,
+  "hop": {
+    "1": "eating",
+    "2": "dreaming"
+  }
 }
