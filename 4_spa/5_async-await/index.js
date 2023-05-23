@@ -13,3 +13,12 @@ const groups = {
   Olga: ["Drinking"],
   Nancy: ["Eating"],
 };
+
+function getUser(id) {
+  const user = users.find((userInfo) => userInfo.id == id);
+  return Promise.resolve(user);
+}
+function getPosts(lastName) {
+  const userPosts = posts[lastName];
+  return Promise.resolve(userPosts);
+}
