@@ -48,6 +48,7 @@ getUser(1)
 //   }
 // }
 // Async Await mit => function
+
 const getUserData = async () => {
   try {
     const user = await getUser(1);

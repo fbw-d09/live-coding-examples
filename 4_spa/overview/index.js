@@ -21,10 +21,10 @@ function getUsers() {
     });
   }, 1500);
 }
-function addUser(userName, callback) {
+function addUser(userName, cb) {
   setTimeout(() => {
     users.push(userName);
-    callback();
+    cb();
   }, 2000);
 }
 // getUsers();
