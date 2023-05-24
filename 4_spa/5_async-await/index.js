@@ -27,6 +27,9 @@ function getGroups(id) {
   return Promise.resolve(userGroups);
 }
 // without ( Async Await )
+// Promises verwenden
+// ! Aufgrund von Bereichsproblemen können wir den Nachnamen nicht an übergeben
+// ! getGroups-Funktion
 getUser(1)
   // { id: 1, name: "Olga", lastName: "Char" }
   .then((valOne) => getPosts(valOne.id))
@@ -34,6 +37,7 @@ getUser(1)
   .then((valTwo) => console.log(valTwo));
 
 // Async Await
+// Wir können das Schlüsselwort „await“ nur innerhalb einer Funktion verwenden, die mit async deklariert wurde
 // async function getUserData() {
 //   try {
 //     const user = await getUser(1);
@@ -62,6 +66,7 @@ const getUserData = async () => {
     console.log(error);
   }
 };
+// Usage of getUser
 
 getUserData().then((data) => {
   console.log(data);

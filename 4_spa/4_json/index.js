@@ -1,5 +1,6 @@
 import data from "./data.json" assert { type: "json" };
 // JSON ->  JavaScript Object Notation
+// leichtes Format zum Speichern und Transportieren von Daten
 
 const obj = {
   name: "Hadi",

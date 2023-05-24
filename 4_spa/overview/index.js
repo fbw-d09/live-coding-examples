@@ -21,6 +21,9 @@ function getUsers() {
     });
   }, 1500);
 }
+// ! Rennbedingung – wir möchten, dass die getUsers-Funktion aufgerufen wird
+// erst nachdem wir einen neuen Benutzer hinzugefügt haben.
+// Deshalb übergeben wir die Funktion getUsers als Callback an die Funktion addUser.
 function addUser(userName, cb) {
   setTimeout(() => {
     users.push(userName);

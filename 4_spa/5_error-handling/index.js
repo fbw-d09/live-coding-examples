@@ -1,4 +1,5 @@
 console.log("Hej");
+// Try / Catch
 try {
   const x = 0;
   x = 7;
@@ -8,7 +9,7 @@ try {
 }
 
 console.log("the new result");
-
+// Example of throwing error
 function multi(a, b) {
   if (typeof a !== "number") {
     throw new Error("Sorry, you need to enter a number");
@@ -19,7 +20,9 @@ function multi(a, b) {
   return a * b;
 }
 try {
-  console.log(multi("Hi", true));
+  let result = multi("Hi", true);
+  // Dies wird nicht ausgelöst, da wir einen Fehler in der Multiplikationsfunktion ausgegeben haben
+  console.log("result: ", result);
 } catch (error) {
   console.log(error.name);
   console.log(error.stack);

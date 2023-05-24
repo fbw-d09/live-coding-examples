@@ -9,6 +9,7 @@ console.log("start");
 //     }, delay);
 //   });
 // }
+// ! Writing the same task with a promise
 // changeBackgroundColor("red", 2000)
 //   .then(() => changeBackgroundColor("yellow", 4000))
 //   .then(() => changeBackgroundColor("orange", 6000))

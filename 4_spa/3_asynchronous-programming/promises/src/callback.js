@@ -13,7 +13,7 @@
 //   document.body.style.backgroundColor = "orange";
 // }, 6000);
 
-// callback hell
+// callback hell, don't do that 😉
 
 // setTimeout(() => {
 //   document.body.style.backgroundColor = "red";
