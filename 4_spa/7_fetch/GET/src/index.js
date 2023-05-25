@@ -13,13 +13,13 @@ user.display();
 
 // API: Application Programming Interface
 // kostenlos API: https://jsonplaceholder.typicode.com/
-const root = document.getElementById("root");
-
+const root = document.querySelector("#root");
+const button = document.querySelector("#post");
 async function getAllPosts() {
   // Opt 1
   // ! Example using async await
   try {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts/");
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     const posts = await res.json();
     console.log(posts);
     posts.forEach((post) => {
@@ -40,4 +40,27 @@ async function getAllPosts() {
     .then((json) => console.log(json))
     .catch((err) => console.log(err));
 }
-getAllPosts();
+// getAllPosts();
+
+async function getOnePhotoUsingID(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`);
+  const post = await res.json();
+  console.log(post);
+  const element = `
+  <div>
+  <img src=${post.url} alt=${post.title} width="15rem" height="15rem" />
+  </div>
+  `;
+
+  root.innerHTML += element;
+
+  // fetch("https://jsonplaceholder.typicode.com/posts/1")
+  //   .then((response) => response.json())
+  //   .then((json) => console.log(json));
+}
+// getOnePostUsingID(8);
+let id = 1;
+button.addEventListener("click", () => {
+  getOnePhotoUsingID(id);
+  id++;
+});
