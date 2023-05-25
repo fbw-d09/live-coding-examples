@@ -13,6 +13,9 @@ user.display();
 
 // API: Application Programming Interface
 // kostenlos API: https://jsonplaceholder.typicode.com/
+
+// URI = scheme ":" ["//" authority] path ["?" query] ["#" fragment]
+
 const root = document.querySelector("#root");
 const button = document.querySelector("#post");
 async function getAllPosts() {
