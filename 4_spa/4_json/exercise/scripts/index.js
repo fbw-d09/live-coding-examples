@@ -25,7 +25,7 @@ Object.entries(dataObj).forEach((entryCards) => {
     sections.forEach((section) => {
       if (card.type === section.id) {
         let cardInfo = `
-        <<div class="card m-3" style="width: 18rem;">
+        <div class="card m-3" style="width: 18rem;">
         <img src="${
           card.image
         }" class="card-img-top" alt="Baked Goods" height="200rem">

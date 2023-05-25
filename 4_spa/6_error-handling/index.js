@@ -24,6 +24,7 @@ try {
   // Dies wird nicht ausgelöst, da wir einen Fehler in der Multiplikationsfunktion ausgegeben haben
   console.log("result: ", result);
 } catch (error) {
+  console.log(error);
   console.log(error.name);
   console.log(error.stack);
   console.log(error.message);
