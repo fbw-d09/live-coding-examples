@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Storage</h1>
+
+    <p>
+        Zum speichern von daten in der aktuellen webseite im browser können wir die localStorage und die sessionStorage verwenden. Der unterschied zwischen diesen beiden arten der datenspeicherung ist, das die localstorage nicht abläuft, das bedeutet, die daten werden beibehalten, bei jedem browserstart, und jedem aufrufen einer seite innerhalb des gespeicherten hosts. Bei der sessionStorage wiederrum werden die daten jedesmal gelöscht, wenn der browser, oder das browserfenster geschlossen werden. In beiden fällen können wir in purem text bis zu 5 MB speichern.
+    </p>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">
+        Link zum MDN artikel über das Storage objekt
+    </a>
+
+    <script>
+        /**
+         * Storage.length 
+         * @description Gibt die nummer an inhalten zurück, die auf der aktuellen seite im storasge objekt gespeichert sind
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Storage/length
+         * returns { number }
+         */
+
+        console.log("Storage.length:");
+        console.log("localStorage", localStorage.length); // Die menge an einträgen in der localStorage
+        console.log("sessionStorage", sessionStorage.length); // Die menge an einträgen in der sessionStorage
+
+
+        /**
+         * Storage.setItem();
+         * @description Fügt der Storage einen eintrag hinzu, basierend auf KEY/VALUE pairs als datentyp String.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
+         */
+
+        // localStorage:
+        localStorage.setItem("darkMode", "true"); // strings können wir einfach in die storage übertragen
+        localStorage.setItem("testZahl", 23); // zahlen und booleans werden automatisch umgewandelt zu einem string
+        localStorage.setItem("testObjekt", JSON.stringify({ firstName: "Max", lastName: "Mustermann"})); // wenn wir objekte in der storage speichern wollen, müssen wir sie erst zu einem string umwandeln
+
+        // sessionStorage:
+        sessionStorage.setItem("darkMode", true);
+        sessionStorage.setItem("testObjekt", JSON.stringify({ firstName: "Max", lastName: "Musterhausen"}));
+
+        
+        /**
+         * Storage.key();
+         * @description gibt uns den namen des schlüssels an position N zurück.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Storage/key
+         * returns { string }
+         */
+
+        console.log(localStorage.key(2));
+
+        // wir holen uns alle keys mit einem for loop:
+        for(let i = 0; i < localStorage.length; i++)
+        {
+            console.log(`Key an position ${i}:`, localStorage.key(i));
+        }
+
+        /**
+         * Storage.getItem();
+         * @description gibt uns einen wert zurück, anhand des schlüsselnamens.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem
+         * returns { string }
+         */
+
+        // localStorage:
+        console.log(JSON.parse(localStorage.getItem("testObjekt")));
+        console.log(localStorage.getItem('testZahl'));
+
+        // sessionStorage:
+        console.log(sessionStorage.getItem("darkMode"));
+
+        // wir holen uns alle einträge mit einem for loop:
+        for(let i = 0; i < localStorage.length; i++)
+        {
+            console.log(localStorage.key(i) + ": " + localStorage.getItem(localStorage.key(i)));
+        }
+
+        /**
+         * Storage.removeItem();
+         * @description löscht einen eintrag in der Storage anhand des schlüsselnamens
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
+         */
+
+        // localStorage
+        localStorage.removeItem("testZahl");
+
+        // sessionStorage
+        sessionStorage.removeItem("darkMode");
+
+        /**
+         * Storage.clear();
+         * @decription löscht alle inhalte des jeweiligen storage objektes (localStorage oder sessionStorage) und leert damit sozusagen die datenbank.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear
+         */
+
+        // localStorage:
+        localStorage.clear();
+
+        // sessionStorage:
+        sessionStorage.clear();
+    </script>
+    
+</body>
+</html>
