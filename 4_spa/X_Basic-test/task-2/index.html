@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 2</title>
+    </head>
+
+    <body>
+        <p>
+            <a
+                class="w3r"
+                type="text/html"
+                hreflang="en-us"
+                rel="nofollow"
+                target="_self"
+                href="https://www.google.com/"
+            >
+                Google.com
+            </a>
+            <a href="#" data-description="Ignore this one!" target="_blank"></a>
+        </p>
+
+        <button>Click here to get attributes</button>
+
+        <script>
+            const buttonElement = document.querySelector('button');
+            const targetElement = document.querySelector('a');
+
+            buttonElement.onclick = () =>
+            {
+                console.log(targetElement.getAttribute("href"));
+                console.log(targetElement.getAttribute("hreflang"));
+                console.log(targetElement.getAttribute("rel"));
+                console.log(targetElement.getAttribute("target"));
+                console.log(targetElement.getAttribute("type"));
+            }
+        </script>
+    </body>
+
+</html>

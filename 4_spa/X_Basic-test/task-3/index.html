@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="First input">
+    </div>
+    <div>
+        <input type="text" value="Second input">
+    </div>
+
+    <script>
+        const inputElements = document.querySelectorAll('input');
+
+        inputElements.forEach(input => {
+            input.onfocus = () => {
+                input.style.border = "10px solid tomato";
+            }
+
+            input.onblur = () => {
+                input.style.border = "";
+            }
+        });
+    </script>
+</body>
+
+</html>

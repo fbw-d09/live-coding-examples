@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 5</title>
+        <style>
+            td { border: 1px solid; }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <button>Calculate new column</button>
+
+        <script>
+            // const buttonElement = document.querySelector('button');
+            
+            // buttonElement.onclick = () =>
+            // {
+            //     const rowElements = document.querySelectorAll('tr');
+                
+            //     rowElements.forEach(row =>
+            //     {
+            //         const cellElements = Array.from(row.querySelectorAll('td'));
+
+            //         const sum = cellElements.reduce((acc, curr) => acc+Number(curr.innerText), 0);
+
+            //         const newCellElement = document.createElement('td');
+            //         newCellElement.innerText = sum;
+            //         row.append(newCellElement);
+            //     })
+            // }
+
+            // IMADS lösung:
+            // const button = document.querySelector('button');
+
+            // button.addEventListener('click', () =>
+            // {
+            //     const table = document.querySelector('table');
+            //     const rows = table.getElementsByTagName('tr');
+
+            //     for (let i = 0; i < rows.length; i++) {
+            //         const cells = rows[i].getElementsByTagName('td');
+
+            //         let sum = 0;
+
+            //         for (let j = 0; j < cells.length; j++) {
+            //             sum += parseInt(cells[j].innerText);
+            //         }
+
+            //         const newCell = document.createElement('td');
+            //         newCell.innerText = sum;
+            //         rows[i].appendChild(newCell);
+            //     }
+            // });
+            
+            // BERATS Lösung:
+            const button = document.querySelector('button');
+            button.onclick = () =>
+            {
+                const table = document.querySelector('table');
+                const rows = [...table.rows];
+
+                rows.forEach((row) =>
+                {
+                    const cells = [...row.cells];
+                    const sum = cells.reduce((acc, cell) => acc + parseInt(cell.innerText), 0);
+
+                    row.innerHTML += `<td>${sum}</td>`;
+                });
+            }
+        </script>
+    </body>
+
+</html>

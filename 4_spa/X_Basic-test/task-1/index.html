@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 1</title>
+    </head>
+
+    <body>
+        <p id="text">Lorem ipsum...</p>
+        <button id="styler">Style</button>
+
+        <script>
+            const buttonElement = document.querySelector('#styler');
+            const textElement = document.querySelector('#text');
+
+            buttonElement.onclick = (e) =>
+            {
+                textElement.style.color = "tomato";
+                textElement.style.fontFamily = "monospace";
+                textElement.style.fontSize = "4em";
+            }
+        </script>
+    </body>
+
+</html>

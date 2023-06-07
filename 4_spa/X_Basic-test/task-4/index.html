@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 4</title>
+    </head>
+
+    <body>
+        <form id="form1">
+            <div>
+                <label for="fname">First name:</label>
+                <input type="text" name="fname" id="fname" value="Margaret">
+            </div>
+            <div>
+                <label for="lname">Last name:</label>
+                <input type="text" name="lname" id="lname" value="Weiss">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            const formElement = document.querySelector('#form1');
+            const firstNameInputElement = document.querySelector('#fname');
+            const lastNameInputElement = document.querySelector('#lname');
+
+            formElement.onsubmit = (e) =>
+            {
+                e.preventDefault();
+                console.log(firstNameInputElement.value);
+                console.log(lastNameInputElement.value);
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 9</title>
+</head>
+
+<body>
+  <p>
+    <!-- 'Hello developer!' -->
+  </p>
+  <script>
+
+    const textElement = document.querySelector('p');
+
+    // const getName = () =>
+    // {
+    //     const nameInput = window.prompt("Wie ist dein name?");
+
+    //     if(!nameInput.trim())
+    //     {
+    //         return getName();
+    //     }
+
+    //     textElement.innerText = `Hallo ${nameInput}!`;
+    // }
+
+    // window.onload = () => {
+    //   getName();
+    // }
+
+    // IMADS lösung:
+    // window.addEventListener('load', () =>
+    // {
+    //     let name = "";
+
+    //     while(!name)
+    //     {
+    //       name = prompt("Whats your name?");
+    //     }
+
+    //     textElement.innerText = `Hallo ${name}!`;
+    // });
+
+    // BERATS lösung:
+    let name;
+
+    for (; ; ) {
+      name = prompt('Whats your name?');
+
+      if (name) {
+        break;
+      }
+    }
+    textElement.textContent = `Hello ${name}`;
+
+
+  </script>
+</body>
+
+</html>
