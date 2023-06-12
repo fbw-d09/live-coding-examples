@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Single Page Applications</h1>
+
+    <p>
+        ZU allererst ist es wichtig zu wissen, das wir alle bereits regelmäßig SPA's, also single page applications benutzen. oder mit ihnen im täglichen leben oft arbeiten.
+    </p>
+
+    <p>
+        Einige beispiele für SPA's wären:
+    </p>
+
+    <ul>
+        <li>Meta's Facebook</li>
+        <li>Meta's Instagram</li>
+        <li>Alphabets Google Maps</li>
+        <li>Alphabets Google Mail</li>
+        <li>Alphabets Google Search</li>
+        <li>Alphabets Youtube</li>
+        <li>Paypal</li>
+        <li>Snapchat</li>
+        <li>Netflix</li>
+        <li>AirBnB</li>
+        <li>Microsoft Skype</li>
+        <li>Slack</li>
+        <li>Twitter</li>
+        <li>Lieferando</li>
+    </ul>
+
+    <p>
+        All diese Anbieter nutzen SPA's damit ihre services einfach zu erweitern, managen und konfortabel zu nutzen sind
+    </p>
+
+    <h2>Was ist eine Single Page Application?</h2>
+
+    <p>
+        Single Page Applications sind einezelne seiten, die viele informationen liefern können, und spezifische inhalbe aktualisieren ohne die seite wechseln oder neu laden zu müssen.
+    </p>
+
+    <p>
+        Wenn wir beispielsweise auf GMAIL sind, und uns durch die emails und ordner klicken, sehen wir das sich ausser des hauptinhaltes nichts ändern. Also die seite läd nicht neu, nur spezifische inhalte werden aktualisiert.
+    </p>
+    
+    <h2>SPA Architektur</h2>
+
+    <p>
+        Die SPA ist eine webanwendung oder "Webseite", die mit dem benutzer interagiert, indem sie aktuelle seiten dynamisch umschreibt, anstatt neue seiten vom server zu laden.
+    </p>
+
+    <p>
+        Dieser ansatz minimiert die unterbrechung der benutzererfahrung zwischen den aufeinanderfolgenden seiten, so das die anwendung sich mehr wie eine desktop anwendung, also ein "computerprogramm" verhält, weswegen es logisch ist uns web-entwickler und nicht web-designer zu nennen.
+    </p>
+
+    <p>
+        Auf den meisten webseiten gibt es viele sich wiederholende inhalte, einige davon bleiben immer gleich, egal wo der benutzer sich hinbewegt, zum beispiel der header, der footer, die navigationsleiste, uns so weiter - Allgemein bleiben viele elemente des layouts gleich.
+    </p>
+
+    <p>
+        Single Page Applications machen sich die wiederholungen von elementen, sogenannten komponenten zu nutze, indem man komponenten anlegt, und wiederverwenden kann.
+    </p>
+
+    <p>
+        Bei traditionellen Multi Page Applications, würden wir bei jeder seite die wir anfragen, immer die GANZE seite, mit allen inhalten geliefert kriegen.
+    </p>
+
+    <img src="https://giphy.com/gifs/8F9sWWRDqbcpKoqoz3/fullscreen" alt="">
+
+    <p>
+        Bei einer SPA hingegen, bekommt unser browser eine bauanleitung, wie er die seite zusammensetzen soll, und wo sich was wiederholt, oder benutzt wird, um das alles zusammenzufügen.
+    </p>
+
+    <img src="https://giphy.com/gifs/52FwconEHyJH73EuFt/fullscreen" alt="">
+
+    <p>
+        Die geschwindigkeit der SPA kommt dadurch zu stande, das ab diesem zeitpunkt, nur noch einzelene informationen ausgetauscht werden müssen, aber keine webseite mit all ihren daten mehr komplett heruntergeladen werden muss, während bei der klassischen seite jetzt immernoch bei jeder anfrage, die seite mit allen inhalten neu geladen werden muss.
+    </p>
+
+    <img src="https://giphy.com/gifs/Xpj7yINzSulzLa8Oq7/fullscreen" alt="">
+
+    <p>
+        Da bei SPA's die aufgabe des zusammensetzens der webseite auf seiten des browsers liegt kann der inhalt dynamisch neu geschrieben werden, anstelle komplet neu geladen werden zu müssen.
+    </p>
+
+    <img src="https://giphy.com/gifs/KWQVAfIlg5LXQm87cg/fullscreen" alt="">
+
+    <p>
+        Anstelle das wir die seite immer neu laden, sehen wir also nur die neuen ersetzten inhalte.
+    </p>
+
+    <img src="https://eww-wp.s3.ap-south-1.amazonaws.com/wp-content/uploads/2020/02/13142441/single-page-web-apps.jpg" alt="">
+
+    <p>
+        Gerade im JavaScript bereich sind SPA's beliebt weil man schnell und einfach komplette webseiten, oer web-applikationen erschaffen, und diese dan wie eine desktop applikation nutzen kann.
+    </p>
+
+    <h2>Das konzept MVC</h2>
+
+    <img src="https://miro.medium.com/max/875/0*A2NPgocJSjAa2YNe.png" alt="">
+
+    <p>
+        MVC steht für Model-View-Controller, eine speziele strukutur für web applikationen, in der die applikation in 3 komponenten eingeteilt wird, die voneinander getrennt entwickelt werden können.
+    </p>
+
+    <ul>
+        <li>Controller: Die steuerung der applikation, hier sitzt die programmlogik, die die daten und die sichtbare webseite verbindet</li>
+        <li>Model: Die datenbankanbindung, die mit dem controller verbunden ist, um daten auszutauschen</li>
+        <li>View: Die darstellung der daten auf der HTML seite, die über den controller zum benutzer kommen</li>
+    </ul>
+
+    <p>
+        Der vorteil dieser flexiblen art der programmierung liegt in der einfachen wiederholbarkeit, und wartung. Im team ist es auch einfacher an MVC's zu arbeiten, wenn jeder seiten bestimmten aufgabenbereich hat. Allerdings ist das setup um eine MVC aufzubauen komplizierter und man ist möglicherweise abhängig von modulen anderer entwickler.
+    </p>
+
+    <h2>Was ist React?</h2>
+
+    <p>
+        React ist eine JavaScript framework bibliothek von FaceBook (Meta), genau wie bootstrap von Zurb Twitter kommt, hat Facebook also mit React einen großen einfluss auf das gehabt, was wir als modernes web kennen.
+    </p>
+
+    <p>
+        React wurde entwickelt um interaktive benutzeroberflächen zu erstellen. Der hauptvorteil von React ist, das man sehr einfach verschiedene views oder einzelen kleine teile, genannt Komponenten, erstellen kann, die auf anfrage einfach geupdated werden können. Jeder komponent ist in der lage, seine eigenen daten und strukturen zu managen, weswegen man sie fantastisch zu komplexen benutzeroberflächen zusammenfügen kann.
+    </p>
+
+    <p>
+        Da die applikation aus einzelnen komponenten besteht, kann man sie voneinander getrennt updaten oder warten, ohne die gesuchte stelle auf tausenden zeilen html oder javascript suchen zu müssen.
+    </p>
+
+    <p>
+        React hat eine sogenannte state und prop verwaltung, das sind 2 wichtige konzepte von React.
+    </p>
+
+    <ul>
+        <li>
+            Props sind eigenschaften die von aussen an komponenten übergeben werden um die funktionalität zu erweitern, diese properties können innerhalb des komponenten verwenden werden. Das ist vergleichbar mit parametern die wir an eine funktion übergeben.
+        </li>
+        <li>
+            States sind eigenschaften die innerhalb einer komponente sind, um einfluss auf den zustand des views haben zu können. Diese states müssen auf spezielle art und weise gesetzt, genutzt und verändert werden, damit sie in echtzeit dynamisch verwendet werden können. Dies ist auch der grund, wieso react, react heisst, denn wenn sich ein staste innerhalb einer komponente verändert, wird automatisch die renderfunktion aufgerufen, was dazu führt das die neuen daten direkt angezeigt werden, es wird also auf einen state reagiert... reacted.
+        </li>
+    </ul>
+
+    <p>
+        React arbeitet ausserdem mit sogenannten hooks, dies sind die states der verschiedenen lebensphasen eines komponenten, wie zum beispiel den zeitpunkt des ladens des komponenten, den wir damit direkt managen können, ausserdem gibt es hooks, die wir direkt einspeisen können um dynamisch den view zu verändern.
+    </p>
+
+    <h2>Fangen wir an mit React</h2>
+
+    <p>
+        Die einfachste möglichkeit am anfang mit react zu arbeiten, ist das terminal programm "create-react-app", das uns automatisch ein rudimentäres react projekt erstellt, mit dem wir arbeiten können. Create-react-app können wir entweder mit NPM installieren, oder die live-version nutzen, in dem wir npx, also den live tracker von npm benutzen.
+    </p>
+
+    <p>
+        Wir nutzen npx, damit wir npx auch mal im einsatz sehen.
+    </p>
+
+    <p>
+        Wir erstellen einen ordner, gehen mit dem terminal hinein. und schreiben "npx create-react-app" und fügen am ende unseren projektnamen ein. (npx create-react-app first-app)
+    </p>
+
+    <p>
+        Wie wir sehen installiert es react und einige andere module, also warten wir mal ab.
+    </p>
+
+    <p>
+        In der zwischenzeit können wir mal in den browser, und uns ein chrome plugin namens "React developer tools" installieren, das wir in zukunft öfter mal benutzen wrden, um uns unsere komponenten im detail anzuschauen.
+    </p>
+
+    <p>
+        Wir geben bei google "React-developer tools" ein, klicken das gesuchte ergebnis auf der chrome web store an und installieren es im browser.
+    </p>
+
+    <p>
+        create-react-app hat uns jetzt eine komplette applikation erstellt, die wir theoretisch einfach ausführen können, mit den befehlen die uns aus der package.json im terminal bereit gestellt werden, aber schauen wir uns erst einmal an, was wir jetzt haben.
+    </p>
+
+    <p>
+        Einige dateien und ordner wurden erstellt.
+    </p>
+
+    <p>
+        Der node-modules ordner ist riesig wie erwartet, hier ist alles drin, was wir zum starten con react brauchen, wen wir unsere applikation erweitern, brauchen wir gegebenenefalles noch andere module, aber für den anfang reicht das, was wir haben.
+    </p>
+
+    <p>
+        Außerdem haben wir jetzt die ordner public und src.
+    </p>
+
+    <p>
+        in public finden wir die haupt html datei, die die app ausführen wird, und alles, was sonst noch zu der html datei gehört, wie zum beispiel das favicon.
+    </p>
+
+    <p>
+        Im ordner src finden wir unser eigentliches react projekt
+    </p>
+
+    <ul>
+        <li>App.css beinhaltet unser CSS, das wir für die applikation grundsätzlich anlegen</li>
+        <li>App.js ist unsere eigentlich applikation, dies ist ein beispiel komponent</li>
+        <li>App.test.js beinhaltet tests für die erfolgreiche ausführung unserer applikation</li>
+        <li>index.css beinhaltet css für den body, und vordefinierte elemente</li>
+        <li>index.js ist die datei, die unsere app in der html aufruft und beides miteinander verbindet.</li>
+    </ul>
+
+    <p>Den rest können wir ignorieren, und uns mal die applikation anschauen.</p>
+
+    <p>
+        Wir schreiben jetzt "npm run start" und sehen den live server von create-react-app laufen.
+    </p>
+
+    <p>
+        Wenn wir jetzt in der App.js änderungen machen, sehen wir, durch den live server diese direkt.
+    </p>
+
+    <h2>Eine React applikation mit VITE erstellen</h2>
+
+    <p>
+        Wir gehen in unseren ordner und schreiben "npm create vite@latest" und geben dann die gewünschten informationen an.
+    </p>
+
+    <p>Wir müssen react und javascript für unser template auswählen</p>
+
+    <p>
+        Danach gehen wir in unseren ordner und installierten die node module, haben wir das getan können wir unser projekt starten in dem wir "npm run dev" schreiben.
+    </p>
+
+    <h2>Sass in react installieren</h2>
+
+    <p>Wir schreiben im terminal "npm install sass", nennen unsere CSS dateien in SCSS dateien um, und verändern den namen der importierten stylesheets innerhalb des react codes auch in scss um.</p>
+
+</body>
+</html>
