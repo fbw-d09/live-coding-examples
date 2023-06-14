@@ -1,0 +1,1 @@
+export { RestaurantEntryMenuItem } from './RestaurantEntryMenuItem';

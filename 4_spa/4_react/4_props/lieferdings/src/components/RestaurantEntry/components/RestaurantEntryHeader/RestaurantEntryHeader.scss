@@ -1,0 +1,18 @@
+.RestaurantEntryHeader
+{
+    &__name
+    {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 1em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid black
+    }
+
+    &__description
+    {
+        text-align: center;
+        font-style: italic;
+        padding-bottom: 1em;
+    }
+}

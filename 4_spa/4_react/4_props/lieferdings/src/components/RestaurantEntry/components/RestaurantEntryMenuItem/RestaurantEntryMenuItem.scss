@@ -1,0 +1,16 @@
+.RestaurantEntryMenuItem
+{
+    list-style: none;
+
+    &__text
+    {
+        padding-top: 0.5em;
+        &__price
+        {
+            padding-left: 1em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: italic;
+            font-size: 1.25em;
+        }
+    }
+}

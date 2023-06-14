@@ -1,0 +1,1 @@
+export { RestaurantEntryHeader } from './RestaurantEntryHeader';
