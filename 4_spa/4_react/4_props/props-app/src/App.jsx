@@ -1,4 +1,4 @@
-import { Circle, Paragraph } from './components';
+import { Box, Circle, Paragraph } from './components';
 import './App.css';
 
 function App() {
@@ -43,6 +43,10 @@ function App() {
           )
         })
       }
+
+      <Box color={ "#3cafe2" }>
+        Test
+      </Box>
     </div>
   );
 }
