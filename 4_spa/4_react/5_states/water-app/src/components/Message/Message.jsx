@@ -7,7 +7,7 @@ export const Message = ({
 }) => {
     const visibilityState = initVisibility; // visibilityState = true;
 
-    const [ visible, setVisible ] = useState(visibilityState); // visible = true;
+    const [ visible, setVisible ] = useState(initVisibility); // visible = true;
 
     const handleVisibility = () =>
     {

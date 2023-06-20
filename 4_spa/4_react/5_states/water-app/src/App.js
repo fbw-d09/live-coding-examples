@@ -5,7 +5,7 @@ import { Message, Water } from './components/';
 
 function App() {
 
-  const [ isVisible, setIsVisible ] = useState(true); // let isVisible = true;
+  const [ isVisible ] = useState(true); // let isVisible = true;
 
   return (
     <div className="App">
