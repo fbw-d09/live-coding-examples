@@ -2,11 +2,13 @@ import './App.css';
 
 import React, { useState } from 'react';
 // wir installieren react-router-dom per befehl: "npm install react-router-dom".
-import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, NavLink, Navigate } from 'react-router-dom';
 
 import { Home, Blog, Contact, NotFound, Profile } from './pages'
 
 function App() {
+    const [ isLoggedIn, setIsLoggedIn ] = useState(false);
+
     return (
         <div className="App">
 
@@ -42,6 +44,14 @@ function App() {
                         <li><NavLink to="/blog">Blog</NavLink></li>
                         <li><NavLink to="/contact">Contact</NavLink></li>
                         <li><NavLink to="/error">Fehlerseite</NavLink></li>
+                        <li>
+                        {
+                            isLoggedIn ?
+                            <button onClick={ () => setIsLoggedIn(false)}>LogOut</button>
+                            :
+                            <button onClick={ () => setIsLoggedIn(true)}>LogIn</button>
+                        }
+                        </li>
                     </ul>
                 </header>
 
@@ -55,10 +65,28 @@ function App() {
                         */}
                         <Route
                             path="/"
-                            element={<Home/>}
+                            element={
+                                isLoggedIn ?
+                                // <Navigate /> überschreibt die aktuelle position im browser, und schickt uns direkt zum komponenten, der dort hinterlegt ist
+                                <Navigate to="/user/IchBinEinUser"/>
+                                // Bei github wäre es etwas anders, dort scheint es die dashboard seite direkt zu laden, zb:
+                                // <Profile>
+                                :
+                                <Home/>
+                        }
                         />
                         {/* wir können auch props an komponenten innerhalb einer route übergeben */}
                         <Route path="/blog" element={ <Blog active={true} /> } />
+                        {/* :id ist der param den wir auslesen wollen, aus /user/:id wird also /user/EINGABE, und auf der seite Profile können wir :id als id aus useParams auslesen. */}
+                        {/* Wichtig ist, den doppelpunkt zu setzen, damit der router weiss das es sich um einen parameter handelt */}
+
+                        {/* 
+                        mehrere parameter in produktionslogik:
+                        /kategorien/:kategorie/produkt/:produktId
+                        zb:
+                        /kategorien/salat/produkt/eisbergsalat
+                         */}
+                        <Route path="/user/:id" element={ <Profile/> } />
                         <Route path="/contact" element={ <Contact/> } />
                         {/* Eine 404 fehlerseite erstellt man, indem man am ende aller routen eine wildcard route erstellt (*), so wird sie als letztes eingeladen, und nur dann genutzt, wenn nichts anderes funktioniert */}
                         <Route path="*" element={ <NotFound/>} />
