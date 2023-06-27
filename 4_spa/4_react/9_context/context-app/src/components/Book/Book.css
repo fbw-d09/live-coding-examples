@@ -1,0 +1,14 @@
+.Book
+{
+    padding: 1em;
+    list-style-type: none;
+}
+
+
+.Book span
+{
+    font-style: italic;
+    font-size: 1.25em;
+    float: right;
+    padding-right: 1em;
+}
