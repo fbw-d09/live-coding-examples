@@ -1,0 +1,30 @@
+.Card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__santa
+    {
+        width: 250px;
+        height: 250px;
+        animation: SantaSpinner infinite 3s linear;
+        z-index: 0;
+    }
+
+    &__setup,
+    &__delivery
+    {
+        z-index: 1;
+    }
+}
+
+@keyframes SantaSpinner
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
