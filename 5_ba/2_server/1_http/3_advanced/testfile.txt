@@ -1,0 +1,1 @@
+Hallo aus einer extern geladenen datei!
