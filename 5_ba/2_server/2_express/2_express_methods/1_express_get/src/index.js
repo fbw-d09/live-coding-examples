@@ -1,3 +1,12 @@
+/* 
+    wenn wir in unseren express applikationen import/export, anstelle von require(); nutzen wollen, müssen wir in der package json die zeile
+    "type": "module",
+    hinzufügen, und können dann hier mit express wie folgt arbeiten:
+
+    import express from 'express';
+    import path from 'path';
+*/
+
 // Wir importieren das modul "express":
 const express = require('express');
 
