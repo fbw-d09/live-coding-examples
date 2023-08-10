@@ -1,0 +1,25 @@
+{
+  "cars": [
+    {
+      "id": 2,
+      "brand": "Ford",
+      "name": "Mustang",
+      "type": "suv",
+      "year": 2019
+    },
+    {
+      "id": 3,
+      "brand": "Jaguar",
+      "name": "F-Page",
+      "type": "suv",
+      "year": 2002
+    },
+    {
+      "id": 4,
+      "brand": "Ford",
+      "name": "Puma",
+      "type": "suv",
+      "year": 1999
+    }
+  ]
+}
