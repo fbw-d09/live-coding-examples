@@ -16,7 +16,7 @@ const path = require('path');
 const app = express();
 
 // wir nutzen eine middleware um den ordner anzugeben, in dem wir unsere statischen dateien laden wollen, wir geben ausserden an, wie dieser ordner innerhalb unserer applikation erreichbar sein soll. Damit nicht jede datei als html datei geladen wird, müssen wir express noch mitteilen, das er nicht immer die index datei laden soll.
-// wie er heissen solll,          wo er zu finden ist.
+// wie er heissen solll, wo er zu finden ist.
 app.use("/static", express.static("public", { index: false }));
 // wir holen die daten aus dem order "public" und bieten sie dem client unter dem pfad "static" an.
 
