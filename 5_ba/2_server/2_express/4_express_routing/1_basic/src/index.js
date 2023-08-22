@@ -106,6 +106,18 @@ app.use((err, req, res, next) => {
 /*
     app.use((req, res, next) => {
         res.status(404).send("Not Found");
+
+        // andere möglichkeit
+
+        const err = new Error("NOT FOUND")
+
+        res.status(404).json({
+            success: false,
+            error: {
+                type: 404,
+                message: err.message;
+            }
+        })
     });
 */
 
