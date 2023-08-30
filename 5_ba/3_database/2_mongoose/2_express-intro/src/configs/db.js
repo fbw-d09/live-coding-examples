@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 exports.connect = async () =>
 {
     try {
-        const conn = await mongoose.connect(`${ process.env.DB_URL}${process.env.DB_NAME}`);
+        const conn = await mongoose.connect(`${ process.env.DB_URL}/${process.env.DB_NAME}`);
 
         console.log(`MongoDB wurde verbunden auf ${conn.connection.host}`);
     } catch (error) {
@@ -12,4 +12,4 @@ exports.connect = async () =>
     }
 }
 
-exports.closeConnection = () => mongoose.closeConnection();
+exports.closeConnection = () => mongoose.connection.close();
