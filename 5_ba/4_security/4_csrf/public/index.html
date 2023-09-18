@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- wir importieren axios aus dem cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+    <h1>Testformular</h1>
+
+    <input type="text" name="testInput" id="testInput">
+    <button id="formButton" type="submit">Senden</button>
+
+    <script>
+        // wir holen uns unsere elemente
+        const formButtonElement = document.querySelector('#formButton');
+        const formInputElement = document.querySelector('#testInput');
+
+        // als erstes erstellen wir eine asynchrone funktion um den token zu bekommen
+        const getCSRFToken = async () =>
+        {
+            // mit axios führen wir einen request auf die url /getToken aus, um uns die daten zu holen:
+            try {
+                const response = await axios.get('/getToken');
+
+                console.log(response);
+
+                // wir setzen den default für den post header von axios auf unseren token, so wird der token immer mitgeschickt, wenn wir einen post request machen.
+                axios.defaults.headers.post['X-CSRF-Token'] = response.data.CSRFToken;
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        getCSRFToken();
+
+        formButtonElement.onclick = () => 
+        {
+            // wir senden einen post request an unseren /sendData endpunkt, und senden den wert aus dem inputfeld an den server:
+            axios
+                .post('/sendData', formInputElement.value)
+                .then(res => console.log(res.data));
+        }
+    </script>
+
+</body>
+</html>
