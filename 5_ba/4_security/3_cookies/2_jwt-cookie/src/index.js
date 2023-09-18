@@ -50,7 +50,7 @@ const authorize = (req, res, next) =>
 app.post('/login', (req, res) => {
     const { username, role } = req.body;
 
-    // hier sollte die datenbank nach dem user überprüft werden
+    // ...hier sollte die datenbank nach dem user überprüft werden
 
     // wir signieren einen token:
     const token = jwt.sign({ username, role }, secret);
