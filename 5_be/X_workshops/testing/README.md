@@ -60,4 +60,46 @@ Es gibt viele verschiedene "expects" die man schreiben kann, eine komplette list
 
 eine gängige methode der software entwicklung ist auch das sogenannte TEST DRIVEN DEVELOPMENT, kurz TDD, in dem man erst die tests schreibt, mocha laufen lässt, und ann den code stück für stück schreibt. So weiss man von vorne herein was man erwartet und läuft, dadurch, das man mit dem selben code die tests erfüllt, nicht gefahr zu vergessen, spezifische stellen im code zu testen.
 
+# Ein frontend test mit react und jest
+
+Im frontend nutzen wir meistens das framework jest, dieses gibt uns die möglichkeit ähnlich wie in mocha/chai expectations zu schreiben.
+
+Jest ist ein beliebtes javascript-test-framework, das ursprüglich von Facebook entwickelt wurde. Es wird häufig für das testen von javascript anwendungen, insbesondere für frontend anwendungen und nodejs anwendungen verwendet. Jest wurde entwickelt um das testen einfacher, effizienter und benutzerfreundlicher zu gestalten.
+
+Jest ist besonders gut für das testen von React-Anwendungen geeignet, da es eine gute integration mit react und der react testing library bietet.
+
+> BEISPIEL 1:
+
+- wir erstellen ein neues react projekt mit npx create-react-app 2_react-jest
+- wir installieren jest und dessen test libraries als dev-depencies: npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+- wir erstellen einen komponenten namens Greeting
+- im selben ordner erstellen wir jetzt ein test datei namens Greeting.test.js
+- jetzt können wir unsere tests automatisch für alle komponenten ausführen, wenn wir "npm run test" ausführen. wir müssen n der package.json dafür nichts verändern, da jetzt jest einfach in das kommando "react-scripts test" injiziert wurde. Der watch mode wird hier automatisch gestartet. Wir können allerdings mit dem paramter "--verbose" detalliertere testergebnisse sehen.
+- Fügen wir einen weiteren komponenten hinzu
+-auch hier erstellen wir eine test datei direkt im komponentenordner, so haben wir in produktion alles, was zu einem komponenten gehört an einer stelle: Den komponenten, das stylesheet, ggf. die storybook datei, und die test datei.
+- auch hier können wir mit Test Driven Development arbeiten. 
+- Allgemein ist es so, das wir in der entwiklung nicht react ausführen, sondern den test watcher, da wir so wissen, das alles funktioniert.
+
+weitere expectations für jest finden wir auf: https://jestjs.io/docs/expect
+
+# Ende zu Ende tests mit puppeteer
+
+Eine fantastische möglichkeit um direkte userinteraktionen (ende zu ende, also user zu client) in react zu testen, ist puppeteer. Puppeteer führt die tests tatsächlich im browser aus, was nicht nur eindrucksvoll, sondern auch hilfreich ist.
+
+> Beispiel
+
+- wir erstellen eine neue react applikation mit npx create-react-app 3_react-puppeteer
+- wir installieren puppeteer als dev dependency: npm i -D jest puppeteer@18.1.0 jest-puppeteer
+- wir erstellen eine jest.config.js datei.
+- wir ändern unsere react app ein wenig ab. um puppeteer einen spielplatz zu geben.
+- die datei App.test.js ändern wir ab.
+- wir starten den development server mit "npm run start"
+- jetzt können wir in einem anderen terminal "npm run test" eingeben, und puppeteer starten.
+- ok, jetzt hat der test wohl funktioniert, aber eindrucksvoll war das weniger.
+- wir setzen im bereich beforeAll(); den paramter "headless" auf false
+- außerdem bauen wir in alle ausführungen noch unser vorher definiertes delay ein
+
+jetzt können wir puppeteer im browser zuschauen, wie es unseren button klickt, wie ein geist, der unsere app benutzt. Das ist zwar cool, aber nervt in der entiwkclung eher, Bei einem build prozess würden wir deshalb eher im headless mode arbeiten, also ohne browser.
+
+weitere informationen zu puppeteer finden wir hier: https://pptr.dev/category/guides
 
